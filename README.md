@@ -1,1 +1,2 @@
-# engsci263-or-project
+# ENGSCI 263 OR Project
+## Group 10
