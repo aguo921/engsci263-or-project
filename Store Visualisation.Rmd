@@ -1,0 +1,54 @@
+---
+title: "Store Map"
+author: "Angela Guo"
+date: '2022-09-25'
+output: html_document
+---
+## Required libraries
+```{r setup, message=FALSE}
+library(readr)
+library("tidyverse")
+library(lubridate)
+library(leaflet)
+```
+
+## Reading location data
+```{r}
+Locations = read_csv("FoodstuffsLocations.csv",show_col_types=FALSE)
+head(Locations)
+```
+## Plotting location of stores on map
+```{r}
+factpal <- colorFactor(topo.colors(4), Locations$Type)
+leaflet() %>% addTiles() %>% addCircleMarkers(data=Locations, lng=~Long, lat=~Lat, popup=~Supermarket, color=~factpal(Type))
+```
+
+## Reading distance data
+```{r}
+Distances = read_csv("FoodstuffsDistances.csv",show_col_types=FALSE)
+head(Distances)
+```
+## Pivoting distance data
+```{r}
+Distances = pivot_longer(Distances, -c("...1"), names_to="To", values_to="Distance")
+head(Distances)
+```
+## Reading duration data
+```{r}
+Durations = read_csv("FoodstuffsDurations.csv",show_col_types=FALSE)
+head(Durations)
+```
+## Pivoting duration data
+```{r}
+Durations = pivot_longer(Durations, -c("...1"), names_to="To", values_to="Duration")
+head(Durations)
+```
+## Merging distance and duration data
+```{r}
+Joined = right_join(Distances, Durations, by=c("...1", "To"))
+head(Joined)
+```
+## Plotting travel distance vs duration
+```{r}
+Joined %>% ggplot() + geom_point(aes(x=Distance / 1000, y=Duration / 60, color="red", alpha=0.1)) + xlab("Distance (km)") + ylab("Duration (min)")
+```
