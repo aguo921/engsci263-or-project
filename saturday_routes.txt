@@ -1,0 +1,200 @@
+Warehouse,Four Square Alberton,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Pak 'n Save Royal Oak,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Pak 'n Save Royal Oak,Four Square Ellerslie,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Pak 'n Save Royal Oak,Four Square Ellerslie,New World Remuera,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Pak 'n Save Royal Oak,Four Square Ellerslie,New World Stonefields,New World Remuera,Warehouse
+Warehouse,Four Square Botany Junction,Warehouse
+Warehouse,Four Square Botany Junction,New World Ormiston,Warehouse
+Warehouse,Four Square Botany Junction,New World Ormiston,Pak 'n Save Ormiston,Warehouse
+Warehouse,Four Square Botany Junction,New World Ormiston,Pak 'n Save Ormiston,Four Square Everglade,Warehouse
+Warehouse,Four Square Botany Junction,New World Ormiston,Pak 'n Save Ormiston,Four Square Everglade,Pak 'n Save Manukau,Warehouse
+Warehouse,Four Square Botany Junction,New World Ormiston,Pak 'n Save Ormiston,Four Square Everglade,Pak 'n Save Manukau,New World Papatoetoe,Warehouse
+Warehouse,Four Square Cockle Bay,Warehouse
+Warehouse,Four Square Cockle Bay,New World Howick,Warehouse
+Warehouse,Four Square Cockle Bay,New World Howick,Four Square Pakuranga Heights,Warehouse
+Warehouse,Four Square Cockle Bay,New World Howick,Pak 'n Save Botany,Four Square Pakuranga Heights,Warehouse
+Warehouse,Four Square Cockle Bay,New World Howick,Pak 'n Save Botany,New World Botany,Four Square Pakuranga Heights,Warehouse
+Warehouse,Four Square Cockle Bay,New World Howick,Pak 'n Save Botany,New World Botany,Four Square Pakuranga Heights,Pak 'n Save Sylvia Park,Warehouse
+Warehouse,Four Square Ellerslie,Warehouse
+Warehouse,Four Square Ellerslie,New World Remuera,Warehouse
+Warehouse,Four Square Ellerslie,New World Stonefields,New World Remuera,Warehouse
+Warehouse,Four Square Ellerslie,New World Stonefields,New World Remuera,Pak 'n Save Royal Oak,Warehouse
+Warehouse,Four Square Ellerslie,Pak 'n Save Sylvia Park,New World Stonefields,New World Remuera,Pak 'n Save Royal Oak,Warehouse
+Warehouse,Four Square Ellerslie,Pak 'n Save Sylvia Park,New World Stonefields,New World Remuera,Pak 'n Save Royal Oak,New World Mt Roskill,Warehouse
+Warehouse,Four Square Everglade,Warehouse
+Warehouse,Four Square Everglade,Pak 'n Save Manukau,Warehouse
+Warehouse,Four Square Everglade,Pak 'n Save Manukau,New World Papatoetoe,Warehouse
+Warehouse,Four Square Everglade,Four Square Botany Junction,Pak 'n Save Manukau,New World Papatoetoe,Warehouse
+Warehouse,Four Square Everglade,New World Ormiston,Four Square Botany Junction,Pak 'n Save Manukau,New World Papatoetoe,Warehouse
+Warehouse,Four Square Fair Price Henderson,Warehouse
+Warehouse,Four Square Fair Price Henderson,Pak 'n Save Lincoln Road,Warehouse
+Warehouse,Four Square Fair Price Henderson,Pak 'n Save Lincoln Road,Pak 'n Save Henderson,Warehouse
+Warehouse,Four Square Fair Price Henderson,Pak 'n Save Lincoln Road,Pak 'n Save Henderson,Four Square Glen Eden,Warehouse
+Warehouse,Four Square Fair Price Henderson,Pak 'n Save Lincoln Road,Pak 'n Save Henderson,Four Square Glen Eden,New World New Lynn,Warehouse
+Warehouse,Four Square Fair Price Henderson,Pak 'n Save Lincoln Road,Pak 'n Save Henderson,Four Square Glen Eden,New World New Lynn,Pak 'n Save Mt Albert,Warehouse
+Warehouse,Four Square Glen Eden,Warehouse
+Warehouse,Four Square Glen Eden,New World New Lynn,Warehouse
+Warehouse,Four Square Glen Eden,New World New Lynn,Pak 'n Save Mt Albert,Warehouse
+Warehouse,Four Square Glen Eden,New World New Lynn,Pak 'n Save Mt Albert,Four Square Alberton,Warehouse
+Warehouse,Four Square Glen Eden,New World New Lynn,Pak 'n Save Mt Albert,Four Square Alberton,New World Mt Roskill,Warehouse
+Warehouse,Four Square Glen Eden,New World Green Bay,New World New Lynn,Pak 'n Save Mt Albert,Four Square Alberton,New World Mt Roskill,Warehouse
+Warehouse,Four Square Glen Eden,New World Green Bay,New World New Lynn,Pak 'n Save Mt Albert,Four Square Alberton,New World Mt Roskill,Pak 'n Save Royal Oak,Warehouse
+Warehouse,Four Square Hobsonville,Warehouse
+Warehouse,Four Square Hobsonville,Pak 'n Save Westgate,Warehouse
+Warehouse,Four Square Hobsonville,Pak 'n Save Westgate,Pak 'n Save Lincoln Road,Warehouse
+Warehouse,Four Square Hobsonville,Pak 'n Save Westgate,Pak 'n Save Lincoln Road,Four Square Fair Price Henderson,Warehouse
+Warehouse,Four Square Hobsonville,Pak 'n Save Westgate,Pak 'n Save Lincoln Road,Four Square Fair Price Henderson,Pak 'n Save Henderson,Warehouse
+Warehouse,Four Square Lancaster,Warehouse
+Warehouse,Four Square Lancaster,New World Birkenhead,Warehouse
+Warehouse,Four Square Lancaster,New World Birkenhead,Pak 'n Save Wairau Road,Warehouse
+Warehouse,Four Square Lancaster,New World Birkenhead,Pak 'n Save Wairau Road,New World Milford,Warehouse
+Warehouse,Four Square Lancaster,New World Birkenhead,Pak 'n Save Wairau Road,New World Milford,New World Metro Shore City,Warehouse
+Warehouse,Four Square Lancaster,New World Birkenhead,Pak 'n Save Wairau Road,New World Milford,New World Metro Shore City,New World Victoria Park,Warehouse
+Warehouse,Four Square Pakuranga Heights,Warehouse
+Warehouse,Four Square Pakuranga Heights,New World Botany,Warehouse
+Warehouse,Four Square Pakuranga Heights,Pak 'n Save Botany,New World Botany,Warehouse
+Warehouse,Four Square Pakuranga Heights,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,Warehouse
+Warehouse,Four Square Pakuranga Heights,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,New World Ormiston,Warehouse
+Warehouse,Four Square Pakuranga Heights,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,New World Ormiston,Pak 'n Save Ormiston,Warehouse
+Warehouse,Four Square St Heliers,Warehouse
+Warehouse,Four Square St Heliers,Pak 'n Save Glen Innes,Warehouse
+Warehouse,Four Square St Heliers,Pak 'n Save Glen Innes,New World Eastridge,Warehouse
+Warehouse,Four Square St Heliers,Pak 'n Save Glen Innes,New World Eastridge,New World Remuera,Warehouse
+Warehouse,Four Square St Heliers,Pak 'n Save Glen Innes,New World Eastridge,New World Remuera,Four Square Ellerslie,Warehouse
+Warehouse,Four Square St Heliers,Pak 'n Save Glen Innes,New World Eastridge,New World Remuera,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse
+Warehouse,Four Square St Heliers,Pak 'n Save Glen Innes,New World Eastridge,New World Remuera,New World Stonefields,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse
+Warehouse,Four Square Torbay,Warehouse
+Warehouse,Four Square Torbay,New World Long Bay,Warehouse
+Warehouse,Four Square Torbay,New World Long Bay,New World Browns Bay,Warehouse
+Warehouse,Four Square Torbay,New World Long Bay,New World Browns Bay,New World Albany,Warehouse
+Warehouse,Four Square Torbay,New World Long Bay,New World Browns Bay,New World Albany,Pak 'n Save Albany,Warehouse
+Warehouse,Four Square Torbay,New World Long Bay,New World Browns Bay,New World Albany,Pak 'n Save Albany,Pak 'n Save Wairau Road,Warehouse
+Warehouse,Four Square Torbay,New World Long Bay,New World Browns Bay,New World Albany,Pak 'n Save Albany,Pak 'n Save Wairau Road,New World Milford,Warehouse
+Warehouse,New World Albany,Warehouse
+Warehouse,New World Albany,Pak 'n Save Albany,Warehouse
+Warehouse,New World Albany,Pak 'n Save Albany,Pak 'n Save Wairau Road,Warehouse
+Warehouse,New World Albany,Pak 'n Save Albany,Pak 'n Save Wairau Road,New World Milford,Warehouse
+Warehouse,New World Albany,Pak 'n Save Albany,Pak 'n Save Wairau Road,New World Milford,New World Metro Shore City,Warehouse
+Warehouse,New World Birkenhead,Warehouse
+Warehouse,New World Botany,Warehouse
+Warehouse,New World Botany,Pak 'n Save Botany,Warehouse
+Warehouse,New World Botany,Pak 'n Save Botany,New World Howick,Four Square Pakuranga Heights,Warehouse
+Warehouse,New World Browns Bay,Warehouse
+Warehouse,New World Browns Bay,Four Square Torbay,Warehouse
+Warehouse,New World Devonport,Warehouse
+Warehouse,New World Devonport,New World Metro Shore City,Warehouse
+Warehouse,New World Devonport,New World Metro Shore City,New World Milford,Warehouse
+Warehouse,New World Devonport,New World Metro Shore City,New World Milford,Pak 'n Save Wairau Road,Warehouse
+Warehouse,New World Devonport,New World Metro Shore City,New World Milford,Pak 'n Save Wairau Road,New World Birkenhead,Warehouse
+Warehouse,New World Devonport,New World Metro Shore City,New World Milford,Pak 'n Save Wairau Road,Four Square Lancaster,New World Birkenhead,Warehouse
+Warehouse,New World Devonport,New World Metro Shore City,New World Milford,Pak 'n Save Wairau Road,Four Square Lancaster,New World Birkenhead,New World Victoria Park,Warehouse
+Warehouse,New World Eastridge,Warehouse
+Warehouse,New World Eastridge,New World Remuera,Warehouse
+Warehouse,New World Eastridge,New World Remuera,Four Square Ellerslie,Warehouse
+Warehouse,New World Eastridge,New World Remuera,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse
+Warehouse,New World Eastridge,New World Remuera,New World Stonefields,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse
+Warehouse,New World Eastridge,New World Remuera,New World Stonefields,Pak 'n Save Sylvia Park,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse
+Warehouse,New World Green Bay,Warehouse
+Warehouse,New World Green Bay,New World New Lynn,Warehouse
+Warehouse,New World Green Bay,New World New Lynn,Pak 'n Save Mt Albert,Warehouse
+Warehouse,New World Green Bay,New World New Lynn,Pak 'n Save Mt Albert,Four Square Alberton,Warehouse
+Warehouse,New World Green Bay,New World New Lynn,Pak 'n Save Mt Albert,Four Square Alberton,New World Mt Roskill,Warehouse
+Warehouse,New World Howick,Warehouse
+Warehouse,New World Howick,Four Square Cockle Bay,Pak 'n Save Botany,Warehouse
+Warehouse,New World Howick,Four Square Cockle Bay,Pak 'n Save Botany,New World Botany,Warehouse
+Warehouse,New World Howick,Four Square Cockle Bay,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,Warehouse
+Warehouse,New World Howick,Four Square Cockle Bay,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,New World Ormiston,Warehouse
+Warehouse,New World Howick,Four Square Cockle Bay,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,New World Ormiston,Pak 'n Save Ormiston,Warehouse
+Warehouse,New World Long Bay,Warehouse
+Warehouse,New World Metro Queen St,Warehouse
+Warehouse,New World Metro Queen St,New World Victoria Park,Warehouse
+Warehouse,New World Metro Queen St,New World Victoria Park,Four Square Alberton,Warehouse
+Warehouse,New World Metro Queen St,New World Victoria Park,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse
+Warehouse,New World Metro Queen St,New World Victoria Park,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Warehouse
+Warehouse,New World Metro Queen St,New World Victoria Park,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Pak 'n Save Royal Oak,Warehouse
+Warehouse,New World Metro Shore City,Warehouse
+Warehouse,New World Metro Shore City,New World Milford,Warehouse
+Warehouse,New World Metro Shore City,New World Milford,Pak 'n Save Wairau Road,Warehouse
+Warehouse,New World Metro Shore City,New World Milford,Pak 'n Save Wairau Road,New World Birkenhead,Warehouse
+Warehouse,New World Milford,Warehouse
+Warehouse,New World Mt Roskill,Warehouse
+Warehouse,New World Mt Roskill,Pak 'n Save Mt Albert,Warehouse
+Warehouse,New World Mt Roskill,Four Square Alberton,Pak 'n Save Mt Albert,New World New Lynn,Warehouse
+Warehouse,New World Mt Roskill,Four Square Alberton,Pak 'n Save Mt Albert,New World New Lynn,New World Green Bay,Four Square Glen Eden,Pak 'n Save Henderson,Warehouse
+Warehouse,New World New Lynn,Warehouse
+Warehouse,New World New Lynn,Pak 'n Save Mt Albert,Warehouse
+Warehouse,New World New Lynn,Pak 'n Save Mt Albert,Four Square Alberton,Warehouse
+Warehouse,New World New Lynn,New World Green Bay,Pak 'n Save Mt Albert,Four Square Alberton,New World Mt Roskill,Pak 'n Save Royal Oak,Warehouse
+Warehouse,New World Ormiston,Warehouse
+Warehouse,New World Ormiston,Pak 'n Save Ormiston,Warehouse
+Warehouse,New World Papakura,Warehouse
+Warehouse,New World Papakura,Pak 'n Save Papakura,Warehouse
+Warehouse,New World Papakura,Pak 'n Save Papakura,New World Southmall,Warehouse
+Warehouse,New World Papakura,Pak 'n Save Papakura,New World Southmall,Four Square Everglade,Warehouse
+Warehouse,New World Papakura,Pak 'n Save Papakura,New World Southmall,Four Square Everglade,Pak 'n Save Manukau,Warehouse
+Warehouse,New World Papakura,Pak 'n Save Papakura,New World Southmall,Four Square Everglade,Pak 'n Save Manukau,New World Papatoetoe,Warehouse
+Warehouse,New World Papatoetoe,Warehouse
+Warehouse,New World Papatoetoe,Pak 'n Save Manukau,Warehouse
+Warehouse,New World Papatoetoe,Pak 'n Save Manukau,Four Square Everglade,New World Southmall,Warehouse
+Warehouse,New World Papatoetoe,Pak 'n Save Manukau,Four Square Everglade,New World Southmall,Pak 'n Save Clendon,Warehouse
+Warehouse,New World Papatoetoe,Pak 'n Save Manukau,Four Square Botany Junction,Four Square Everglade,New World Southmall,Pak 'n Save Clendon,Warehouse
+Warehouse,New World Papatoetoe,Pak 'n Save Manukau,New World Ormiston,Four Square Botany Junction,Four Square Everglade,New World Southmall,Pak 'n Save Clendon,Warehouse
+Warehouse,New World Remuera,Warehouse
+Warehouse,New World Remuera,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse
+Warehouse,New World Southmall,Warehouse
+Warehouse,New World Southmall,Four Square Everglade,Warehouse
+Warehouse,New World Southmall,Four Square Everglade,Pak 'n Save Manukau,Warehouse
+Warehouse,New World Southmall,Four Square Everglade,Four Square Botany Junction,Pak 'n Save Manukau,New World Papatoetoe,Warehouse
+Warehouse,New World Southmall,Four Square Everglade,New World Ormiston,Four Square Botany Junction,Pak 'n Save Manukau,New World Papatoetoe,Warehouse
+Warehouse,New World Southmall,Four Square Everglade,New World Ormiston,Pak 'n Save Ormiston,Four Square Botany Junction,Pak 'n Save Manukau,New World Papatoetoe,Warehouse
+Warehouse,New World Stonefields,Warehouse
+Warehouse,New World Stonefields,Four Square Ellerslie,Warehouse
+Warehouse,New World Stonefields,Pak 'n Save Sylvia Park,Four Square Ellerslie,New World Remuera,Warehouse
+Warehouse,New World Victoria Park,Warehouse
+Warehouse,Pak 'n Save Albany,Warehouse
+Warehouse,Pak 'n Save Albany,New World Albany,New World Browns Bay,Warehouse
+Warehouse,Pak 'n Save Albany,New World Albany,New World Browns Bay,Four Square Torbay,Warehouse
+Warehouse,Pak 'n Save Botany,Warehouse
+Warehouse,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,Warehouse
+Warehouse,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,New World Ormiston,Warehouse
+Warehouse,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,New World Ormiston,Pak 'n Save Ormiston,Warehouse
+Warehouse,Pak 'n Save Clendon,Warehouse
+Warehouse,Pak 'n Save Clendon,New World Southmall,Warehouse
+Warehouse,Pak 'n Save Clendon,New World Southmall,Four Square Everglade,Warehouse
+Warehouse,Pak 'n Save Clendon,New World Southmall,Four Square Everglade,Pak 'n Save Manukau,Warehouse
+Warehouse,Pak 'n Save Glen Innes,Warehouse
+Warehouse,Pak 'n Save Henderson,Warehouse
+Warehouse,Pak 'n Save Henderson,Four Square Fair Price Henderson,Warehouse
+Warehouse,Pak 'n Save Henderson,Four Square Fair Price Henderson,Pak 'n Save Lincoln Road,Pak 'n Save Westgate,Warehouse
+Warehouse,Pak 'n Save Lincoln Road,Warehouse
+Warehouse,Pak 'n Save Mangere,Warehouse
+Warehouse,Pak 'n Save Mangere,New World Mt Roskill,Warehouse
+Warehouse,Pak 'n Save Mangere,New World Mt Roskill,Pak 'n Save Mt Albert,Warehouse
+Warehouse,Pak 'n Save Mangere,New World Mt Roskill,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse
+Warehouse,Pak 'n Save Mangere,New World Mt Roskill,Four Square Alberton,Pak 'n Save Mt Albert,New World New Lynn,Warehouse
+Warehouse,Pak 'n Save Mangere,New World Mt Roskill,Four Square Alberton,Pak 'n Save Mt Albert,New World New Lynn,New World Green Bay,Warehouse
+Warehouse,Pak 'n Save Manukau,Warehouse
+Warehouse,Pak 'n Save Mt Albert,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Pak 'n Save Royal Oak,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Pak 'n Save Royal Oak,Four Square Ellerslie,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Pak 'n Save Royal Oak,Four Square Ellerslie,New World Remuera,Warehouse
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Pak 'n Save Royal Oak,Four Square Ellerslie,New World Stonefields,New World Remuera,Warehouse
+Warehouse,Pak 'n Save Ormiston,Warehouse
+Warehouse,Pak 'n Save Papakura,Warehouse
+Warehouse,Pak 'n Save Royal Oak,Warehouse
+Warehouse,Pak 'n Save Royal Oak,New World Mt Roskill,Warehouse
+Warehouse,Pak 'n Save Royal Oak,New World Mt Roskill,Pak 'n Save Mt Albert,Warehouse
+Warehouse,Pak 'n Save Royal Oak,New World Mt Roskill,Four Square Alberton,Pak 'n Save Mt Albert,New World New Lynn,Warehouse
+Warehouse,Pak 'n Save Sylvia Park,Warehouse
+Warehouse,Pak 'n Save Sylvia Park,Four Square Ellerslie,Warehouse
+Warehouse,Pak 'n Save Sylvia Park,New World Stonefields,Four Square Ellerslie,Warehouse
+Warehouse,Pak 'n Save Wairau Road,Warehouse
+Warehouse,Pak 'n Save Wairau Road,New World Milford,Warehouse
+Warehouse,Pak 'n Save Wairau Road,New World Milford,New World Metro Shore City,New World Victoria Park,Warehouse
+Warehouse,Pak 'n Save Wairau Road,New World Milford,New World Metro Shore City,New World Victoria Park,New World Metro Queen St,Warehouse
+Warehouse,Pak 'n Save Wairau Road,New World Milford,New World Metro Shore City,New World Victoria Park,New World Metro Queen St,Four Square Alberton,Warehouse
+Warehouse,Pak 'n Save Westgate,Warehouse
