@@ -1,129 +1,290 @@
-Warehouse,Four Square Alberton,Warehouse:67.13124999999992
-Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse:76.66708333333334
-Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Warehouse:92.10791666666667
-Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Pak 'n Save Royal Oak,Warehouse:139.96583333333334
-Warehouse,Four Square Botany Junction,Warehouse:158.02041666666673
-Warehouse,Four Square Botany Junction,New World Ormiston,Warehouse:183.5041666666668
-Warehouse,Four Square Botany Junction,New World Ormiston,Pak 'n Save Ormiston,Warehouse:199.3029166666667
-Warehouse,Four Square Botany Junction,New World Ormiston,Pak 'n Save Ormiston,Four Square Everglade,Warehouse:215.2008333333335
-Warehouse,Four Square Cockle Bay,Warehouse:229.52958333333328
-Warehouse,Four Square Cockle Bay,New World Howick,Warehouse:232.82416666666649
-Warehouse,Four Square Cockle Bay,New World Howick,Four Square Pakuranga Heights,Warehouse:241.88958333333323
-Warehouse,Four Square Cockle Bay,New World Howick,Pak 'n Save Botany,Four Square Pakuranga Heights,Warehouse:266.94166666666666
-Warehouse,Four Square Ellerslie,Warehouse:103.22416666666676
-Warehouse,Four Square Ellerslie,New World Remuera,Warehouse:133.04416666666674
-Warehouse,Four Square Ellerslie,New World Stonefields,New World Remuera,Warehouse:164.91416666666677
-Warehouse,Four Square Ellerslie,New World Stonefields,New World Remuera,Pak 'n Save Royal Oak,Warehouse:184.07916666666677
-Warehouse,Four Square Everglade,Warehouse:137.37874999999997
-Warehouse,Four Square Everglade,Pak 'n Save Manukau,Warehouse:159.16916666666665
-Warehouse,Four Square Everglade,Pak 'n Save Manukau,New World Papatoetoe,Warehouse:178.02333333333337
-Warehouse,Four Square Everglade,Four Square Botany Junction,Pak 'n Save Manukau,New World Papatoetoe,Warehouse:210.8083333333333
-Warehouse,Four Square Fair Price Henderson,Warehouse:119.63625
-Warehouse,Four Square Fair Price Henderson,Pak 'n Save Lincoln Road,Warehouse:131.08666666666656
-Warehouse,Four Square Fair Price Henderson,Pak 'n Save Lincoln Road,Pak 'n Save Henderson,Warehouse:167.7979166666665
-Warehouse,Four Square Glen Eden,Warehouse:108.83708333333324
-Warehouse,Four Square Glen Eden,New World New Lynn,Warehouse:125.45333333333342
 Warehouse,Four Square Glen Eden,New World New Lynn,Pak 'n Save Mt Albert,Warehouse:142.14458333333334
 Warehouse,Four Square Glen Eden,New World New Lynn,Pak 'n Save Mt Albert,Four Square Alberton,Warehouse:176.12041666666659
-Warehouse,Four Square Hobsonville,Warehouse:137.95375
-Warehouse,Four Square Hobsonville,Pak 'n Save Westgate,Warehouse:162.4083333333333
-Warehouse,Four Square Hobsonville,Pak 'n Save Westgate,Pak 'n Save Lincoln Road,Warehouse:192.47416666666655
-Warehouse,Four Square Lancaster,Warehouse:181.72874999999996
-Warehouse,Four Square Lancaster,New World Birkenhead,Warehouse:196.77375
-Warehouse,Four Square Lancaster,New World Birkenhead,Pak 'n Save Wairau Road,Warehouse:241.17083333333326
-Warehouse,Four Square Lancaster,New World Birkenhead,Pak 'n Save Wairau Road,New World Milford,Warehouse:269.43791666666664
-Warehouse,Four Square Pakuranga Heights,Warehouse:154.1833333333335
-Warehouse,Four Square Pakuranga Heights,New World Botany,Warehouse:204.44833333333347
-Warehouse,Four Square Pakuranga Heights,Pak 'n Save Botany,New World Botany,Warehouse:218.55125000000015
-Warehouse,Four Square St Heliers,Warehouse:183.5275
-Warehouse,Four Square St Heliers,Pak 'n Save Glen Innes,Warehouse:198.1749999999999
-Warehouse,Four Square St Heliers,Pak 'n Save Glen Innes,New World Eastridge,Warehouse:225.3137500000001
-Warehouse,Four Square Torbay,Warehouse:232.415
-Warehouse,Four Square Torbay,New World Long Bay,Warehouse:246.77583333333322
-Warehouse,Four Square Torbay,New World Long Bay,New World Browns Bay,Warehouse:276.02333333333337
-Warehouse,Four Square Torbay,New World Long Bay,New World Browns Bay,New World Albany,Warehouse:298.20124999999985
-Warehouse,New World Albany,Warehouse:190.5816666666665
-Warehouse,New World Albany,Pak 'n Save Albany,Warehouse:203.53666666666646
-Warehouse,New World Albany,Pak 'n Save Albany,Pak 'n Save Wairau Road,Warehouse:234.36500000000004
-Warehouse,New World Birkenhead,Warehouse:156.63499999999996
-Warehouse,New World Botany,Warehouse:188.34291666666678
-Warehouse,New World Botany,Pak 'n Save Botany,Warehouse:206.6920833333333
-Warehouse,New World Browns Bay,Warehouse:218.66083333333324
-Warehouse,New World Browns Bay,Four Square Torbay,Warehouse:253.71749999999992
-Warehouse,New World Devonport,Warehouse:206.28041666666675
-Warehouse,New World Devonport,New World Metro Shore City,Warehouse:224.535
-Warehouse,New World Devonport,New World Metro Shore City,New World Milford,Warehouse:257.01958333333346
-Warehouse,New World Eastridge,Warehouse:149.95625
-Warehouse,New World Eastridge,New World Remuera,Warehouse:159.40375
-Warehouse,New World Eastridge,New World Remuera,Four Square Ellerslie,Warehouse:186.62375000000003
-Warehouse,New World Eastridge,New World Remuera,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse:202.0029166666667
-Warehouse,New World Green Bay,Warehouse:78.90875
-Warehouse,New World Green Bay,New World New Lynn,Warehouse:105.61791666666682
-Warehouse,New World Green Bay,New World New Lynn,Pak 'n Save Mt Albert,Warehouse:122.30916666666674
-Warehouse,New World Howick,Warehouse:207.065
-Warehouse,New World Howick,Four Square Cockle Bay,Pak 'n Save Botany,Warehouse:254.17750000000012
-Warehouse,New World Howick,Four Square Cockle Bay,Pak 'n Save Botany,New World Botany,Warehouse:265.6162500000002
-Warehouse,New World Long Bay,Warehouse:224.95125000000002
-Warehouse,New World Metro Queen St,Warehouse:100.5891666666665
-Warehouse,New World Metro Queen St,New World Victoria Park,Warehouse:121.27791666666667
-Warehouse,New World Metro Queen St,New World Victoria Park,Four Square Alberton,Warehouse:149.66499999999994
-Warehouse,New World Metro Queen St,New World Victoria Park,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse:159.20083333333335
-Warehouse,New World Metro Shore City,Warehouse:150.7866666666665
-Warehouse,New World Metro Shore City,New World Milford,Warehouse:183.27124999999998
-Warehouse,New World Metro Shore City,New World Milford,Pak 'n Save Wairau Road,Warehouse:210.89374999999993
-Warehouse,New World Milford,Warehouse:164.16291666666672
-Warehouse,New World Mt Roskill,Warehouse:32.83958333333332
-Warehouse,New World Mt Roskill,Pak 'n Save Mt Albert,Warehouse:74.9725
-Warehouse,New World Mt Roskill,Four Square Alberton,Pak 'n Save Mt Albert,New World New Lynn,Warehouse:142.72458333333344
-Warehouse,New World New Lynn,Warehouse:73.5945833333335
-Warehouse,New World New Lynn,Pak 'n Save Mt Albert,Warehouse:90.28583333333341
-Warehouse,New World New Lynn,Pak 'n Save Mt Albert,Four Square Alberton,Warehouse:124.2616666666667
-Warehouse,New World Ormiston,Warehouse:170.1870833333335
-Warehouse,New World Ormiston,Pak 'n Save Ormiston,Warehouse:185.98583333333343
-Warehouse,New World Papakura,Warehouse:189.43166666666679
-Warehouse,New World Papakura,Pak 'n Save Papakura,Warehouse:203.7233333333335
-Warehouse,New World Papakura,Pak 'n Save Papakura,New World Southmall,Warehouse:224.65041666666676
-Warehouse,New World Papatoetoe,Warehouse:114.54125
-Warehouse,New World Papatoetoe,Pak 'n Save Manukau,Warehouse:146.92000000000002
-Warehouse,New World Papatoetoe,Pak 'n Save Manukau,Four Square Everglade,New World Southmall,Warehouse:208.54250000000002
-Warehouse,New World Remuera,Warehouse:102.94624999999999
-Warehouse,New World Remuera,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse:145.5454166666667
-Warehouse,New World Southmall,Warehouse:146.45749999999998
-Warehouse,New World Southmall,Four Square Everglade,Warehouse:167.66458333333333
-Warehouse,New World Southmall,Four Square Everglade,Pak 'n Save Manukau,Warehouse:189.455
-Warehouse,New World Stonefields,Warehouse:146.1820833333335
-Warehouse,New World Stonefields,Four Square Ellerslie,Warehouse:142.76041666666677
-Warehouse,New World Stonefields,Pak 'n Save Sylvia Park,Four Square Ellerslie,New World Remuera,Warehouse:203.8683333333334
-Warehouse,New World Victoria Park,Warehouse:97.58874999999999
-Warehouse,Pak 'n Save Albany,Warehouse:186.6375
-Warehouse,Pak 'n Save Albany,New World Albany,New World Browns Bay,Warehouse:253.22375000000002
-Warehouse,Pak 'n Save Botany,Warehouse:193.86499999999998
-Warehouse,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,Warehouse:216.69625
-Warehouse,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,New World Ormiston,Warehouse:242.1800000000001
-Warehouse,Pak 'n Save Clendon,Warehouse:143.65124999999998
-Warehouse,Pak 'n Save Clendon,New World Southmall,Warehouse:175.91083333333341
+Warehouse,New World Birkenhead,Four Square Lancaster,Warehouse:196.73499999999999
+Warehouse,New World Southmall,Four Square Everglade,Pak 'n Save Manukau,New World Papatoetoe,Warehouse:208.30916666666664
+Warehouse,New World Victoria Park,New World Metro Queen St,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse:157.87375
 Warehouse,Pak 'n Save Clendon,New World Southmall,Four Square Everglade,Warehouse:197.11791666666673
 Warehouse,Pak 'n Save Clendon,New World Southmall,Four Square Everglade,Pak 'n Save Manukau,Warehouse:218.90833333333342
-Warehouse,Pak 'n Save Glen Innes,Warehouse:166.76583333333326
-Warehouse,Pak 'n Save Henderson,Warehouse:120.41624999999999
-Warehouse,Pak 'n Save Henderson,Four Square Fair Price Henderson,Warehouse:145.61833333333348
-Warehouse,Pak 'n Save Lincoln Road,Warehouse:104.19250000000001
-Warehouse,Pak 'n Save Mangere,Warehouse:89.92541666666675
-Warehouse,Pak 'n Save Mangere,New World Mt Roskill,Warehouse:114.68624999999999
-Warehouse,Pak 'n Save Mangere,New World Mt Roskill,Pak 'n Save Mt Albert,Warehouse:156.81916666666666
-Warehouse,Pak 'n Save Manukau,Warehouse:128.03125000000003
-Warehouse,Pak 'n Save Mt Albert,Warehouse:48.880416666666676
-Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse:76.66708333333334
+Warehouse,Pak 'n Save Lincoln Road,Four Square Fair Price Henderson,Pak 'n Save Henderson,Warehouse:156.25874999999994
+Warehouse,Pak 'n Save Papakura,New World Papakura,Warehouse:202.59875000000002
+Warehouse,Pak 'n Save Royal Oak,New World Mt Roskill,Pak 'n Save Mt Albert,Warehouse:127.75416666666666
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World New Lynn,Warehouse:121.1075000000001
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World New Lynn,New World Green Bay,Warehouse:153.56416666666658
+Warehouse,Four Square Cockle Bay,New World Howick,Four Square Pakuranga Heights,Warehouse:241.88958333333323
+Warehouse,Four Square Cockle Bay,New World Howick,Pak 'n Save Botany,Four Square Pakuranga Heights,Warehouse:266.94166666666666
+Warehouse,Four Square Ellerslie,New World Stonefields,New World Remuera,Warehouse:164.91416666666677
+Warehouse,Four Square Everglade,Four Square Botany Junction,Pak 'n Save Manukau,New World Papatoetoe,Warehouse:210.8083333333333
+Warehouse,Four Square Fair Price Henderson,Pak 'n Save Lincoln Road,Warehouse:131.08666666666656
+Warehouse,Four Square Glen Eden,New World Green Bay,New World New Lynn,Warehouse:154.67583333333337
+Warehouse,Four Square Pakuranga Heights,New World Botany,Warehouse:204.44833333333347
+Warehouse,Four Square St Heliers,New World Eastridge,Warehouse:197.01000000000008
+Warehouse,New World Birkenhead,Pak 'n Save Wairau Road,Warehouse:201.03208333333322
+Warehouse,New World Birkenhead,Four Square Lancaster,Pak 'n Save Wairau Road,Warehouse:224.6716666666665
+Warehouse,New World Birkenhead,Four Square Lancaster,Pak 'n Save Wairau Road,New World Milford,Warehouse:252.93874999999989
+Warehouse,New World Botany,Pak 'n Save Botany,Four Square Pakuranga Heights,Warehouse:213.54208333333338
+Warehouse,New World Browns Bay,Four Square Torbay,Warehouse:253.71749999999992
+Warehouse,New World Browns Bay,Four Square Torbay,New World Long Bay,Pak 'n Save Albany,Warehouse:291.80041666666637
+Warehouse,New World Devonport,New World Metro Shore City,Warehouse:224.535
+Warehouse,New World Devonport,New World Metro Shore City,New World Milford,Warehouse:257.01958333333346
+Warehouse,New World Eastridge,New World Remuera,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse:202.0029166666667
+Warehouse,New World Green Bay,New World New Lynn,Pak 'n Save Mt Albert,Warehouse:122.30916666666674
+Warehouse,New World Howick,Four Square Cockle Bay,Pak 'n Save Botany,Warehouse:254.17750000000012
+Warehouse,New World Howick,Four Square Cockle Bay,Pak 'n Save Botany,New World Botany,Warehouse:265.6162500000002
+Warehouse,New World Long Bay,Four Square Torbay,New World Browns Bay,Warehouse:265.61583333333346
+Warehouse,New World Long Bay,Four Square Torbay,New World Browns Bay,New World Albany,Warehouse:287.79374999999993
+Warehouse,New World Milford,New World Metro Shore City,Warehouse:180.9487499999999
+Warehouse,New World New Lynn,Pak 'n Save Mt Albert,Four Square Alberton,New World Mt Roskill,Warehouse:129.38041666666675
+Warehouse,New World Ormiston,Pak 'n Save Ormiston,Four Square Botany Junction,Warehouse:197.37833333333342
+Warehouse,New World Ormiston,Pak 'n Save Ormiston,Four Square Botany Junction,Four Square Everglade,Warehouse:214.67291666666685
+Warehouse,New World Papakura,Pak 'n Save Papakura,New World Southmall,Warehouse:224.65041666666676
+Warehouse,New World Remuera,Four Square Ellerslie,Warehouse:130.16625000000002
+Warehouse,New World Remuera,New World Stonefields,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse:176.26208333333335
+Warehouse,New World Southmall,Pak 'n Save Clendon,Warehouse:173.92874999999992
+Warehouse,Four Square Alberton,New World Victoria Park,New World Metro Queen St,Warehouse:147.20958333333326
+Warehouse,Pak 'n Save Albany,New World Albany,New World Browns Bay,Warehouse:253.22375000000002
+Warehouse,Pak 'n Save Botany,New World Botany,Warehouse:205.30375000000006
+Warehouse,Pak 'n Save Glen Innes,Four Square St Heliers,New World Eastridge,Warehouse:218.01500000000007
+Warehouse,Pak 'n Save Ormiston,Four Square Everglade,Warehouse:190.45166666666674
+Warehouse,Pak 'n Save Ormiston,Four Square Botany Junction,Four Square Everglade,Warehouse:203.2408333333334
+Warehouse,Pak 'n Save Papakura,New World Southmall,Four Square Everglade,Warehouse:214.17708333333334
+Warehouse,Pak 'n Save Papakura,New World Southmall,Four Square Everglade,Pak 'n Save Manukau,Warehouse:235.9675
+Warehouse,Pak 'n Save Sylvia Park,Four Square Ellerslie,Warehouse:143.2912500000001
+Warehouse,Pak 'n Save Sylvia Park,New World Stonefields,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse:186.35250000000008
+Warehouse,Pak 'n Save Wairau Road,New World Milford,Warehouse:190.64375000000015
+Warehouse,Pak 'n Save Wairau Road,New World Milford,New World Metro Shore City,Warehouse:207.42958333333334
+Warehouse,Pak 'n Save Westgate,Four Square Hobsonville,Warehouse:158.38166666666677
+Warehouse,Pak 'n Save Westgate,Four Square Hobsonville,Pak 'n Save Lincoln Road,Warehouse:188.44750000000002
+Warehouse,Four Square Alberton,New World Mt Roskill,Warehouse:72.25
 Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Warehouse:92.10791666666667
 Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,Pak 'n Save Royal Oak,Warehouse:139.96583333333334
-Warehouse,Pak 'n Save Ormiston,Warehouse:174.55375
-Warehouse,Pak 'n Save Papakura,Warehouse:172.04291666666674
-Warehouse,Pak 'n Save Royal Oak,Warehouse:60.860833333333254
+Warehouse,Four Square Botany Junction,New World Ormiston,Warehouse:183.5041666666668
+Warehouse,Four Square Botany Junction,Pak 'n Save Ormiston,New World Ormiston,Pak 'n Save Manukau,Warehouse:217.07916666666688
+Warehouse,Four Square Cockle Bay,New World Howick,Warehouse:232.82416666666649
+Warehouse,Four Square Cockle Bay,New World Howick,Pak 'n Save Botany,New World Ormiston,Warehouse:282.7516666666666
+Warehouse,Four Square Everglade,Four Square Botany Junction,Pak 'n Save Manukau,Warehouse:191.95416666666668
+Warehouse,Four Square Everglade,New World Ormiston,Four Square Botany Junction,Pak 'n Save Manukau,Warehouse:214.20416666666668
+Warehouse,Four Square Fair Price Henderson,Pak 'n Save Henderson,Warehouse:144.8083333333332
+Warehouse,Four Square Glen Eden,New World Green Bay,Warehouse:127.96666666666655
+Warehouse,Four Square Glen Eden,New World Green Bay,Pak 'n Save Mt Albert,Warehouse:149.82166666666674
+Warehouse,Four Square Glen Eden,New World Green Bay,New World New Lynn,Pak 'n Save Mt Albert,Warehouse:171.36708333333328
+Warehouse,Four Square Hobsonville,Pak 'n Save Westgate,Four Square Fair Price Henderson,Pak 'n Save Henderson,Warehouse:233.08999999999972
+Warehouse,Four Square Lancaster,New World Birkenhead,New World Metro Shore City,Warehouse:241.27458333333323
+Warehouse,Four Square Lancaster,New World Birkenhead,New World Milford,New World Metro Shore City,Warehouse:266.96958333333316
+Warehouse,Four Square Pakuranga Heights,Pak 'n Save Sylvia Park,Four Square Ellerslie,Warehouse:197.50250000000008
+Warehouse,Four Square Pakuranga Heights,Pak 'n Save Sylvia Park,Four Square Ellerslie,New World Remuera,Warehouse:227.32250000000008
+Warehouse,Four Square Torbay,New World Long Bay,Warehouse:246.77583333333322
+Warehouse,New World Albany,Pak 'n Save Albany,Warehouse:203.53666666666646
+Warehouse,New World Albany,Pak 'n Save Albany,Pak 'n Save Wairau Road,Warehouse:234.36500000000004
+Warehouse,New World Birkenhead,New World Metro Shore City,Warehouse:201.13583333333324
+Warehouse,New World Birkenhead,New World Metro Shore City,New World Milford,Warehouse:233.62041666666673
+Warehouse,New World Botany,New World Ormiston,Four Square Botany Junction,Warehouse:222.39541666666668
+Warehouse,New World Botany,New World Ormiston,Four Square Botany Junction,Pak 'n Save Manukau,Warehouse:238.2066666666668
+Warehouse,New World Browns Bay,New World Albany,Warehouse:240.83874999999978
+Warehouse,New World Browns Bay,Four Square Torbay,New World Albany,Warehouse:277.43666666666644
+Warehouse,New World Devonport,New World Victoria Park,Warehouse:227.33041666666676
+Warehouse,New World Devonport,New World Metro Queen St,New World Victoria Park,Warehouse:253.9354166666669
+Warehouse,New World Eastridge,New World Remuera,Warehouse:159.40375
+Warehouse,New World Eastridge,New World Remuera,Four Square Ellerslie,Warehouse:186.62375000000003
+Warehouse,New World Eastridge,New World Remuera,New World Stonefields,Four Square Ellerslie,Warehouse:217.3404166666667
+Warehouse,New World Green Bay,New World New Lynn,Warehouse:105.61791666666682
+Warehouse,New World Green Bay,New World New Lynn,Four Square Alberton,Warehouse:146.28500000000005
+Warehouse,New World Green Bay,New World New Lynn,Four Square Alberton,New World Mt Roskill,Warehouse:151.40375000000014
+Warehouse,New World Howick,Pak 'n Save Botany,Warehouse:234.33250000000007
+Warehouse,New World Howick,Pak 'n Save Botany,New World Botany,Warehouse:245.77125000000018
+Warehouse,New World Long Bay,New World Browns Bay,Warehouse:254.19875000000008
+Warehouse,New World Milford,New World Victoria Park,Warehouse:185.21291666666673
+Warehouse,New World Milford,New World Victoria Park,New World Metro Queen St,Warehouse:207.57541666666654
+Warehouse,New World New Lynn,Four Square Alberton,Warehouse:114.26166666666676
+Warehouse,New World Ormiston,Pak 'n Save Ormiston,Warehouse:185.98583333333343
+Warehouse,New World Ormiston,Pak 'n Save Ormiston,Four Square Everglade,Warehouse:201.88375000000016
+Warehouse,New World Ormiston,Pak 'n Save Ormiston,Four Square Everglade,Pak 'n Save Manukau,Warehouse:223.67416666666685
+Warehouse,New World Papakura,Pak 'n Save Ormiston,Warehouse:249.16708333333352
+Warehouse,New World Papakura,Pak 'n Save Ormiston,Four Square Botany Junction,Warehouse:260.5595833333335
+Warehouse,New World Papatoetoe,Pak 'n Save Manukau,Four Square Everglade,Warehouse:175.025
+Warehouse,New World Papatoetoe,Pak 'n Save Manukau,Four Square Everglade,New World Ormiston,Warehouse:224.64666666666665
+Warehouse,New World Remuera,Pak 'n Save Royal Oak,New World Mt Roskill,Warehouse:146.87166666666675
+Warehouse,New World Southmall,Four Square Everglade,Pak 'n Save Manukau,Warehouse:189.455
+Warehouse,New World Southmall,Four Square Everglade,Pak 'n Save Manukau,Four Square Botany Junction,Warehouse:232.92749999999992
+Warehouse,New World Stonefields,Four Square Ellerslie,Warehouse:142.76041666666677
+Warehouse,New World Stonefields,Four Square Ellerslie,Pak 'n Save Royal Oak,Warehouse:158.13958333333343
+Warehouse,New World Victoria Park,New World Metro Queen St,Warehouse:119.95124999999982
+Warehouse,New World Victoria Park,New World Metro Queen St,New World Mt Roskill,Four Square Alberton,Warehouse:196.22583333333324
+Warehouse,Pak 'n Save Albany,Pak 'n Save Wairau Road,Warehouse:217.46583333333353
+Warehouse,Pak 'n Save Albany,Pak 'n Save Wairau Road,New World Milford,Warehouse:245.7329166666669
+Warehouse,Pak 'n Save Botany,Four Square Botany Junction,Warehouse:205.25750000000002
+Warehouse,Pak 'n Save Botany,New World Botany,Four Square Botany Junction,Warehouse:216.69625
+Warehouse,Pak 'n Save Botany,New World Botany,New World Ormiston,Four Square Botany Junction,Warehouse:239.35625000000002
+Warehouse,Pak 'n Save Clendon,New World Southmall,Pak 'n Save Manukau,Warehouse:204.87958333333341
+Warehouse,Pak 'n Save Glen Innes,Four Square St Heliers,Four Square Ellerslie,Warehouse:208.25083333333325
+Warehouse,Pak 'n Save Glen Innes,Four Square St Heliers,New World Stonefields,Four Square Ellerslie,Warehouse:226.08791666666676
+Warehouse,Four Square Alberton,Pak 'n Save Lincoln Road,Four Square Fair Price Henderson,Warehouse:165.01166666666666
+Warehouse,Four Square Alberton,Pak 'n Save Henderson,Pak 'n Save Lincoln Road,Four Square Fair Price Henderson,Warehouse:202.64083333333343
+Warehouse,Pak 'n Save Mangere,New World Mt Roskill,Warehouse:114.68624999999999
+Warehouse,Pak 'n Save Mangere,New World Mt Roskill,Pak 'n Save Mt Albert,Warehouse:156.81916666666666
+Warehouse,Pak 'n Save Manukau,Four Square Everglade,Warehouse:156.13625000000002
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Mt Roskill,New World Green Bay,Warehouse:164.10208333333316
+Warehouse,Pak 'n Save Papakura,New World Southmall,Warehouse:192.97
 Warehouse,Pak 'n Save Royal Oak,New World Mt Roskill,Warehouse:85.62124999999999
-Warehouse,Pak 'n Save Royal Oak,New World Mt Roskill,Pak 'n Save Mt Albert,Warehouse:127.75416666666666
-Warehouse,Pak 'n Save Sylvia Park,Warehouse:145.13416666666674
-Warehouse,Pak 'n Save Sylvia Park,Four Square Ellerslie,Warehouse:143.2912500000001
+Warehouse,Pak 'n Save Royal Oak,Four Square Alberton,New World Mt Roskill,Warehouse:124.19041666666658
+Warehouse,Pak 'n Save Sylvia Park,New World Stonefields,Warehouse:174.39500000000015
 Warehouse,Pak 'n Save Sylvia Park,New World Stonefields,Four Square Ellerslie,Warehouse:170.97333333333341
+Warehouse,Pak 'n Save Sylvia Park,New World Stonefields,Four Square Ellerslie,New World Remuera,Warehouse:200.79333333333346
+Warehouse,Pak 'n Save Wairau Road,New World Metro Shore City,Warehouse:188.65083333333334
+Warehouse,Four Square Alberton,Pak 'n Save Lincoln Road,Pak 'n Save Westgate,Warehouse:179.12458333333333
+Warehouse,Four Square Alberton,Warehouse:67.13124999999992
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,New World Green Bay,Warehouse:130.96458333333317
+Warehouse,Four Square Botany Junction,Warehouse:158.02041666666673
+Warehouse,Four Square Botany Junction,Pak 'n Save Botany,New World Botany,Pak 'n Save Manukau,Warehouse:236.55708333333342
+Warehouse,Four Square Cockle Bay,Warehouse:229.52958333333328
+Warehouse,Four Square Cockle Bay,Pak 'n Save Botany,Warehouse:240.8449999999999
+Warehouse,Four Square Cockle Bay,New World Botany,Pak 'n Save Botany,Warehouse:259.31749999999994
+Warehouse,Four Square Cockle Bay,New World Botany,Pak 'n Save Botany,New World Ormiston,Warehouse:281.9774999999999
+Warehouse,Four Square Ellerslie,Warehouse:103.22416666666676
+Warehouse,Four Square Everglade,Warehouse:137.37874999999997
+Warehouse,Four Square Everglade,New World Howick,Warehouse:233.73833333333323
+Warehouse,Four Square Everglade,Pak 'n Save Ormiston,New World Howick,Warehouse:260.70083333333304
+Warehouse,Four Square Everglade,Pak 'n Save Ormiston,Pak 'n Save Botany,New World Howick,Warehouse:274.13083333333304
+Warehouse,Four Square Fair Price Henderson,Warehouse:119.63625
+Warehouse,Four Square Fair Price Henderson,Pak 'n Save Westgate,Warehouse:160.6433333333333
+Warehouse,Four Square Fair Price Henderson,Pak 'n Save Westgate,Four Square Hobsonville,Warehouse:200.33958333333328
+Warehouse,Four Square Glen Eden,Warehouse:108.83708333333324
+Warehouse,Four Square Glen Eden,New World New Lynn,Warehouse:125.45333333333342
+Warehouse,Four Square Alberton,Four Square Glen Eden,New World New Lynn,Warehouse:161.24958333333336
+Warehouse,Four Square Hobsonville,Warehouse:137.95375
+Warehouse,Four Square Alberton,Four Square Hobsonville,Warehouse:171.8787500000002
+Warehouse,Four Square Alberton,Pak 'n Save Lincoln Road,Four Square Hobsonville,Warehouse:198.39291666666668
+Warehouse,Four Square Alberton,Pak 'n Save Lincoln Road,Pak 'n Save Westgate,Four Square Hobsonville,Warehouse:218.82083333333333
+Warehouse,Four Square Lancaster,Warehouse:181.72874999999996
+Warehouse,Four Square Alberton,Four Square Lancaster,Warehouse:208.98708333333343
+Warehouse,Four Square Alberton,Four Square Lancaster,New World Birkenhead,Warehouse:224.03208333333342
+Warehouse,Four Square Alberton,New World Victoria Park,Four Square Lancaster,New World Birkenhead,Warehouse:245.53458333333347
+Warehouse,Four Square Pakuranga Heights,Warehouse:154.1833333333335
+Warehouse,Four Square Pakuranga Heights,Pak 'n Save Glen Innes,Warehouse:211.75958333333327
+Warehouse,Four Square Pakuranga Heights,Pak 'n Save Glen Innes,Four Square St Heliers,Warehouse:249.52625
+Warehouse,Four Square Pakuranga Heights,Pak 'n Save Glen Innes,New World Eastridge,Four Square St Heliers,Warehouse:282.9579166666666
+Warehouse,Four Square St Heliers,Warehouse:183.5275
+Warehouse,Four Square St Heliers,Pak 'n Save Glen Innes,Warehouse:198.1749999999999
+Warehouse,Four Square Torbay,Warehouse:232.415
+Warehouse,Four Square Torbay,Pak 'n Save Westgate,Warehouse:268.1925
+Warehouse,Four Square Torbay,Pak 'n Save Wairau Road,Pak 'n Save Westgate,Warehouse:310.55666666666673
+Warehouse,New World Albany,Warehouse:190.5816666666665
+Warehouse,New World Albany,Pak 'n Save Wairau Road,Warehouse:221.41
+Warehouse,New World Albany,Pak 'n Save Wairau Road,Four Square Lancaster,Warehouse:274.3695833333335
+Warehouse,New World Albany,Pak 'n Save Albany,Pak 'n Save Wairau Road,Four Square Lancaster,Warehouse:287.32458333333346
+Warehouse,New World Birkenhead,Warehouse:156.63499999999996
+Warehouse,New World Birkenhead,Four Square Alberton,Warehouse:185.0216666666665
+Warehouse,New World Birkenhead,New World Victoria Park,Four Square Alberton,Warehouse:206.07208333333327
+Warehouse,New World Birkenhead,New World Victoria Park,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse:215.6079166666667
+Warehouse,New World Botany,Warehouse:188.34291666666678
+Warehouse,New World Botany,Four Square Botany Junction,Warehouse:199.7354166666667
+Warehouse,New World Botany,Four Square Botany Junction,New World Southmall,Warehouse:241.54458333333343
+Warehouse,New World Botany,Four Square Botany Junction,Pak 'n Save Ormiston,New World Southmall,Warehouse:271.3954166666669
+Warehouse,New World Browns Bay,Warehouse:218.66083333333324
+Warehouse,New World Browns Bay,Pak 'n Save Albany,Warehouse:242.01374999999973
+Warehouse,New World Browns Bay,Pak 'n Save Albany,New World Long Bay,Warehouse:304.4891666666665
+Warehouse,New World Devonport,Warehouse:206.28041666666675
+Warehouse,Four Square Alberton,New World Devonport,Warehouse:233.53874999999996
+Warehouse,Four Square Alberton,New World Metro Queen St,New World Devonport,Warehouse:263.32874999999996
+Warehouse,Four Square Alberton,New World Metro Queen St,New World Metro Shore City,New World Devonport,Warehouse:284.04041666666666
+Warehouse,New World Eastridge,Warehouse:149.95625
+Warehouse,Four Square Alberton,New World Eastridge,Warehouse:177.21458333333342
+Warehouse,Four Square Alberton,New World Remuera,New World Eastridge,Warehouse:196.11625000000018
+Warehouse,Four Square Alberton,New World Remuera,New World Eastridge,Pak 'n Save Glen Innes,Warehouse:230.40458333333333
+Warehouse,New World Green Bay,Warehouse:78.90875
+Warehouse,Four Square Alberton,New World Green Bay,Warehouse:120.96458333333317
+Warehouse,Four Square Alberton,Four Square Glen Eden,New World Green Bay,Warehouse:163.76291666666648
+Warehouse,Four Square Alberton,New World New Lynn,Four Square Glen Eden,New World Green Bay,Warehouse:181.93291666666667
+Warehouse,New World Howick,Warehouse:207.065
+Warehouse,New World Howick,New World Ormiston,Warehouse:245.67708333333348
+Warehouse,New World Howick,New World Ormiston,Pak 'n Save Ormiston,Warehouse:261.47583333333347
+Warehouse,New World Long Bay,Warehouse:224.95125000000002
+Warehouse,New World Long Bay,New World Albany,Warehouse:249.57125000000002
+Warehouse,New World Long Bay,New World Browns Bay,New World Albany,Warehouse:276.3766666666666
+Warehouse,New World Metro Queen St,Warehouse:100.5891666666665
+Warehouse,New World Metro Queen St,Pak 'n Save Mt Albert,Warehouse:123.17749999999992
+Warehouse,Four Square Alberton,New World Metro Queen St,Pak 'n Save Mt Albert,Warehouse:150.4354166666666
+Warehouse,Four Square Alberton,New World Metro Queen St,New World New Lynn,Pak 'n Save Mt Albert,Warehouse:199.06374999999986
+Warehouse,New World Metro Shore City,Warehouse:150.7866666666665
+Warehouse,Four Square Alberton,New World Metro Shore City,Pak 'n Save Wairau Road,Warehouse:217.9029166666666
+Warehouse,New World Milford,Warehouse:164.16291666666672
+Warehouse,New World Milford,Pak 'n Save Mt Albert,Warehouse:186.75124999999994
+Warehouse,New World Milford,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse:202.0854166666667
+Warehouse,New World Milford,New World Victoria Park,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse:223.13583333333344
+Warehouse,New World Mt Roskill,Warehouse:32.83958333333332
+Warehouse,New World Mt Roskill,Pak 'n Save Mt Albert,Warehouse:74.9725
+Warehouse,New World Mt Roskill,New World Metro Queen St,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse:171.35125
+Warehouse,New World New Lynn,Warehouse:73.5945833333335
+Warehouse,New World New Lynn,Pak 'n Save Mt Albert,Warehouse:90.28583333333341
+Warehouse,New World New Lynn,New World Mt Roskill,Pak 'n Save Mt Albert,Warehouse:130.34000000000017
+Warehouse,New World Ormiston,Warehouse:170.1870833333335
+Warehouse,New World Ormiston,Pak 'n Save Mangere,Warehouse:201.3675000000003
+Warehouse,New World Ormiston,Four Square Botany Junction,Pak 'n Save Mangere,Warehouse:212.76041666666694
+Warehouse,New World Ormiston,Four Square Everglade,Four Square Botany Junction,Pak 'n Save Mangere,Warehouse:256.03000000000026
+Warehouse,New World Papakura,Warehouse:189.43166666666679
+Warehouse,New World Papakura,New World Papatoetoe,Warehouse:222.63750000000024
+Warehouse,New World Papakura,New World Papatoetoe,Pak 'n Save Mangere,Warehouse:253.8183333333335
+Warehouse,New World Papatoetoe,Warehouse:114.54125
+Warehouse,New World Papatoetoe,Four Square Everglade,Warehouse:162.80875
+Warehouse,New World Papatoetoe,Four Square Everglade,Pak 'n Save Ormiston,Warehouse:216.79666666666648
+Warehouse,New World Papatoetoe,Pak 'n Save Mangere,Four Square Everglade,Pak 'n Save Ormiston,Warehouse:279.000833333333
+Warehouse,New World Remuera,Warehouse:102.94624999999999
+Warehouse,New World Remuera,Pak 'n Save Royal Oak,Warehouse:122.11124999999998
+Warehouse,New World Southmall,Warehouse:146.45749999999998
+Warehouse,New World Southmall,Four Square Everglade,Warehouse:167.66458333333333
+Warehouse,New World Southmall,Four Square Everglade,New World Ormiston,Warehouse:217.28625000000002
+Warehouse,New World Southmall,Four Square Everglade,Pak 'n Save Manukau,New World Ormiston,Warehouse:245.09416666666675
+Warehouse,New World Stonefields,Warehouse:146.1820833333335
+Warehouse,New World Stonefields,Pak 'n Save Glen Innes,Warehouse:182.0283333333333
+Warehouse,New World Stonefields,Pak 'n Save Glen Innes,New World Metro Queen St,Warehouse:219.80916666666656
+Warehouse,New World Victoria Park,Warehouse:97.58874999999999
+Warehouse,New World Victoria Park,Four Square Alberton,Warehouse:125.97583333333326
+Warehouse,New World Victoria Park,New World Metro Queen St,Four Square Alberton,Pak 'n Save Lincoln Road,Warehouse:219.32416666666657
+Warehouse,Pak 'n Save Albany,Warehouse:186.6375
+Warehouse,Four Square Alberton,Pak 'n Save Albany,Warehouse:213.89583333333314
+Warehouse,Four Square Alberton,New World Metro Queen St,Pak 'n Save Albany,Warehouse:243.68624999999994
+Warehouse,Pak 'n Save Botany,Warehouse:193.86499999999998
+Warehouse,Pak 'n Save Botany,Four Square Everglade,Warehouse:211.15916666666675
+Warehouse,Pak 'n Save Botany,New World Ormiston,Four Square Everglade,Warehouse:232.42291666666668
+Warehouse,Pak 'n Save Botany,Four Square Botany Junction,New World Ormiston,Four Square Everglade,Warehouse:246.63916666666677
+Warehouse,Pak 'n Save Clendon,Warehouse:143.65124999999998
+Warehouse,Pak 'n Save Clendon,Pak 'n Save Mangere,Warehouse:174.83208333333351
+Warehouse,Pak 'n Save Clendon,Four Square Everglade,Pak 'n Save Mangere,Warehouse:212.14000000000001
+Warehouse,Pak 'n Save Glen Innes,Warehouse:166.76583333333326
+Warehouse,Pak 'n Save Glen Innes,Four Square Ellerslie,Warehouse:176.81125000000003
+Warehouse,Pak 'n Save Glen Innes,Four Square Ellerslie,New World Remuera,Warehouse:206.63125
+Warehouse,Pak 'n Save Henderson,Warehouse:120.41624999999999
+Warehouse,Four Square Alberton,Pak 'n Save Henderson,Warehouse:154.34124999999992
+Warehouse,Four Square Alberton,Pak 'n Save Henderson,Pak 'n Save Lincoln Road,Warehouse:175.74666666666664
+Warehouse,Pak 'n Save Lincoln Road,Warehouse:104.19250000000001
+Warehouse,Four Square Alberton,Pak 'n Save Lincoln Road,Warehouse:138.11749999999992
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,Pak 'n Save Lincoln Road,Warehouse:163.18791666666667
+Warehouse,Pak 'n Save Mangere,Warehouse:89.92541666666675
+Warehouse,Pak 'n Save Mangere,New World Papatoetoe,Warehouse:146.3783333333335
+Warehouse,Pak 'n Save Mangere,New World Papatoetoe,Pak 'n Save Sylvia Park,Warehouse:212.81583333333353
+Warehouse,Pak 'n Save Manukau,Warehouse:128.03125000000003
+Warehouse,Pak 'n Save Manukau,New World Papatoetoe,Warehouse:146.88541666666669
+Warehouse,Pak 'n Save Manukau,Four Square Botany Junction,New World Papatoetoe,Warehouse:191.54708333333346
+Warehouse,Pak 'n Save Manukau,Four Square Botany Junction,New World Papatoetoe,New World Mt Roskill,Warehouse:216.30791666666667
+Warehouse,Pak 'n Save Mt Albert,Warehouse:48.880416666666676
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,Warehouse:76.66708333333334
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,Four Square Ellerslie,Warehouse:158.60666666666665
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,Pak 'n Save Royal Oak,Four Square Ellerslie,Warehouse:175.95166666666674
+Warehouse,Pak 'n Save Ormiston,Warehouse:174.55375
+Warehouse,Pak 'n Save Ormiston,New World Southmall,Warehouse:216.36333333333351
+Warehouse,Pak 'n Save Ormiston,New World Southmall,Pak 'n Save Manukau,Warehouse:245.3320833333335
+Warehouse,Pak 'n Save Papakura,Warehouse:172.04291666666674
+Warehouse,Pak 'n Save Papakura,Pak 'n Save Clendon,Warehouse:203.3575
+Warehouse,Pak 'n Save Papakura,New World Southmall,Pak 'n Save Clendon,Warehouse:220.44124999999994
+Warehouse,Pak 'n Save Royal Oak,Warehouse:60.860833333333254
+Warehouse,Pak 'n Save Royal Oak,Four Square Ellerslie,Warehouse:114.28041666666658
+Warehouse,Pak 'n Save Royal Oak,Four Square Ellerslie,New World Remuera,Warehouse:144.10041666666658
+Warehouse,Four Square Alberton,Pak 'n Save Royal Oak,Four Square Ellerslie,New World Remuera,Warehouse:196.2358333333332
+Warehouse,Pak 'n Save Sylvia Park,Warehouse:145.13416666666674
+Warehouse,Pak 'n Save Sylvia Park,Four Square Pakuranga Heights,Warehouse:176.5395833333335
+Warehouse,Pak 'n Save Sylvia Park,Four Square Pakuranga Heights,New World Botany,Warehouse:226.80458333333348
+Warehouse,Pak 'n Save Sylvia Park,Four Square Pakuranga Heights,New World Botany,New World Stonefields,Warehouse:274.1758333333335
 Warehouse,Pak 'n Save Wairau Road,Warehouse:162.37666666666675
-Warehouse,Pak 'n Save Wairau Road,New World Milford,Warehouse:190.64375000000015
+Warehouse,Pak 'n Save Wairau Road,New World Metro Shore City,New World Birkenhead,Warehouse:243.39791666666684
 Warehouse,Pak 'n Save Westgate,Warehouse:118.68541666666675
+Warehouse,Four Square Alberton,Pak 'n Save Westgate,Warehouse:152.61041666666668
+Warehouse,Four Square Alberton,Pak 'n Save Mt Albert,Pak 'n Save Westgate,Warehouse:177.68083333333342

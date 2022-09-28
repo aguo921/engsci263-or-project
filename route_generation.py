@@ -1,3 +1,5 @@
+import random
+
 def calculate_route_capacity(route, demands, day_type):
     """ Calculate pallets delivered on route.
 
@@ -68,7 +70,7 @@ def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_co
         cost += (route_time - shift_time) * overtime_cost / 60
         return cost
 
-def insert_store(route, nodes, demands, durations, day_type, capacity=16):
+def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropout=0):
     """ Insert a store into the optimal position in a route.
 
         Parameters
@@ -83,6 +85,8 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16):
             Type of day.
         capacity : int (default=16)
             Capacity of truck.
+        dropout : float (default=0)
+            Value between 0 and 1. Rate at which better routes are dropped out.
         
         Returns
         -------
@@ -91,8 +95,12 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16):
         route_cost : float
             Cost of best route.
     """
+
     # get list of unvisited stores
     unvisited = [node for node in nodes if node not in route]
+
+    if unvisited == []:
+        return None
 
     # initiate best route and time
     best_route = route.copy()
@@ -109,7 +117,7 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16):
             current_time = calculate_route_time(current_route, durations, localised=True)
 
             # replace best time if new route time is better
-            if current_time < best_time:
+            if current_time < best_time and random.random() > dropout:
                 best_route = current_route
                 best_time = current_time
 
@@ -125,7 +133,7 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16):
         return None
 
 
-def generate_routes(nodes, demands, durations, weekday=True):
+def generate_routes(nodes, demands, durations, weekday=True, dropout=0):
     """ Generate feasible routes between warehouse and stores.
 
         Parameters
@@ -164,11 +172,11 @@ def generate_routes(nodes, demands, durations, weekday=True):
         # keep inserting routes until constraints are not met
         while (route is not None):
             routes.append(route)
-            route = insert_store(route[0], nodes, demands, durations, day_type)
+            route = insert_store(route[0], nodes, demands, durations, day_type, dropout=dropout)
             
     return routes
 
-def remove_duplicate_routes(routes):
+def remove_duplicate_routes(routes, remove_identical=False):
     """ Remove routes visiting identical stores.
 
         Parameters
@@ -181,14 +189,38 @@ def remove_duplicate_routes(routes):
         routes : list
             List of routes with duplicates removed.
     """
+    routes_to_remove = []
+
     # loop over every possible pair of routes
-    for route1 in routes:
-        for route2 in [route2 for route2 in routes if route1 != route2]:
+    for i in range(len(routes)):
+        for j in range(i + 1, len(routes)):
             # remove a route if they contain identical stores
-            if set(route1[0]) == set(route2[0]):
+            if set(routes[i][0]) == set(routes[j][0]):
                 # remove route with higher cost
-                if route2[1] < route1[1]:
-                    route1 = route2
-                routes.remove(route2)
+                if routes[i][1] < routes[j][1]:
+                    routes_to_remove.append(j)
+                else:
+                    routes_to_remove.append(i)
+
+    routes = [route for i, route in enumerate(routes) if i not in routes_to_remove]
+
+    return routes
+
+def write_routes(routes, filename):
+    with open(filename, "w") as f:
+        for route in routes:
+            f.write(",".join(route[0]))
+            f.write(":")
+            f.write(str(route[1]))
+            f.write("\n")
+
+def read_routes(filename):
+    routes = []
+    with open(filename, "r") as f:
+        for line in f:
+            route, cost = line.split(":")
+            cost = float(cost.strip())
+            route = route.split(",")
+            routes.append((route, cost))
 
     return routes
