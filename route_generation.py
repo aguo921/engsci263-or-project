@@ -17,7 +17,7 @@ def calculate_route_capacity(route, demands, day_type):
     """
     capacity = 0
     for i in range(1, len(route) - 1):
-        capacity += demands[demands["Supermarket"]==route[i]].iloc[0][day_type]
+        capacity += demands[demands.Supermarket==route[i]].iloc[0][day_type]
     return capacity
 
 def calculate_route_time(route, durations, localised=False, unloading=4, traffic_intensity=1):
@@ -46,21 +46,29 @@ def calculate_route_time(route, durations, localised=False, unloading=4, traffic
 
     # loop over trips between stores
     for i in range(len(route) - 1):
-        # obtain from and to stores
-        fro = route[i]
-        to = route[i + 1]
+        # obtain source and destination stores of individual trip
+        source = route[i]
+        destination = route[i + 1]
         
         # calculate travel time between stores
-        travel_time = traffic_intensity * durations.Duration[(durations["From"]==fro) & (durations["To"]==to)].iloc[0]
+        travel_time = traffic_intensity * durations.Duration[(durations.From==source) & (durations.To==destination)].iloc[0]
         
         # decrease weighting of trips to and from the warehouse
-        if localised and (fro == "Warehouse" or to == "Warehouse"):
+        if localised and (source == "Warehouse" or destination == "Warehouse"):
             time += 0.25 * travel_time
         else:
             time += travel_time
     return time
 
-def insert_store(route, nodes, demands, durations, day_type, capacity=16, time_limit=240):
+def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_cost=200):
+    if route_time < shift_time:
+        return route_time * shift_cost / 60
+    else:
+        cost = shift_time * shift_cost
+        cost += (route_time - shift_time) * overtime_cost / 60
+        return cost
+
+def insert_store(route, nodes, demands, durations, day_type, capacity=16):
     """ Insert a store into the optimal position in a route.
 
         Parameters
@@ -71,11 +79,17 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, time_l
             Store to insert into route.
         durations : dataframe
             Duration between nodes.
+        day_type : string
+            Type of day.
+        capacity : int (default=16)
+            Capacity of truck.
         
         Returns
         -------
         best_route : list
             List of nodes in optimal route.
+        route_cost : float
+            Cost of best route.
     """
     # get list of unvisited stores
     unvisited = [node for node in nodes if node not in route]
@@ -103,9 +117,10 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, time_l
     route_time = calculate_route_time(best_route, durations)
     route_capacity = calculate_route_capacity(route, demands, day_type)
     
-    # return best route if constraints are satisfied
-    if route_time <= time_limit and route_capacity <= capacity:
-        return best_route
+    # return best route if capacity constraint is satisfied
+    if route_capacity <= capacity:
+        route_cost = calculate_route_cost(route_time)
+        return (best_route, route_cost)
     else:
         return None
 
@@ -141,12 +156,15 @@ def generate_routes(nodes, demands, durations, weekday=True):
     # loop over every store
     for store in nodes:
         # initiate route to store
-        route = ["Warehouse", store, "Warehouse"]
+        initial_route = ["Warehouse", store, "Warehouse"]
+        route_time = calculate_route_time(initial_route, durations)
+        route_cost = calculate_route_cost(route_time)
+        route = (initial_route, route_cost)
 
         # keep inserting routes until constraints are not met
         while (route is not None):
             routes.append(route)
-            route = insert_store(route, nodes, demands, durations, day_type)
+            route = insert_store(route[0], nodes, demands, durations, day_type)
             
     return routes
 
@@ -167,7 +185,10 @@ def remove_duplicate_routes(routes):
     for route1 in routes:
         for route2 in [route2 for route2 in routes if route1 != route2]:
             # remove a route if they contain identical stores
-            if set(route1) == set(route2):
+            if set(route1[0]) == set(route2[0]):
+                # remove route with higher cost
+                if route2[1] < route1[1]:
+                    route1 = route2
                 routes.remove(route2)
 
     return routes
