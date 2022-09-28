@@ -1,0 +1,49 @@
+Brand,Location,Weekdays,Saturday
+Four Square,Alberton,2.1,0.5
+Four Square,Botany Junction,1.7,0.0
+Four Square,Cockle Bay,1.75,0.75
+Four Square,Ellerslie,2.0,0.75
+Four Square,Everglade,1.6,0.5
+Four Square,Fair Price Henderson,2.05,0.75
+Four Square,Glen Eden,1.7,0.5
+Four Square,Hobsonville,2.0,0.5
+Four Square,Lancaster,1.8,0.5
+Four Square,Pakuranga Heights,2.05,0.5
+Four Square,St Heliers,2.05,0.5
+Four Square,Torbay,1.95,0.0
+New World,Albany,5.65,2.0
+New World,Birkenhead,5.55,1.75
+New World,Botany,5.65,2.5
+New World,Browns Bay,5.45,1.5
+New World,Devonport,5.55,1.75
+New World,Eastridge,5.45,3.0
+New World,Green Bay,5.95,2.0
+New World,Howick,5.25,2.25
+New World,Long Bay,5.45,1.75
+New World,Metro Queen St,5.25,2.0
+New World,Metro Shore City,5.95,3.0
+New World,Milford,5.35,2.5
+New World,Mt Roskill,5.65,2.25
+New World,New Lynn,5.85,2.5
+New World,Ormiston,5.1,2.25
+New World,Papakura,6.05,1.5
+New World,Papatoetoe,5.75,2.0
+New World,Remuera,6.05,2.25
+New World,Southmall,5.35,2.5
+New World,Stonefields,5.7,2.25
+New World,Victoria Park,5.4,2.25
+Pak 'n Save,Albany,7.65,4.75
+Pak 'n Save,Botany,8.0,5.0
+Pak 'n Save,Clendon,7.75,4.75
+Pak 'n Save,Glen Innes,7.15,3.75
+Pak 'n Save,Henderson,7.05,5.25
+Pak 'n Save,Lincoln Road,8.05,4.5
+Pak 'n Save,Mangere,7.6,4.75
+Pak 'n Save,Manukau,7.4,4.5
+Pak 'n Save,Mt Albert,6.95,3.5
+Pak 'n Save,Ormiston,7.3,5.5
+Pak 'n Save,Papakura,7.7,4.75
+Pak 'n Save,Royal Oak,6.85,4.0
+Pak 'n Save,Sylvia Park,6.8,4.75
+Pak 'n Save,Wairau Road,7.15,5.0
+Pak 'n Save,Westgate,7.6,4.5

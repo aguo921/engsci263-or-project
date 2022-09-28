@@ -1,0 +1,49 @@
+Brand,Location,Weekdays,Saturday
+Four Square,Alberton,3,1
+Four Square,Botany Junction,2,0
+Four Square,Cockle Bay,2,1
+Four Square,Ellerslie,2,1
+Four Square,Everglade,2,1
+Four Square,Fair Price Henderson,3,1
+Four Square,Glen Eden,2,1
+Four Square,Hobsonville,2,1
+Four Square,Lancaster,2,1
+Four Square,Pakuranga Heights,3,1
+Four Square,St Heliers,3,1
+Four Square,Torbay,2,0
+New World,Albany,6,2
+New World,Birkenhead,6,2
+New World,Botany,6,3
+New World,Browns Bay,6,2
+New World,Devonport,6,2
+New World,Eastridge,6,3
+New World,Green Bay,6,2
+New World,Howick,6,3
+New World,Long Bay,6,2
+New World,Metro Queen St,6,2
+New World,Metro Shore City,6,3
+New World,Milford,6,3
+New World,Mt Roskill,6,3
+New World,New Lynn,6,3
+New World,Ormiston,6,3
+New World,Papakura,7,2
+New World,Papatoetoe,6,2
+New World,Remuera,7,3
+New World,Southmall,6,3
+New World,Stonefields,6,3
+New World,Victoria Park,6,3
+Pak 'n Save,Albany,8,5
+Pak 'n Save,Botany,8,5
+Pak 'n Save,Clendon,8,5
+Pak 'n Save,Glen Innes,8,4
+Pak 'n Save,Henderson,8,6
+Pak 'n Save,Lincoln Road,9,5
+Pak 'n Save,Mangere,8,5
+Pak 'n Save,Manukau,8,5
+Pak 'n Save,Mt Albert,7,4
+Pak 'n Save,Ormiston,8,6
+Pak 'n Save,Papakura,8,5
+Pak 'n Save,Royal Oak,7,4
+Pak 'n Save,Sylvia Park,7,5
+Pak 'n Save,Wairau Road,8,5
+Pak 'n Save,Westgate,8,5
