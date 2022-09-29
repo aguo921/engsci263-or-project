@@ -1,4 +1,5 @@
 import random
+import math
 
 def calculate_route_capacity(route, demands, day_type):
     """ Calculate pallets delivered on route.
@@ -18,8 +19,8 @@ def calculate_route_capacity(route, demands, day_type):
             Number of pallets delivered on route.
     """
     capacity = 0
-    for i in range(1, len(route) - 1):
-        capacity += demands[demands.Supermarket==route[i]].iloc[0][day_type]
+    for store in route[1:-1]:
+        capacity += demands[demands.Supermarket==store].iloc[0][day_type]
     return capacity
 
 def calculate_route_time(route, durations, localised=False, unloading=4, traffic_intensity=1):
@@ -64,10 +65,12 @@ def calculate_route_time(route, durations, localised=False, unloading=4, traffic
 
 def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_cost=200):
     if route_time < shift_time:
+        # shift costs can be fractional
         return route_time * shift_cost / 60
     else:
+        # overtime costs cannot be fractional
         cost = shift_time * shift_cost
-        cost += (route_time - shift_time) * overtime_cost / 60
+        cost += (route_time - shift_time) * math.ceiling(overtime_cost / 60)
         return cost
 
 def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropout=0):
@@ -106,6 +109,7 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
     best_route = route.copy()
     best_route.insert(1, unvisited[0])
     best_time = calculate_route_time(best_route, durations, localised=True)
+    best_store = unvisited[0]
 
     # loop over every unvisited store
     for node in unvisited:
@@ -120,17 +124,19 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
             if current_time < best_time and random.random() > dropout:
                 best_route = current_route
                 best_time = current_time
+                best_store = node
 
     # calculate route time and capacity of best route
     route_time = calculate_route_time(best_route, durations)
-    route_capacity = calculate_route_capacity(route, demands, day_type)
+    route_capacity = calculate_route_capacity(best_route, demands, day_type)
     
     # return best route if capacity constraint is satisfied
     if route_capacity <= capacity:
         route_cost = calculate_route_cost(route_time)
         return (best_route, route_cost)
     else:
-        return None
+        new_nodes = [node for node in nodes if node != best_store]
+        return insert_store(route, new_nodes, demands, durations, day_type, capacity, dropout)
 
 
 def generate_routes(nodes, demands, durations, weekday=True, dropout=0):
@@ -144,8 +150,10 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0):
             Demands at each node.
         durations : dataframe
             Durations between nodes.
-        weekday : boolean
+        weekday : boolean (default=True)
             Whether the day is a weekday or not.
+        dropout : float (default=0)
+            Value between 0 and 1. Rate at which improved routes are dropped.
 
         Returns
         -------
@@ -176,7 +184,7 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0):
             
     return routes
 
-def remove_duplicate_routes(routes, remove_identical=False):
+def remove_duplicate_routes(routes):
     """ Remove routes visiting identical stores.
 
         Parameters
@@ -206,7 +214,45 @@ def remove_duplicate_routes(routes, remove_identical=False):
 
     return routes
 
+def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0]):
+    """ Aggregate generated routes over multiple regions for different dropout rates.
+
+        Parameters
+        ----------
+        regions : list
+            List of lists containing stores in each region.
+        demands : dataframe
+            Demands at each store.
+        durations : dataframe
+            Travel times between each store.
+        weekday : boolean (default=True)
+            Whether the day is a weekday or not.
+        dropouts : list (default=[0])
+            List of dropout rates.
+
+        Returns
+        -------
+        all_routes : list
+            List of all generated routes across the regions.
+    """
+    all_routes = []
+    for region in regions:
+        for dropout in dropouts:
+            all_routes.append(generate_routes(region, demands, durations, weekday, dropout=dropout))
+
+    all_routes = [route for routes in all_routes for route in routes]
+    return remove_duplicate_routes(all_routes)
+
 def write_routes(routes, filename):
+    """ Write routes to a text file.
+
+        Parameters
+        ----------
+        routes : list
+            List of routes to write to file.
+        filename : string
+            Name of text file in which to write routes.    
+    """
     with open(filename, "w") as f:
         for route in routes:
             f.write(",".join(route[0]))
@@ -215,6 +261,13 @@ def write_routes(routes, filename):
             f.write("\n")
 
 def read_routes(filename):
+    """ Read routes from a text file.
+
+        Parameters
+        ----------
+        filename : string
+            Name of text file from which to read routes.
+    """
     routes = []
     with open(filename, "r") as f:
         for line in f:
@@ -224,3 +277,18 @@ def read_routes(filename):
             routes.append((route, cost))
 
     return routes
+
+def read_nodes(filename):
+    """ Read supermarket nodes from a text file.
+
+        Parameters
+        ----------
+        filename : string
+            Name of text file from which to read nodes.
+    """
+    nodes = []
+    with open(filename, "r") as f:
+        for line in f:
+            nodes.append(line.strip())
+
+    return nodes
