@@ -64,15 +64,21 @@ def calculate_route_time(route, durations, localised=False, unloading=4, traffic
             time += travel_time
     return time
 
-def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_cost=200):
+def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_cost=200, mainfreight=False):
     if route_time < shift_time:
         # shift costs can be fractional
-        return route_time * shift_cost / 60
+        if mainfreight:
+            return 3000
+        else:
+            return route_time * shift_cost / 60
     else:
-        # overtime costs cannot be fractional
-        cost = shift_time * shift_cost
-        cost += (route_time - shift_time) * math.ceiling(overtime_cost / 60)
-        return cost
+        if mainfreight:
+            return math.ceiling(route_time / 240)
+        else:
+            # overtime costs cannot be fractional
+            cost = shift_time * shift_cost
+            cost += (route_time - shift_time) * math.ceiling(overtime_cost / 60)
+            return cost
 
 def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropout=0):
     """ Insert a store into the optimal position in a route.
@@ -133,8 +139,9 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
     
     # return best route if capacity constraint is satisfied
     if route_capacity <= capacity:
-        route_cost = calculate_route_cost(route_time)
-        return (best_route, route_cost)
+        cost = calculate_route_cost(route_time)
+        mainfreight_cost = calculate_route_cost(route_time, mainfreight=True)
+        return (best_route, cost, mainfreight_cost)
     else:
         new_nodes = [node for node in nodes if node != best_store]
         return insert_store(route, new_nodes, demands, durations, day_type, capacity, dropout)
@@ -175,8 +182,10 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0):
         # initiate route to store
         initial_route = ["Warehouse", store, "Warehouse"]
         route_time = calculate_route_time(initial_route, durations)
-        route_cost = calculate_route_cost(route_time)
-        route = (initial_route, route_cost)
+        cost = calculate_route_cost(route_time)
+        mainfreight_cost = calculate_route_cost(route_time, mainfreight=True)
+
+        route = (initial_route, cost, mainfreight_cost)
 
         # keep inserting routes until constraints are not met
         while (route is not None):
@@ -246,8 +255,9 @@ def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0]):
 
 def convert_routes_to_dataframe(routes):
     return pd.DataFrame({
-        "route": [route[0] for route in routes],
-        "cost": [route[1] for route in routes]
+        "Route": [route[0] for route in routes],
+        "Cost": [route[1] for route in routes],
+        "MainfreightCost": [route[2] for route in routes]
     })
 
 def read_regions(filename):
