@@ -1,0 +1,101 @@
+---
+title: "Lab 4 Task 4: Visualising demand data"
+author: "Angela Guo"
+output: html_document
+---
+## Required libraries
+```{r, message=FALSE}
+library(readr)
+library("tidyverse")
+library(lubridate)
+```
+
+## Reading the demand data
+```{r}
+Demand = read_csv("FoodstuffsDemands.csv",show_col_types=FALSE)
+head(Demand)
+```
+
+## Parsing the data
+```{r}
+Demand = Demand %>% 
+  mutate("Type"=ifelse(
+    grepl("Four Square", Supermarket, fixed=TRUE), "Four Square", ifelse(
+    grepl("New World", Supermarket, fixed=TRUE), "New World", "Pak 'n Save"
+  ))) %>%
+  pivot_longer(-c(Type, Supermarket), names_to="Date", values_to="Demand") %>%
+  mutate(Date=ymd(Date)) %>%
+  mutate(Weekday=wday(Date, label=TRUE))
+
+head(Demand)
+```
+## Data summaries
+```{r}
+Demand %>%
+  group_by(Weekday) %>%
+  summarise(
+    Average=mean(Demand),
+    LQ=quantile(Demand,0.25),
+    Median=median(Demand),
+    UQ=quantile(Demand,0.75),
+  )
+```
+
+```{r}
+Demand %>%
+  group_by(Type) %>%
+  summarise(TotalDemand=sum(Demand))
+```
+
+
+## Data visualisation
+
+```{r, message=FALSE}
+Demand %>%
+  group_by(Type, Date) %>%
+  summarise(TotalDemand=sum(Demand)) %>%
+  ggplot() +
+  geom_line(aes(x=Date, y=TotalDemand, color=Type)) +
+  labs(title="Total daily demand of pallets to Foodstuffs supermarket chains in Auckland") +
+  ylab("Total Daily Demand")
+```
+
+```{r}
+Demand %>%
+  group_by(Type, Weekday) %>%
+  ggplot() +
+  geom_boxplot(aes(x=Weekday, y=Demand, color=Type)) +
+  labs(title="Daily demand of pallets to Foodstuffs supermarket chains in Auckland") +
+  ylab("Daily Demand")
+```
+
+
+## Data description
+We have data on the number of pallets to be delivered to 49 Foodstuff stores between 4th July 2022 and 31st July 2022.
+
+When visualising our data, we separated the stores into three supermarket chains: Four Square, New World and Pak 'n Save.
+
+We observe that Four Square supermarkets have much lower total demand than New World and Pak 'n Save supermarkets, which is unsurprising as Four Square supermarkets are smaller in scale. We also observe that Pak 'n Save supermarkets have slightly higher demand than New World supermarkets, which may be because they have cheaper prices and higher volume in sales.
+
+We observe a weekly cycle in the demand for all chains. Demand is consistently high during the weekdays, but demand is lower on Saturdays and is zero on Sundays. This is consistent with expectations of less deliveries during the weekend.
+
+We observe no long term trend in the demand. The weekly cycles remain similar and consistent.
+
+## Calculating the demand estimates
+
+```{r}
+DemandEstimates = Demand %>%
+  subset(Weekday != 'Sun') %>%
+  mutate(DayType=ifelse(Weekday == 'Sat', 'Saturday', 'Weekday')) %>%
+  group_by(DayType, Supermarket, Type) %>%
+  summarise(UQ=quantile(Demand, 0.75)) %>%
+  pivot_wider(names_from=DayType, values_from=UQ)
+
+write.csv(DemandEstimates, "DemandEstimates.csv", row.names=FALSE)
+```
+
+## Plotting the demand estimates
+```{r}
+ggplot(DemandEstimates) + geom_point(aes(x=Saturday, y=Weekday, color=Type, alpha=0.1)) + guides(alpha="none")
+```
+
