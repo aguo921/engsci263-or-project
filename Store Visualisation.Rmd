@@ -55,7 +55,12 @@ head(Joined)
 ```
 ## Plotting travel distance vs duration
 ```{r}
-Joined %>% ggplot() + geom_point(aes(x=Distance, y=Duration, color="red", alpha=0.1)) + xlab("Distance (km)") + ylab("Duration (min)")
+Joined %>% ggplot() + 
+  geom_point(aes(x=Distance, y=Duration, color="red", alpha=0.1)) +
+  labs(title="Distance vs Duration of each trip") +
+  xlab("Distance (km)") + 
+  ylab("Duration (min)") + 
+  guides(color="none", alpha="none")
 ```
 ## Writing data to csv file
 ```{r}
