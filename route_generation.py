@@ -1,5 +1,6 @@
 import random
 import math
+import pandas as pd
 
 def calculate_route_capacity(route, demands, day_type):
     """ Calculate pallets delivered on route.
@@ -243,52 +244,18 @@ def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0]):
     all_routes = [route for routes in all_routes for route in routes]
     return remove_duplicate_routes(all_routes)
 
-def write_routes(routes, filename):
-    """ Write routes to a text file.
+def convert_routes_to_dataframe(routes):
+    return pd.DataFrame({
+        "route": [route[0] for route in routes],
+        "cost": [route[1] for route in routes]
+    })
 
-        Parameters
-        ----------
-        routes : list
-            List of routes to write to file.
-        filename : string
-            Name of text file in which to write routes.    
-    """
-    with open(filename, "w") as f:
-        for route in routes:
-            f.write(",".join(route[0]))
-            f.write(":")
-            f.write(str(route[1]))
-            f.write("\n")
+def read_regions(filename):
+    df = pd.read_csv(filename)
 
-def read_routes(filename):
-    """ Read routes from a text file.
+    regions = []
+    for region in df:
+        stores = df[region].values.tolist()
+        regions.append([store for store in stores if not pd.isna(store)])
 
-        Parameters
-        ----------
-        filename : string
-            Name of text file from which to read routes.
-    """
-    routes = []
-    with open(filename, "r") as f:
-        for line in f:
-            route, cost = line.split(":")
-            cost = float(cost.strip())
-            route = route.split(",")
-            routes.append((route, cost))
-
-    return routes
-
-def read_nodes(filename):
-    """ Read supermarket nodes from a text file.
-
-        Parameters
-        ----------
-        filename : string
-            Name of text file from which to read nodes.
-    """
-    nodes = []
-    with open(filename, "r") as f:
-        for line in f:
-            nodes.append(line.strip())
-
-    return nodes
+    return regions
