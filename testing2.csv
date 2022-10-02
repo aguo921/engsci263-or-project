@@ -1,0 +1,433 @@
+RouteNum,Route,TruckType,RouteCost,RouteNum
+r1,"['Warehouse', 'New World Papatoetoe', ""Pak 'n Save Manukau"", 'Four Square Everglade', 'Warehouse']",Cost,175.025,r1
+r2,"['Warehouse', 'New World Southmall', 'Four Square Everglade', ""Pak 'n Save Manukau"", 'Warehouse']",Cost,189.455,r2
+r3,"['Warehouse', ""Pak 'n Save Papakura"", 'New World Papakura', 'Warehouse']",Cost,202.59875,r3
+r4,"['Warehouse', 'Four Square Everglade', 'Four Square Botany Junction', 'New World Ormiston', 'New World Papatoetoe', 'Warehouse']",Cost,221.6695833333334,r4
+r5,"['Warehouse', 'New World Mt Roskill', 'Four Square Everglade', 'Warehouse']",Cost,157.2154166666668,r5
+r6,"['Warehouse', 'New World Mt Roskill', ""Pak 'n Save Manukau"", 'Four Square Everglade', 'Warehouse']",Cost,175.97291666666686,r6
+r7,"['Warehouse', 'New World Papatoetoe', ""Pak 'n Save Mangere"", 'Warehouse']",Cost,145.72208333333322,r7
+r8,"['Warehouse', 'Four Square Botany Junction', 'New World Papatoetoe', ""Pak 'n Save Mangere"", 'Warehouse']",Cost,209.2445833333335,r8
+r9,"['Warehouse', 'New World Southmall', ""Pak 'n Save Clendon"", 'Warehouse']",Cost,173.92874999999992,r9
+r10,"['Warehouse', 'New World Ormiston', 'Four Square Botany Junction', 'Warehouse']",Cost,181.57958333333343,r10
+r11,"['Warehouse', 'New World Ormiston', 'Four Square Botany Junction', 'Four Square Everglade', 'Warehouse']",Cost,198.87416666666684,r11
+r12,"['Warehouse', ""Pak 'n Save Manukau"", 'New World Papatoetoe', 'Warehouse']",Cost,146.88541666666669,r12
+r13,"['Warehouse', 'Four Square Botany Junction', ""Pak 'n Save Manukau"", 'New World Papatoetoe', 'Warehouse']",Cost,192.68583333333356,r13
+r14,"['Warehouse', ""Pak 'n Save Papakura"", 'New World Southmall', 'Four Square Everglade', 'Warehouse']",Cost,214.17708333333331,r14
+r15,"['Warehouse', 'Four Square Everglade', 'Four Square Botany Junction', ""Pak 'n Save Ormiston"", 'Warehouse']",Cost,205.99333333333328,r15
+r16,"['Warehouse', 'Four Square Everglade', 'Warehouse']",Cost,137.37874999999997,r16
+r17,"['Warehouse', 'Four Square Botany Junction', 'Four Square Everglade', 'Warehouse']",Cost,175.31500000000017,r17
+r18,"['Warehouse', 'New World Mt Roskill', ""Pak 'n Save Mangere"", 'Warehouse']",Cost,109.7616666666668,r18
+r19,"['Warehouse', 'New World Mt Roskill', 'Four Square Everglade', ""Pak 'n Save Mangere"", 'Warehouse']",Cost,188.3962500000001,r19
+r20,"['Warehouse', 'New World Papatoetoe', 'Warehouse']",Cost,114.54125,r20
+r21,"['Warehouse', 'New World Papatoetoe', 'Four Square Everglade', 'Warehouse']",Cost,162.80875,r21
+r22,"['Warehouse', 'New World Southmall', 'Warehouse']",Cost,146.45749999999998,r22
+r23,"['Warehouse', 'New World Southmall', 'Four Square Everglade', 'Warehouse']",Cost,167.66458333333333,r23
+r24,"['Warehouse', 'New World Southmall', 'Four Square Everglade', 'Four Square Botany Junction', 'Warehouse']",Cost,206.42874999999992,r24
+r25,"['Warehouse', 'New World Southmall', 'Four Square Everglade', 'Four Square Botany Junction', 'New World Ormiston', 'Warehouse']",Cost,231.9125,r25
+r26,"['Warehouse', 'New World Papakura', 'Warehouse']",Cost,189.4316666666668,r26
+r27,"['Warehouse', 'New World Papakura', 'New World Southmall', 'Warehouse']",Cost,212.71833333333356,r27
+r28,"['Warehouse', 'New World Papakura', 'New World Southmall', 'Four Square Everglade', 'Warehouse']",Cost,233.9254166666668,r28
+r29,"['Warehouse', ""Pak 'n Save Mangere"", 'Warehouse']",Cost,89.92541666666675,r29
+r30,"['Warehouse', 'Four Square Botany Junction', ""Pak 'n Save Mangere"", 'New World Mt Roskill', 'Warehouse']",Cost,213.9620833333335,r30
+r31,"['Warehouse', ""Pak 'n Save Manukau"", 'Warehouse']",Cost,128.03125000000003,r31
+r32,"['Warehouse', ""Pak 'n Save Manukau"", 'Four Square Everglade', 'Warehouse']",Cost,156.13625000000002,r32
+r33,"['Warehouse', 'Four Square Botany Junction', ""Pak 'n Save Manukau"", 'Four Square Everglade', 'Warehouse']",Cost,201.93666666666684,r33
+r34,"['Warehouse', ""Pak 'n Save Clendon"", 'Warehouse']",Cost,143.65124999999998,r34
+r35,"['Warehouse', ""Pak 'n Save Clendon"", 'New World Southmall', 'Four Square Everglade', 'Warehouse']",Cost,197.11791666666676,r35
+r36,"['Warehouse', ""Pak 'n Save Papakura"", 'Warehouse']",Cost,172.04291666666674,r36
+r37,"['Warehouse', ""Pak 'n Save Papakura"", 'New World Southmall', 'Warehouse']",Cost,192.97,r37
+r38,"['Warehouse', ""Pak 'n Save Papakura"", 'New World Southmall', 'Four Square Botany Junction', 'Warehouse']",Cost,242.1766666666665,r38
+r39,"['Warehouse', 'Four Square Botany Junction', ""Pak 'n Save Ormiston"", 'Warehouse']",Cost,187.87083333333345,r39
+r40,"['Warehouse', ""Pak 'n Save Henderson"", 'Four Square Fair Price Henderson', 'Warehouse']",Cost,145.61833333333348,r40
+r41,"['Warehouse', ""Pak 'n Save Henderson"", 'Four Square Glen Eden', 'Warehouse']",Cost,153.43083333333325,r41
+r42,"['Warehouse', ""Pak 'n Save Henderson"", 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'Warehouse']",Cost,189.9329166666668,r42
+r43,"['Warehouse', 'Four Square Hobsonville', ""Pak 'n Save Henderson"", 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'Warehouse']",Cost,265.3975,r43
+r44,"['Warehouse', 'Four Square Fair Price Henderson', ""Pak 'n Save Lincoln Road"", 'Warehouse']",Cost,131.08666666666656,r44
+r45,"['Warehouse', 'Four Square Fair Price Henderson', ""Pak 'n Save Lincoln Road"", 'Four Square Hobsonville', 'Warehouse']",Cost,191.3620833333333,r45
+r46,"['Warehouse', 'Four Square Glen Eden', 'Four Square Fair Price Henderson', ""Pak 'n Save Lincoln Road"", 'Four Square Hobsonville', 'Warehouse']",Cost,236.4950000000001,r46
+r47,"['Warehouse', ""Pak 'n Save Lincoln Road"", 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'Warehouse']",Cost,175.40125,r47
+r48,"['Warehouse', 'New World New Lynn', ""Pak 'n Save Westgate"", 'Four Square Hobsonville', 'Warehouse']",Cost,205.5895833333335,r48
+r49,"['Warehouse', 'New World New Lynn', 'Warehouse']",Cost,73.5945833333335,r49
+r50,"['Warehouse', 'New World Green Bay', 'Warehouse']",Cost,78.90875,r50
+r51,"['Warehouse', 'New World New Lynn', 'New World Green Bay', 'Warehouse']",Cost,106.05125,r51
+r52,"['Warehouse', 'New World New Lynn', 'New World Green Bay', 'Four Square Glen Eden', 'Warehouse']",Cost,153.8625,r52
+r53,"['Warehouse', 'New World New Lynn', 'New World Green Bay', 'Four Square Glen Eden', 'Four Square Hobsonville', 'Warehouse']",Cost,247.23416666666677,r53
+r54,"['Warehouse', 'Four Square Glen Eden', 'Warehouse']",Cost,108.83708333333324,r54
+r55,"['Warehouse', 'New World New Lynn', 'Four Square Glen Eden', 'Warehouse']",Cost,125.29041666666669,r55
+r56,"['Warehouse', ""Pak 'n Save Henderson"", 'Warehouse']",Cost,120.41625,r56
+r57,"['Warehouse', 'New World New Lynn', ""Pak 'n Save Henderson"", 'Warehouse']",Cost,148.8825,r57
+r58,"['Warehouse', 'New World New Lynn', 'Four Square Glen Eden', ""Pak 'n Save Henderson"", 'Warehouse']",Cost,168.92374999999993,r58
+r59,"['Warehouse', 'New World New Lynn', ""Pak 'n Save Mt Albert"", 'Warehouse']",Cost,90.2858333333334,r59
+r60,"['Warehouse', 'Four Square Glen Eden', 'New World New Lynn', ""Pak 'n Save Mt Albert"", 'Warehouse']",Cost,142.14458333333334,r60
+r61,"['Warehouse', 'Four Square Fair Price Henderson', 'Warehouse']",Cost,119.63625,r61
+r62,"['Warehouse', 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'Warehouse']",Cost,163.95083333333326,r62
+r63,"['Warehouse', 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'New World New Lynn', 'Warehouse']",Cost,180.56708333333344,r63
+r64,"['Warehouse', 'Four Square Hobsonville', 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'New World New Lynn', 'Warehouse']",Cost,244.39416666666665,r64
+r65,"['Warehouse', ""Pak 'n Save Lincoln Road"", 'Warehouse']",Cost,104.1925,r65
+r66,"['Warehouse', 'New World New Lynn', ""Pak 'n Save Lincoln Road"", 'Warehouse']",Cost,151.40041666666676,r66
+r67,"['Warehouse', ""Pak 'n Save Westgate"", 'Warehouse']",Cost,118.68541666666675,r67
+r68,"['Warehouse', ""Pak 'n Save Westgate"", 'Four Square Hobsonville', 'Warehouse']",Cost,158.38166666666675,r68
+r69,"['Warehouse', ""Pak 'n Save Westgate"", 'Four Square Hobsonville', 'Four Square Fair Price Henderson', 'Warehouse']",Cost,203.89125,r69
+r70,"['Warehouse', ""Pak 'n Save Westgate"", 'Four Square Hobsonville', 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'Warehouse']",Cost,248.2058333333333,r70
+r71,"['Warehouse', 'Four Square Hobsonville', 'Warehouse']",Cost,137.95375,r71
+r72,"['Warehouse', 'Four Square St Heliers', ""Pak 'n Save Glen Innes"", 'Warehouse']",Cost,198.1749999999999,r72
+r73,"['Warehouse', 'Four Square St Heliers', ""Pak 'n Save Glen Innes"", 'Four Square Ellerslie', 'Warehouse']",Cost,208.2204166666667,r73
+r74,"['Warehouse', 'Four Square St Heliers', ""Pak 'n Save Glen Innes"", 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Warehouse']",Cost,260.59041666666667,r74
+r75,"['Warehouse', 'Four Square Pakuranga Heights', 'Four Square Cockle Bay', 'New World Botany', 'Four Square Botany Junction', 'Four Square Ellerslie', 'Warehouse']",Cost,303.7754166666668,r75
+r76,"['Warehouse', 'Four Square Cockle Bay', 'New World Howick', 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Four Square Alberton', 'Warehouse']",Cost,319.21833333333296,r76
+r77,"['Warehouse', 'New World Stonefields', 'Four Square Ellerslie', 'Warehouse']",Cost,142.76041666666677,r77
+r78,"['Warehouse', 'New World Howick', 'Four Square Cockle Bay', ""Pak 'n Save Botany"", 'Warehouse']",Cost,254.17750000000007,r78
+r79,"['Warehouse', 'Four Square St Heliers', 'New World Remuera', 'Warehouse']",Cost,192.97458333333324,r79
+r80,"['Warehouse', 'Four Square St Heliers', 'New World Eastridge', 'New World Remuera', 'Warehouse']",Cost,206.45750000000007,r80
+r81,"['Warehouse', 'Four Square Pakuranga Heights', 'New World Botany', 'Warehouse']",Cost,204.4483333333335,r81
+r82,"['Warehouse', 'Four Square Pakuranga Heights', 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",Cost,215.84083333333345,r82
+r83,"['Warehouse', 'Four Square Pakuranga Heights', 'Four Square Cockle Bay', 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",Cost,264.24625,r83
+r84,"['Warehouse', 'Four Square Alberton', 'Four Square Pakuranga Heights', 'Four Square Cockle Bay', 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",Cost,291.5045833333332,r84
+r85,"['Warehouse', 'Four Square Cockle Bay', 'New World Howick', 'Warehouse']",Cost,232.82416666666649,r85
+r86,"['Warehouse', 'Four Square Cockle Bay', 'New World Howick', 'Four Square Pakuranga Heights', 'Warehouse']",Cost,241.88958333333323,r86
+r87,"['Warehouse', 'Four Square Cockle Bay', 'New World Howick', 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Warehouse']",Cost,267.78499999999974,r87
+r88,"['Warehouse', 'Four Square Cockle Bay', 'New World Howick', 'Four Square Pakuranga Heights', 'Four Square St Heliers', 'Four Square Ellerslie', 'Warehouse']",Cost,324.539583333333,r88
+r89,"['Warehouse', 'Four Square Botany Junction', 'New World Botany', 'New World Ormiston', 'Warehouse']",Cost,226.12500000000017,r89
+r90,"['Warehouse', 'Four Square Botany Junction', 'Four Square Cockle Bay', 'New World Botany', 'New World Ormiston', 'Warehouse']",Cost,281.5600000000001,r90
+r91,"['Warehouse', 'Four Square Alberton', 'New World Mt Roskill', ""Pak 'n Save Royal Oak"", 'Warehouse']",Cost,120.10791666666668,r91
+r92,"['Warehouse', 'New World Remuera', 'Four Square Ellerslie', 'Warehouse']",Cost,130.16625000000002,r92
+r93,"['Warehouse', 'New World Remuera', 'New World Stonefields', 'Four Square Ellerslie', 'Warehouse']",Cost,160.88291666666666,r93
+r94,"['Warehouse', 'New World Stonefields', 'New World Remuera', 'Warehouse']",Cost,151.79000000000008,r94
+r95,"['Warehouse', 'New World Howick', 'New World Botany', 'Warehouse']",Cost,234.45583333333352,r95
+r96,"['Warehouse', 'New World Howick', 'Four Square Cockle Bay', 'New World Botany', 'Warehouse']",Cost,254.30083333333351,r96
+r97,"['Warehouse', 'New World Howick', 'Four Square Cockle Bay', 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",Cost,265.69333333333344,r97
+r98,"['Warehouse', ""Pak 'n Save Royal Oak"", 'Four Square Ellerslie', 'Warehouse']",Cost,114.28041666666658,r98
+r99,"['Warehouse', ""Pak 'n Save Royal Oak"", 'Four Square Ellerslie', 'New World Stonefields', 'Warehouse']",Cost,170.3625,r99
+r100,"['Warehouse', ""Pak 'n Save Sylvia Park"", 'Four Square Ellerslie', 'New World Remuera', 'Warehouse']",Cost,173.11125000000007,r100
+r101,"['Warehouse', ""Pak 'n Save Botany"", 'New World Botany', 'Warehouse']",Cost,205.3037500000001,r101
+r102,"['Warehouse', ""Pak 'n Save Botany"", 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",Cost,216.69625,r102
+r103,"['Warehouse', ""Pak 'n Save Glen Innes"", 'New World Stonefields', 'Warehouse']",Cost,195.49583333333345,r103
+r104,"['Warehouse', ""Pak 'n Save Glen Innes"", 'New World Stonefields', 'Four Square Ellerslie', 'Warehouse']",Cost,192.07416666666668,r104
+r105,"['Warehouse', 'Four Square Alberton', ""Pak 'n Save Royal Oak"", 'Warehouse']",Cost,112.99624999999992,r105
+r106,"['Warehouse', 'Four Square Alberton', ""Pak 'n Save Royal Oak"", 'Four Square Ellerslie', 'Warehouse']",Cost,166.4158333333332,r106
+r107,"['Warehouse', 'Four Square Alberton', ""Pak 'n Save Royal Oak"", 'Four Square Ellerslie', 'Four Square Botany Junction', 'Warehouse']",Cost,258.22125,r107
+r108,"['Warehouse', 'Four Square Alberton', ""Pak 'n Save Royal Oak"", 'Four Square Ellerslie', 'Four Square Botany Junction', 'Four Square Cockle Bay', 'Warehouse']",Cost,347.66208333333327,r108
+r109,"['Warehouse', 'Four Square Ellerslie', 'Warehouse']",Cost,103.22416666666676,r109
+r110,"['Warehouse', 'Four Square St Heliers', 'Warehouse']",Cost,183.5275,r110
+r111,"['Warehouse', 'Four Square St Heliers', 'New World Eastridge', 'Warehouse']",Cost,197.01000000000008,r111
+r112,"['Warehouse', 'Four Square St Heliers', 'New World Eastridge', 'Four Square Ellerslie', 'Warehouse']",Cost,211.25583333333333,r112
+r113,"['Warehouse', 'Four Square St Heliers', 'New World Eastridge', 'Four Square Ellerslie', 'Four Square Alberton', 'Warehouse']",Cost,262.6891666666666,r113
+r114,"['Warehouse', 'Four Square Cockle Bay', 'Four Square St Heliers', 'New World Eastridge', 'Four Square Ellerslie', 'Four Square Alberton', 'Warehouse']",Cost,374.237083333333,r114
+r115,"['Warehouse', 'Four Square Pakuranga Heights', 'Warehouse']",Cost,154.1833333333335,r115
+r116,"['Warehouse', 'Four Square Pakuranga Heights', ""Pak 'n Save Botany"", 'Four Square Botany Junction', 'Warehouse']",Cost,218.50500000000008,r116
+r117,"['Warehouse', 'Four Square Pakuranga Heights', ""Pak 'n Save Botany"", 'Four Square Cockle Bay', 'Four Square Botany Junction', 'Warehouse']",Cost,270.0891666666668,r117
+r118,"['Warehouse', 'Four Square Cockle Bay', 'Warehouse']",Cost,229.52958333333328,r118
+r119,"['Warehouse', 'Four Square Cockle Bay', ""Pak 'n Save Botany"", 'Warehouse']",Cost,240.8449999999999,r119
+r120,"['Warehouse', 'Four Square Cockle Bay', ""Pak 'n Save Botany"", 'Four Square Pakuranga Heights', 'Warehouse']",Cost,247.695,r120
+r121,"['Warehouse', 'Four Square Cockle Bay', ""Pak 'n Save Botany"", 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Warehouse']",Cost,273.59041666666656,r121
+r122,"['Warehouse', 'Four Square Botany Junction', 'Warehouse']",Cost,158.02041666666673,r122
+r123,"['Warehouse', 'Four Square Botany Junction', ""Pak 'n Save Sylvia Park"", 'Warehouse']",Cost,217.4975,r123
+r124,"['Warehouse', 'Four Square Botany Junction', 'New World Ormiston', ""Pak 'n Save Sylvia Park"", 'Warehouse']",Cost,242.98125000000007,r124
+r125,"['Warehouse', 'New World Mt Roskill', 'Warehouse']",Cost,32.83958333333332,r125
+r126,"['Warehouse', 'Four Square Alberton', 'New World Mt Roskill', 'Warehouse']",Cost,72.25,r126
+r127,"['Warehouse', 'Four Square Ellerslie', 'Four Square Alberton', 'New World Mt Roskill', 'Warehouse']",Cost,159.77625000000006,r127
+r128,"['Warehouse', 'Four Square St Heliers', 'Four Square Ellerslie', 'Four Square Alberton', 'New World Mt Roskill', 'Warehouse']",Cost,243.7979166666665,r128
+r129,"['Warehouse', 'Four Square Cockle Bay', 'Four Square St Heliers', 'Four Square Ellerslie', 'Four Square Alberton', 'New World Mt Roskill', 'Warehouse']",Cost,355.3458333333331,r129
+r130,"['Warehouse', 'New World Remuera', 'Warehouse']",Cost,102.94625,r130
+r131,"['Warehouse', 'New World Remuera', ""Pak 'n Save Royal Oak"", 'Warehouse']",Cost,122.11124999999998,r131
+r132,"['Warehouse', 'New World Remuera', 'Four Square Ellerslie', ""Pak 'n Save Royal Oak"", 'Warehouse']",Cost,145.5454166666667,r132
+r133,"['Warehouse', 'New World Eastridge', 'Warehouse']",Cost,149.95625,r133
+r134,"['Warehouse', 'New World Eastridge', 'New World Remuera', 'Warehouse']",Cost,159.40375,r134
+r135,"['Warehouse', 'New World Eastridge', 'New World Remuera', 'Four Square Ellerslie', 'Warehouse']",Cost,186.62375000000003,r135
+r136,"['Warehouse', 'New World Stonefields', 'Warehouse']",Cost,146.1820833333335,r136
+r137,"['Warehouse', 'New World Stonefields', ""Pak 'n Save Sylvia Park"", 'Warehouse']",Cost,175.89125000000007,r137
+r138,"['Warehouse', 'New World Howick', 'Warehouse']",Cost,207.065,r138
+r139,"['Warehouse', 'New World Howick', 'Four Square Botany Junction', 'Warehouse']",Cost,234.40958333333356,r139
+r140,"['Warehouse', 'New World Howick', ""Pak 'n Save Botany"", 'Four Square Botany Junction', 'Warehouse']",Cost,245.72500000000008,r140
+r141,"['Warehouse', 'New World Botany', 'Warehouse']",Cost,188.3429166666668,r141
+r142,"['Warehouse', 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",Cost,199.7354166666667,r142
+r143,"['Warehouse', 'New World Ormiston', 'Warehouse']",Cost,170.1870833333335,r143
+r144,"['Warehouse', 'New World Ormiston', ""Pak 'n Save Ormiston"", 'Warehouse']",Cost,185.98583333333343,r144
+r145,"['Warehouse', 'New World Ormiston', ""Pak 'n Save Ormiston"", 'Four Square Botany Junction', 'Warehouse']",Cost,197.37833333333344,r145
+r146,"['Warehouse', ""Pak 'n Save Royal Oak"", 'Warehouse']",Cost,60.86083333333325,r146
+r147,"['Warehouse', ""Pak 'n Save Royal Oak"", 'New World Mt Roskill', 'Warehouse']",Cost,85.62124999999999,r147
+r148,"['Warehouse', ""Pak 'n Save Sylvia Park"", 'Warehouse']",Cost,145.13416666666674,r148
+r149,"['Warehouse', ""Pak 'n Save Sylvia Park"", 'Four Square Ellerslie', 'Warehouse']",Cost,143.2912500000001,r149
+r150,"['Warehouse', ""Pak 'n Save Sylvia Park"", 'New World Stonefields', 'Four Square Ellerslie', 'Warehouse']",Cost,170.9733333333334,r150
+r151,"['Warehouse', ""Pak 'n Save Botany"", 'Warehouse']",Cost,193.865,r151
+r152,"['Warehouse', ""Pak 'n Save Botany"", 'Four Square Pakuranga Heights', 'Warehouse']",Cost,200.7150000000001,r152
+r153,"['Warehouse', ""Pak 'n Save Botany"", 'Four Square Botany Junction', 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Warehouse']",Cost,274.4658333333333,r153
+r154,"['Warehouse', ""Pak 'n Save Ormiston"", 'Warehouse']",Cost,174.55375,r154
+r155,"['Warehouse', ""Pak 'n Save Ormiston"", ""Pak 'n Save Botany"", 'Warehouse']",Cost,222.4575,r155
+r156,"['Warehouse', ""Pak 'n Save Glen Innes"", 'Warehouse']",Cost,166.76583333333326,r156
+r157,"['Warehouse', ""Pak 'n Save Glen Innes"", 'Four Square St Heliers', 'Four Square Ellerslie', 'Four Square Botany Junction', 'Warehouse']",Cost,300.05625,r157
+r158,"['Warehouse', 'New World Devonport', 'New World Metro Shore City', 'Four Square Alberton', 'Warehouse']",Cost,252.9220833333333,r158
+r159,"['Warehouse', 'New World Milford', 'New World Metro Shore City', 'Warehouse']",Cost,180.9487499999999,r159
+r160,"['Warehouse', 'New World Milford', 'New World Metro Shore City', 'Four Square Alberton', 'Warehouse']",Cost,209.3358333333332,r160
+r161,"['Warehouse', 'Four Square Torbay', 'New World Long Bay', 'Warehouse']",Cost,246.7758333333332,r161
+r162,"['Warehouse', 'New World Victoria Park', 'New World Metro Queen St', 'Warehouse']",Cost,119.95124999999982,r162
+r163,"['Warehouse', 'New World Victoria Park', 'New World Metro Queen St', 'Four Square Alberton', 'Warehouse']",Cost,148.33791666666656,r163
+r164,"['Warehouse', 'New World Metro Queen St', 'Four Square Alberton', 'Warehouse']",Cost,128.97583333333327,r164
+r165,"['Warehouse', 'New World Devonport', 'New World Metro Shore City', 'Warehouse']",Cost,224.535,r165
+r166,"['Warehouse', 'New World Devonport', 'New World Metro Shore City', 'Four Square Lancaster', 'Warehouse']",Cost,297.5987500000002,r166
+r167,"['Warehouse', 'New World Devonport', 'New World Metro Shore City', 'Four Square Lancaster', 'Four Square Torbay', 'Warehouse']",Cost,402.6408333333335,r167
+r168,"['Warehouse', 'New World Birkenhead', 'Four Square Lancaster', 'Warehouse']",Cost,196.735,r168
+r169,"['Warehouse', 'Four Square Lancaster', ""Pak 'n Save Wairau Road"", 'Warehouse']",Cost,209.6654166666665,r169
+r170,"['Warehouse', ""Pak 'n Save Wairau Road"", 'New World Metro Shore City', 'Warehouse']",Cost,188.6508333333333,r170
+r171,"['Warehouse', ""Pak 'n Save Wairau Road"", 'New World Metro Shore City', 'Four Square Lancaster', 'Warehouse']",Cost,261.7145833333336,r171
+r172,"['Warehouse', 'New World Milford', ""Pak 'n Save Wairau Road"", 'Four Square Lancaster', 'Warehouse']",Cost,244.74500000000015,r172
+r173,"['Warehouse', 'New World Albany', ""Pak 'n Save Albany"", 'Warehouse']",Cost,203.5366666666665,r173
+r174,"['Warehouse', 'Four Square Torbay', 'New World Albany', 'Warehouse']",Cost,256.1341666666665,r174
+r175,"['Warehouse', 'Four Square Torbay', 'New World Albany', ""Pak 'n Save Albany"", 'Warehouse']",Cost,269.0891666666665,r175
+r176,"['Warehouse', 'New World Long Bay', 'Four Square Torbay', 'New World Browns Bay', 'Warehouse']",Cost,265.61583333333346,r176
+r177,"['Warehouse', 'New World Long Bay', 'Four Square Torbay', 'New World Browns Bay', 'Four Square Lancaster', 'Warehouse']",Cost,325.1362500000002,r177
+r178,"['Warehouse', ""Pak 'n Save Mt Albert"", 'Warehouse']",Cost,48.88041666666668,r178
+r179,"['Warehouse', 'Four Square Alberton', ""Pak 'n Save Mt Albert"", 'Warehouse']",Cost,76.66708333333334,r179
+r180,"['Warehouse', 'New World Victoria Park', 'Four Square Alberton', ""Pak 'n Save Mt Albert"", 'Warehouse']",Cost,135.51166666666666,r180
+r181,"['Warehouse', 'Four Square Alberton', 'Warehouse']",Cost,67.13124999999992,r181
+r182,"['Warehouse', 'New World Victoria Park', 'Warehouse']",Cost,97.58875,r182
+r183,"['Warehouse', 'New World Victoria Park', ""Pak 'n Save Mt Albert"", 'Warehouse']",Cost,120.17708333333316,r183
+r184,"['Warehouse', 'New World Metro Queen St', 'Warehouse']",Cost,100.5891666666665,r184
+r185,"['Warehouse', 'New World Metro Queen St', ""Pak 'n Save Mt Albert"", 'Warehouse']",Cost,123.17749999999992,r185
+r186,"['Warehouse', 'New World Metro Queen St', 'Four Square Alberton', ""Pak 'n Save Mt Albert"", 'Warehouse']",Cost,138.51166666666668,r186
+r187,"['Warehouse', 'New World Devonport', 'Warehouse']",Cost,206.28041666666675,r187
+r188,"['Warehouse', 'New World Devonport', 'New World Milford', 'Warehouse']",Cost,243.88916666666677,r188
+r189,"['Warehouse', 'New World Devonport', 'New World Milford', 'Four Square Lancaster', 'Warehouse']",Cost,307.96125,r189
+r190,"['Warehouse', 'New World Devonport', 'New World Milford', 'Four Square Torbay', 'Four Square Lancaster', 'Warehouse']",Cost,415.7970833333332,r190
+r191,"['Warehouse', 'New World Birkenhead', 'Warehouse']",Cost,156.63499999999996,r191
+r192,"['Warehouse', 'New World Birkenhead', ""Pak 'n Save Wairau Road"", 'Warehouse']",Cost,201.0320833333332,r192
+r193,"['Warehouse', 'New World Birkenhead', 'Four Square Lancaster', ""Pak 'n Save Wairau Road"", 'Warehouse']",Cost,224.6716666666665,r193
+r194,"['Warehouse', 'New World Metro Shore City', 'Warehouse']",Cost,150.7866666666665,r194
+r195,"['Warehouse', 'New World Metro Shore City', 'New World Milford', 'Four Square Lancaster', 'Warehouse']",Cost,247.34333333333325,r195
+r196,"['Warehouse', 'New World Metro Shore City', 'New World Milford', 'Four Square Lancaster', 'Four Square Torbay', 'Warehouse']",Cost,352.38541666666646,r196
+r197,"['Warehouse', 'Four Square Lancaster', 'Warehouse']",Cost,181.72875,r197
+r198,"['Warehouse', 'Four Square Lancaster', ""Pak 'n Save Albany"", 'Warehouse']",Cost,240.99333333333325,r198
+r199,"['Warehouse', 'Four Square Lancaster', ""Pak 'n Save Albany"", 'New World Albany', 'Warehouse']",Cost,258.2533333333333,r199
+r200,"['Warehouse', ""Pak 'n Save Wairau Road"", 'Warehouse']",Cost,162.37666666666675,r200
+r201,"['Warehouse', ""Pak 'n Save Wairau Road"", 'New World Milford', 'Warehouse']",Cost,190.64375000000013,r201
+r202,"['Warehouse', 'New World Milford', 'Warehouse']",Cost,164.16291666666672,r202
+r203,"['Warehouse', 'New World Milford', 'New World Metro Queen St', 'Warehouse']",Cost,191.1291666666665,r203
+r204,"['Warehouse', 'New World Milford', 'New World Metro Queen St', 'Four Square Alberton', 'Warehouse']",Cost,219.5158333333333,r204
+r205,"['Warehouse', 'New World Albany', 'Warehouse']",Cost,190.5816666666665,r205
+r206,"['Warehouse', 'New World Albany', 'New World Metro Shore City', 'Warehouse']",Cost,226.17749999999972,r206
+r207,"['Warehouse', 'New World Albany', 'New World Metro Shore City', 'Four Square Alberton', 'Warehouse']",Cost,254.56458333333305,r207
+r208,"['Warehouse', ""Pak 'n Save Albany"", 'Warehouse']",Cost,186.6375,r208
+r209,"['Warehouse', ""Pak 'n Save Albany"", ""Pak 'n Save Wairau Road"", 'Warehouse']",Cost,217.46583333333356,r209
+r210,"['Warehouse', 'New World Browns Bay', 'Warehouse']",Cost,218.66083333333324,r210
+r211,"['Warehouse', 'Four Square Torbay', 'Warehouse']",Cost,232.415,r211
+r212,"['Warehouse', 'Four Square Torbay', 'New World Browns Bay', 'Warehouse']",Cost,251.07416666666663,r212
+r213,"['Warehouse', 'Four Square Torbay', 'New World Browns Bay', 'New World Albany', 'Warehouse']",Cost,273.25208333333313,r213
+r214,"['Warehouse', 'Four Square Torbay', 'New World Browns Bay', 'New World Albany', 'Four Square Lancaster', 'Warehouse']",Cost,332.77249999999987,r214
+r215,"['Warehouse', 'New World Long Bay', 'Warehouse']",Cost,224.95125,r215
+r216,"['Warehouse', 'New World Long Bay', 'New World Browns Bay', 'Warehouse']",Cost,254.19875000000008,r216
+r217,"['Warehouse', 'New World Papatoetoe', ""Pak 'n Save Manukau"", 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r217
+r218,"['Warehouse', 'New World Southmall', 'Four Square Everglade', ""Pak 'n Save Manukau"", 'Warehouse']",MainfreightCost,3000.0,r218
+r219,"['Warehouse', ""Pak 'n Save Papakura"", 'New World Papakura', 'Warehouse']",MainfreightCost,3000.0,r219
+r220,"['Warehouse', 'Four Square Everglade', 'Four Square Botany Junction', 'New World Ormiston', 'New World Papatoetoe', 'Warehouse']",MainfreightCost,3000.0,r220
+r221,"['Warehouse', 'New World Mt Roskill', 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r221
+r222,"['Warehouse', 'New World Mt Roskill', ""Pak 'n Save Manukau"", 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r222
+r223,"['Warehouse', 'New World Papatoetoe', ""Pak 'n Save Mangere"", 'Warehouse']",MainfreightCost,3000.0,r223
+r224,"['Warehouse', 'Four Square Botany Junction', 'New World Papatoetoe', ""Pak 'n Save Mangere"", 'Warehouse']",MainfreightCost,3000.0,r224
+r225,"['Warehouse', 'New World Southmall', ""Pak 'n Save Clendon"", 'Warehouse']",MainfreightCost,3000.0,r225
+r226,"['Warehouse', 'New World Ormiston', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r226
+r227,"['Warehouse', 'New World Ormiston', 'Four Square Botany Junction', 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r227
+r228,"['Warehouse', ""Pak 'n Save Manukau"", 'New World Papatoetoe', 'Warehouse']",MainfreightCost,3000.0,r228
+r229,"['Warehouse', 'Four Square Botany Junction', ""Pak 'n Save Manukau"", 'New World Papatoetoe', 'Warehouse']",MainfreightCost,3000.0,r229
+r230,"['Warehouse', ""Pak 'n Save Papakura"", 'New World Southmall', 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r230
+r231,"['Warehouse', 'Four Square Everglade', 'Four Square Botany Junction', ""Pak 'n Save Ormiston"", 'Warehouse']",MainfreightCost,3000.0,r231
+r232,"['Warehouse', 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r232
+r233,"['Warehouse', 'Four Square Botany Junction', 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r233
+r234,"['Warehouse', 'New World Mt Roskill', ""Pak 'n Save Mangere"", 'Warehouse']",MainfreightCost,3000.0,r234
+r235,"['Warehouse', 'New World Mt Roskill', 'Four Square Everglade', ""Pak 'n Save Mangere"", 'Warehouse']",MainfreightCost,3000.0,r235
+r236,"['Warehouse', 'New World Papatoetoe', 'Warehouse']",MainfreightCost,3000.0,r236
+r237,"['Warehouse', 'New World Papatoetoe', 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r237
+r238,"['Warehouse', 'New World Southmall', 'Warehouse']",MainfreightCost,3000.0,r238
+r239,"['Warehouse', 'New World Southmall', 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r239
+r240,"['Warehouse', 'New World Southmall', 'Four Square Everglade', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r240
+r241,"['Warehouse', 'New World Southmall', 'Four Square Everglade', 'Four Square Botany Junction', 'New World Ormiston', 'Warehouse']",MainfreightCost,3000.0,r241
+r242,"['Warehouse', 'New World Papakura', 'Warehouse']",MainfreightCost,3000.0,r242
+r243,"['Warehouse', 'New World Papakura', 'New World Southmall', 'Warehouse']",MainfreightCost,3000.0,r243
+r244,"['Warehouse', 'New World Papakura', 'New World Southmall', 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r244
+r245,"['Warehouse', ""Pak 'n Save Mangere"", 'Warehouse']",MainfreightCost,3000.0,r245
+r246,"['Warehouse', 'Four Square Botany Junction', ""Pak 'n Save Mangere"", 'New World Mt Roskill', 'Warehouse']",MainfreightCost,3000.0,r246
+r247,"['Warehouse', ""Pak 'n Save Manukau"", 'Warehouse']",MainfreightCost,3000.0,r247
+r248,"['Warehouse', ""Pak 'n Save Manukau"", 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r248
+r249,"['Warehouse', 'Four Square Botany Junction', ""Pak 'n Save Manukau"", 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r249
+r250,"['Warehouse', ""Pak 'n Save Clendon"", 'Warehouse']",MainfreightCost,3000.0,r250
+r251,"['Warehouse', ""Pak 'n Save Clendon"", 'New World Southmall', 'Four Square Everglade', 'Warehouse']",MainfreightCost,3000.0,r251
+r252,"['Warehouse', ""Pak 'n Save Papakura"", 'Warehouse']",MainfreightCost,3000.0,r252
+r253,"['Warehouse', ""Pak 'n Save Papakura"", 'New World Southmall', 'Warehouse']",MainfreightCost,3000.0,r253
+r254,"['Warehouse', ""Pak 'n Save Papakura"", 'New World Southmall', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r254
+r255,"['Warehouse', 'Four Square Botany Junction', ""Pak 'n Save Ormiston"", 'Warehouse']",MainfreightCost,3000.0,r255
+r256,"['Warehouse', ""Pak 'n Save Henderson"", 'Four Square Fair Price Henderson', 'Warehouse']",MainfreightCost,3000.0,r256
+r257,"['Warehouse', ""Pak 'n Save Henderson"", 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r257
+r258,"['Warehouse', ""Pak 'n Save Henderson"", 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r258
+r259,"['Warehouse', 'Four Square Hobsonville', ""Pak 'n Save Henderson"", 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r259
+r260,"['Warehouse', 'Four Square Fair Price Henderson', ""Pak 'n Save Lincoln Road"", 'Warehouse']",MainfreightCost,3000.0,r260
+r261,"['Warehouse', 'Four Square Fair Price Henderson', ""Pak 'n Save Lincoln Road"", 'Four Square Hobsonville', 'Warehouse']",MainfreightCost,3000.0,r261
+r262,"['Warehouse', 'Four Square Glen Eden', 'Four Square Fair Price Henderson', ""Pak 'n Save Lincoln Road"", 'Four Square Hobsonville', 'Warehouse']",MainfreightCost,3000.0,r262
+r263,"['Warehouse', ""Pak 'n Save Lincoln Road"", 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r263
+r264,"['Warehouse', 'New World New Lynn', ""Pak 'n Save Westgate"", 'Four Square Hobsonville', 'Warehouse']",MainfreightCost,3000.0,r264
+r265,"['Warehouse', 'New World New Lynn', 'Warehouse']",MainfreightCost,3000.0,r265
+r266,"['Warehouse', 'New World Green Bay', 'Warehouse']",MainfreightCost,3000.0,r266
+r267,"['Warehouse', 'New World New Lynn', 'New World Green Bay', 'Warehouse']",MainfreightCost,3000.0,r267
+r268,"['Warehouse', 'New World New Lynn', 'New World Green Bay', 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r268
+r269,"['Warehouse', 'New World New Lynn', 'New World Green Bay', 'Four Square Glen Eden', 'Four Square Hobsonville', 'Warehouse']",MainfreightCost,3000.0,r269
+r270,"['Warehouse', 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r270
+r271,"['Warehouse', 'New World New Lynn', 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r271
+r272,"['Warehouse', ""Pak 'n Save Henderson"", 'Warehouse']",MainfreightCost,3000.0,r272
+r273,"['Warehouse', 'New World New Lynn', ""Pak 'n Save Henderson"", 'Warehouse']",MainfreightCost,3000.0,r273
+r274,"['Warehouse', 'New World New Lynn', 'Four Square Glen Eden', ""Pak 'n Save Henderson"", 'Warehouse']",MainfreightCost,3000.0,r274
+r275,"['Warehouse', 'New World New Lynn', ""Pak 'n Save Mt Albert"", 'Warehouse']",MainfreightCost,3000.0,r275
+r276,"['Warehouse', 'Four Square Glen Eden', 'New World New Lynn', ""Pak 'n Save Mt Albert"", 'Warehouse']",MainfreightCost,3000.0,r276
+r277,"['Warehouse', 'Four Square Fair Price Henderson', 'Warehouse']",MainfreightCost,3000.0,r277
+r278,"['Warehouse', 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r278
+r279,"['Warehouse', 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'New World New Lynn', 'Warehouse']",MainfreightCost,3000.0,r279
+r280,"['Warehouse', 'Four Square Hobsonville', 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'New World New Lynn', 'Warehouse']",MainfreightCost,3000.0,r280
+r281,"['Warehouse', ""Pak 'n Save Lincoln Road"", 'Warehouse']",MainfreightCost,3000.0,r281
+r282,"['Warehouse', 'New World New Lynn', ""Pak 'n Save Lincoln Road"", 'Warehouse']",MainfreightCost,3000.0,r282
+r283,"['Warehouse', ""Pak 'n Save Westgate"", 'Warehouse']",MainfreightCost,3000.0,r283
+r284,"['Warehouse', ""Pak 'n Save Westgate"", 'Four Square Hobsonville', 'Warehouse']",MainfreightCost,3000.0,r284
+r285,"['Warehouse', ""Pak 'n Save Westgate"", 'Four Square Hobsonville', 'Four Square Fair Price Henderson', 'Warehouse']",MainfreightCost,3000.0,r285
+r286,"['Warehouse', ""Pak 'n Save Westgate"", 'Four Square Hobsonville', 'Four Square Fair Price Henderson', 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r286
+r287,"['Warehouse', 'Four Square Hobsonville', 'Warehouse']",MainfreightCost,3000.0,r287
+r288,"['Warehouse', 'Four Square St Heliers', ""Pak 'n Save Glen Innes"", 'Warehouse']",MainfreightCost,3000.0,r288
+r289,"['Warehouse', 'Four Square St Heliers', ""Pak 'n Save Glen Innes"", 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r289
+r290,"['Warehouse', 'Four Square St Heliers', ""Pak 'n Save Glen Innes"", 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r290
+r291,"['Warehouse', 'Four Square Pakuranga Heights', 'Four Square Cockle Bay', 'New World Botany', 'Four Square Botany Junction', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r291
+r292,"['Warehouse', 'Four Square Cockle Bay', 'New World Howick', 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Four Square Alberton', 'Warehouse']",MainfreightCost,3000.0,r292
+r293,"['Warehouse', 'New World Stonefields', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r293
+r294,"['Warehouse', 'New World Howick', 'Four Square Cockle Bay', ""Pak 'n Save Botany"", 'Warehouse']",MainfreightCost,3000.0,r294
+r295,"['Warehouse', 'Four Square St Heliers', 'New World Remuera', 'Warehouse']",MainfreightCost,3000.0,r295
+r296,"['Warehouse', 'Four Square St Heliers', 'New World Eastridge', 'New World Remuera', 'Warehouse']",MainfreightCost,3000.0,r296
+r297,"['Warehouse', 'Four Square Pakuranga Heights', 'New World Botany', 'Warehouse']",MainfreightCost,3000.0,r297
+r298,"['Warehouse', 'Four Square Pakuranga Heights', 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r298
+r299,"['Warehouse', 'Four Square Pakuranga Heights', 'Four Square Cockle Bay', 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r299
+r300,"['Warehouse', 'Four Square Alberton', 'Four Square Pakuranga Heights', 'Four Square Cockle Bay', 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r300
+r301,"['Warehouse', 'Four Square Cockle Bay', 'New World Howick', 'Warehouse']",MainfreightCost,3000.0,r301
+r302,"['Warehouse', 'Four Square Cockle Bay', 'New World Howick', 'Four Square Pakuranga Heights', 'Warehouse']",MainfreightCost,3000.0,r302
+r303,"['Warehouse', 'Four Square Cockle Bay', 'New World Howick', 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r303
+r304,"['Warehouse', 'Four Square Cockle Bay', 'New World Howick', 'Four Square Pakuranga Heights', 'Four Square St Heliers', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r304
+r305,"['Warehouse', 'Four Square Botany Junction', 'New World Botany', 'New World Ormiston', 'Warehouse']",MainfreightCost,3000.0,r305
+r306,"['Warehouse', 'Four Square Botany Junction', 'Four Square Cockle Bay', 'New World Botany', 'New World Ormiston', 'Warehouse']",MainfreightCost,3000.0,r306
+r307,"['Warehouse', 'Four Square Alberton', 'New World Mt Roskill', ""Pak 'n Save Royal Oak"", 'Warehouse']",MainfreightCost,3000.0,r307
+r308,"['Warehouse', 'New World Remuera', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r308
+r309,"['Warehouse', 'New World Remuera', 'New World Stonefields', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r309
+r310,"['Warehouse', 'New World Stonefields', 'New World Remuera', 'Warehouse']",MainfreightCost,3000.0,r310
+r311,"['Warehouse', 'New World Howick', 'New World Botany', 'Warehouse']",MainfreightCost,3000.0,r311
+r312,"['Warehouse', 'New World Howick', 'Four Square Cockle Bay', 'New World Botany', 'Warehouse']",MainfreightCost,3000.0,r312
+r313,"['Warehouse', 'New World Howick', 'Four Square Cockle Bay', 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r313
+r314,"['Warehouse', ""Pak 'n Save Royal Oak"", 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r314
+r315,"['Warehouse', ""Pak 'n Save Royal Oak"", 'Four Square Ellerslie', 'New World Stonefields', 'Warehouse']",MainfreightCost,3000.0,r315
+r316,"['Warehouse', ""Pak 'n Save Sylvia Park"", 'Four Square Ellerslie', 'New World Remuera', 'Warehouse']",MainfreightCost,3000.0,r316
+r317,"['Warehouse', ""Pak 'n Save Botany"", 'New World Botany', 'Warehouse']",MainfreightCost,3000.0,r317
+r318,"['Warehouse', ""Pak 'n Save Botany"", 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r318
+r319,"['Warehouse', ""Pak 'n Save Glen Innes"", 'New World Stonefields', 'Warehouse']",MainfreightCost,3000.0,r319
+r320,"['Warehouse', ""Pak 'n Save Glen Innes"", 'New World Stonefields', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r320
+r321,"['Warehouse', 'Four Square Alberton', ""Pak 'n Save Royal Oak"", 'Warehouse']",MainfreightCost,3000.0,r321
+r322,"['Warehouse', 'Four Square Alberton', ""Pak 'n Save Royal Oak"", 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r322
+r323,"['Warehouse', 'Four Square Alberton', ""Pak 'n Save Royal Oak"", 'Four Square Ellerslie', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r323
+r324,"['Warehouse', 'Four Square Alberton', ""Pak 'n Save Royal Oak"", 'Four Square Ellerslie', 'Four Square Botany Junction', 'Four Square Cockle Bay', 'Warehouse']",MainfreightCost,3000.0,r324
+r325,"['Warehouse', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r325
+r326,"['Warehouse', 'Four Square St Heliers', 'Warehouse']",MainfreightCost,3000.0,r326
+r327,"['Warehouse', 'Four Square St Heliers', 'New World Eastridge', 'Warehouse']",MainfreightCost,3000.0,r327
+r328,"['Warehouse', 'Four Square St Heliers', 'New World Eastridge', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r328
+r329,"['Warehouse', 'Four Square St Heliers', 'New World Eastridge', 'Four Square Ellerslie', 'Four Square Alberton', 'Warehouse']",MainfreightCost,3000.0,r329
+r330,"['Warehouse', 'Four Square Cockle Bay', 'Four Square St Heliers', 'New World Eastridge', 'Four Square Ellerslie', 'Four Square Alberton', 'Warehouse']",MainfreightCost,3000.0,r330
+r331,"['Warehouse', 'Four Square Pakuranga Heights', 'Warehouse']",MainfreightCost,3000.0,r331
+r332,"['Warehouse', 'Four Square Pakuranga Heights', ""Pak 'n Save Botany"", 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r332
+r333,"['Warehouse', 'Four Square Pakuranga Heights', ""Pak 'n Save Botany"", 'Four Square Cockle Bay', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r333
+r334,"['Warehouse', 'Four Square Cockle Bay', 'Warehouse']",MainfreightCost,3000.0,r334
+r335,"['Warehouse', 'Four Square Cockle Bay', ""Pak 'n Save Botany"", 'Warehouse']",MainfreightCost,3000.0,r335
+r336,"['Warehouse', 'Four Square Cockle Bay', ""Pak 'n Save Botany"", 'Four Square Pakuranga Heights', 'Warehouse']",MainfreightCost,3000.0,r336
+r337,"['Warehouse', 'Four Square Cockle Bay', ""Pak 'n Save Botany"", 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r337
+r338,"['Warehouse', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r338
+r339,"['Warehouse', 'Four Square Botany Junction', ""Pak 'n Save Sylvia Park"", 'Warehouse']",MainfreightCost,3000.0,r339
+r340,"['Warehouse', 'Four Square Botany Junction', 'New World Ormiston', ""Pak 'n Save Sylvia Park"", 'Warehouse']",MainfreightCost,3000.0,r340
+r341,"['Warehouse', 'New World Mt Roskill', 'Warehouse']",MainfreightCost,3000.0,r341
+r342,"['Warehouse', 'Four Square Alberton', 'New World Mt Roskill', 'Warehouse']",MainfreightCost,3000.0,r342
+r343,"['Warehouse', 'Four Square Ellerslie', 'Four Square Alberton', 'New World Mt Roskill', 'Warehouse']",MainfreightCost,3000.0,r343
+r344,"['Warehouse', 'Four Square St Heliers', 'Four Square Ellerslie', 'Four Square Alberton', 'New World Mt Roskill', 'Warehouse']",MainfreightCost,3000.0,r344
+r345,"['Warehouse', 'Four Square Cockle Bay', 'Four Square St Heliers', 'Four Square Ellerslie', 'Four Square Alberton', 'New World Mt Roskill', 'Warehouse']",MainfreightCost,3000.0,r345
+r346,"['Warehouse', 'New World Remuera', 'Warehouse']",MainfreightCost,3000.0,r346
+r347,"['Warehouse', 'New World Remuera', ""Pak 'n Save Royal Oak"", 'Warehouse']",MainfreightCost,3000.0,r347
+r348,"['Warehouse', 'New World Remuera', 'Four Square Ellerslie', ""Pak 'n Save Royal Oak"", 'Warehouse']",MainfreightCost,3000.0,r348
+r349,"['Warehouse', 'New World Eastridge', 'Warehouse']",MainfreightCost,3000.0,r349
+r350,"['Warehouse', 'New World Eastridge', 'New World Remuera', 'Warehouse']",MainfreightCost,3000.0,r350
+r351,"['Warehouse', 'New World Eastridge', 'New World Remuera', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r351
+r352,"['Warehouse', 'New World Stonefields', 'Warehouse']",MainfreightCost,3000.0,r352
+r353,"['Warehouse', 'New World Stonefields', ""Pak 'n Save Sylvia Park"", 'Warehouse']",MainfreightCost,3000.0,r353
+r354,"['Warehouse', 'New World Howick', 'Warehouse']",MainfreightCost,3000.0,r354
+r355,"['Warehouse', 'New World Howick', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r355
+r356,"['Warehouse', 'New World Howick', ""Pak 'n Save Botany"", 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r356
+r357,"['Warehouse', 'New World Botany', 'Warehouse']",MainfreightCost,3000.0,r357
+r358,"['Warehouse', 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r358
+r359,"['Warehouse', 'New World Ormiston', 'Warehouse']",MainfreightCost,3000.0,r359
+r360,"['Warehouse', 'New World Ormiston', ""Pak 'n Save Ormiston"", 'Warehouse']",MainfreightCost,3000.0,r360
+r361,"['Warehouse', 'New World Ormiston', ""Pak 'n Save Ormiston"", 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r361
+r362,"['Warehouse', ""Pak 'n Save Royal Oak"", 'Warehouse']",MainfreightCost,3000.0,r362
+r363,"['Warehouse', ""Pak 'n Save Royal Oak"", 'New World Mt Roskill', 'Warehouse']",MainfreightCost,3000.0,r363
+r364,"['Warehouse', ""Pak 'n Save Sylvia Park"", 'Warehouse']",MainfreightCost,3000.0,r364
+r365,"['Warehouse', ""Pak 'n Save Sylvia Park"", 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r365
+r366,"['Warehouse', ""Pak 'n Save Sylvia Park"", 'New World Stonefields', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r366
+r367,"['Warehouse', ""Pak 'n Save Botany"", 'Warehouse']",MainfreightCost,3000.0,r367
+r368,"['Warehouse', ""Pak 'n Save Botany"", 'Four Square Pakuranga Heights', 'Warehouse']",MainfreightCost,3000.0,r368
+r369,"['Warehouse', ""Pak 'n Save Botany"", 'Four Square Botany Junction', 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Warehouse']",MainfreightCost,3000.0,r369
+r370,"['Warehouse', ""Pak 'n Save Ormiston"", 'Warehouse']",MainfreightCost,3000.0,r370
+r371,"['Warehouse', ""Pak 'n Save Ormiston"", ""Pak 'n Save Botany"", 'Warehouse']",MainfreightCost,3000.0,r371
+r372,"['Warehouse', ""Pak 'n Save Glen Innes"", 'Warehouse']",MainfreightCost,3000.0,r372
+r373,"['Warehouse', ""Pak 'n Save Glen Innes"", 'Four Square St Heliers', 'Four Square Ellerslie', 'Four Square Botany Junction', 'Warehouse']",MainfreightCost,3000.0,r373
+r374,"['Warehouse', 'New World Devonport', 'New World Metro Shore City', 'Four Square Alberton', 'Warehouse']",MainfreightCost,3000.0,r374
+r375,"['Warehouse', 'New World Milford', 'New World Metro Shore City', 'Warehouse']",MainfreightCost,3000.0,r375
+r376,"['Warehouse', 'New World Milford', 'New World Metro Shore City', 'Four Square Alberton', 'Warehouse']",MainfreightCost,3000.0,r376
+r377,"['Warehouse', 'Four Square Torbay', 'New World Long Bay', 'Warehouse']",MainfreightCost,3000.0,r377
+r378,"['Warehouse', 'New World Victoria Park', 'New World Metro Queen St', 'Warehouse']",MainfreightCost,3000.0,r378
+r379,"['Warehouse', 'New World Victoria Park', 'New World Metro Queen St', 'Four Square Alberton', 'Warehouse']",MainfreightCost,3000.0,r379
+r380,"['Warehouse', 'New World Metro Queen St', 'Four Square Alberton', 'Warehouse']",MainfreightCost,3000.0,r380
+r381,"['Warehouse', 'New World Devonport', 'New World Metro Shore City', 'Warehouse']",MainfreightCost,3000.0,r381
+r382,"['Warehouse', 'New World Devonport', 'New World Metro Shore City', 'Four Square Lancaster', 'Warehouse']",MainfreightCost,3000.0,r382
+r383,"['Warehouse', 'New World Devonport', 'New World Metro Shore City', 'Four Square Lancaster', 'Four Square Torbay', 'Warehouse']",MainfreightCost,3000.0,r383
+r384,"['Warehouse', 'New World Birkenhead', 'Four Square Lancaster', 'Warehouse']",MainfreightCost,3000.0,r384
+r385,"['Warehouse', 'Four Square Lancaster', ""Pak 'n Save Wairau Road"", 'Warehouse']",MainfreightCost,3000.0,r385
+r386,"['Warehouse', ""Pak 'n Save Wairau Road"", 'New World Metro Shore City', 'Warehouse']",MainfreightCost,3000.0,r386
+r387,"['Warehouse', ""Pak 'n Save Wairau Road"", 'New World Metro Shore City', 'Four Square Lancaster', 'Warehouse']",MainfreightCost,3000.0,r387
+r388,"['Warehouse', 'New World Milford', ""Pak 'n Save Wairau Road"", 'Four Square Lancaster', 'Warehouse']",MainfreightCost,3000.0,r388
+r389,"['Warehouse', 'New World Albany', ""Pak 'n Save Albany"", 'Warehouse']",MainfreightCost,3000.0,r389
+r390,"['Warehouse', 'Four Square Torbay', 'New World Albany', 'Warehouse']",MainfreightCost,3000.0,r390
+r391,"['Warehouse', 'Four Square Torbay', 'New World Albany', ""Pak 'n Save Albany"", 'Warehouse']",MainfreightCost,3000.0,r391
+r392,"['Warehouse', 'New World Long Bay', 'Four Square Torbay', 'New World Browns Bay', 'Warehouse']",MainfreightCost,3000.0,r392
+r393,"['Warehouse', 'New World Long Bay', 'Four Square Torbay', 'New World Browns Bay', 'Four Square Lancaster', 'Warehouse']",MainfreightCost,3000.0,r393
+r394,"['Warehouse', ""Pak 'n Save Mt Albert"", 'Warehouse']",MainfreightCost,3000.0,r394
+r395,"['Warehouse', 'Four Square Alberton', ""Pak 'n Save Mt Albert"", 'Warehouse']",MainfreightCost,3000.0,r395
+r396,"['Warehouse', 'New World Victoria Park', 'Four Square Alberton', ""Pak 'n Save Mt Albert"", 'Warehouse']",MainfreightCost,3000.0,r396
+r397,"['Warehouse', 'Four Square Alberton', 'Warehouse']",MainfreightCost,3000.0,r397
+r398,"['Warehouse', 'New World Victoria Park', 'Warehouse']",MainfreightCost,3000.0,r398
+r399,"['Warehouse', 'New World Victoria Park', ""Pak 'n Save Mt Albert"", 'Warehouse']",MainfreightCost,3000.0,r399
+r400,"['Warehouse', 'New World Metro Queen St', 'Warehouse']",MainfreightCost,3000.0,r400
+r401,"['Warehouse', 'New World Metro Queen St', ""Pak 'n Save Mt Albert"", 'Warehouse']",MainfreightCost,3000.0,r401
+r402,"['Warehouse', 'New World Metro Queen St', 'Four Square Alberton', ""Pak 'n Save Mt Albert"", 'Warehouse']",MainfreightCost,3000.0,r402
+r403,"['Warehouse', 'New World Devonport', 'Warehouse']",MainfreightCost,3000.0,r403
+r404,"['Warehouse', 'New World Devonport', 'New World Milford', 'Warehouse']",MainfreightCost,3000.0,r404
+r405,"['Warehouse', 'New World Devonport', 'New World Milford', 'Four Square Lancaster', 'Warehouse']",MainfreightCost,3000.0,r405
+r406,"['Warehouse', 'New World Devonport', 'New World Milford', 'Four Square Torbay', 'Four Square Lancaster', 'Warehouse']",MainfreightCost,3000.0,r406
+r407,"['Warehouse', 'New World Birkenhead', 'Warehouse']",MainfreightCost,3000.0,r407
+r408,"['Warehouse', 'New World Birkenhead', ""Pak 'n Save Wairau Road"", 'Warehouse']",MainfreightCost,3000.0,r408
+r409,"['Warehouse', 'New World Birkenhead', 'Four Square Lancaster', ""Pak 'n Save Wairau Road"", 'Warehouse']",MainfreightCost,3000.0,r409
+r410,"['Warehouse', 'New World Metro Shore City', 'Warehouse']",MainfreightCost,3000.0,r410
+r411,"['Warehouse', 'New World Metro Shore City', 'New World Milford', 'Four Square Lancaster', 'Warehouse']",MainfreightCost,3000.0,r411
+r412,"['Warehouse', 'New World Metro Shore City', 'New World Milford', 'Four Square Lancaster', 'Four Square Torbay', 'Warehouse']",MainfreightCost,3000.0,r412
+r413,"['Warehouse', 'Four Square Lancaster', 'Warehouse']",MainfreightCost,3000.0,r413
+r414,"['Warehouse', 'Four Square Lancaster', ""Pak 'n Save Albany"", 'Warehouse']",MainfreightCost,3000.0,r414
+r415,"['Warehouse', 'Four Square Lancaster', ""Pak 'n Save Albany"", 'New World Albany', 'Warehouse']",MainfreightCost,3000.0,r415
+r416,"['Warehouse', ""Pak 'n Save Wairau Road"", 'Warehouse']",MainfreightCost,3000.0,r416
+r417,"['Warehouse', ""Pak 'n Save Wairau Road"", 'New World Milford', 'Warehouse']",MainfreightCost,3000.0,r417
+r418,"['Warehouse', 'New World Milford', 'Warehouse']",MainfreightCost,3000.0,r418
+r419,"['Warehouse', 'New World Milford', 'New World Metro Queen St', 'Warehouse']",MainfreightCost,3000.0,r419
+r420,"['Warehouse', 'New World Milford', 'New World Metro Queen St', 'Four Square Alberton', 'Warehouse']",MainfreightCost,3000.0,r420
+r421,"['Warehouse', 'New World Albany', 'Warehouse']",MainfreightCost,3000.0,r421
+r422,"['Warehouse', 'New World Albany', 'New World Metro Shore City', 'Warehouse']",MainfreightCost,3000.0,r422
+r423,"['Warehouse', 'New World Albany', 'New World Metro Shore City', 'Four Square Alberton', 'Warehouse']",MainfreightCost,3000.0,r423
+r424,"['Warehouse', ""Pak 'n Save Albany"", 'Warehouse']",MainfreightCost,3000.0,r424
+r425,"['Warehouse', ""Pak 'n Save Albany"", ""Pak 'n Save Wairau Road"", 'Warehouse']",MainfreightCost,3000.0,r425
+r426,"['Warehouse', 'New World Browns Bay', 'Warehouse']",MainfreightCost,3000.0,r426
+r427,"['Warehouse', 'Four Square Torbay', 'Warehouse']",MainfreightCost,3000.0,r427
+r428,"['Warehouse', 'Four Square Torbay', 'New World Browns Bay', 'Warehouse']",MainfreightCost,3000.0,r428
+r429,"['Warehouse', 'Four Square Torbay', 'New World Browns Bay', 'New World Albany', 'Warehouse']",MainfreightCost,3000.0,r429
+r430,"['Warehouse', 'Four Square Torbay', 'New World Browns Bay', 'New World Albany', 'Four Square Lancaster', 'Warehouse']",MainfreightCost,3000.0,r430
+r431,"['Warehouse', 'New World Long Bay', 'Warehouse']",MainfreightCost,3000.0,r431
+r432,"['Warehouse', 'New World Long Bay', 'New World Browns Bay', 'Warehouse']",MainfreightCost,3000.0,r432
