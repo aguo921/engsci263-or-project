@@ -1,8 +1,8 @@
 RouteNum,Route,TruckType,RouteCost
-r102,"['Warehouse', ""Pak 'n Save Botany"", 'New World Botany', 'Four Square Botany Junction', 'Warehouse']",OwnedTruck,216.69625
+r101,"['Warehouse', ""Pak 'n Save Botany"", 'New World Botany', 'Warehouse']",OwnedTruck,205.3037500000001
 r12,"['Warehouse', ""Pak 'n Save Manukau"", 'New World Papatoetoe', 'Warehouse']",OwnedTruck,146.88541666666669
 r134,"['Warehouse', 'New World Eastridge', 'New World Remuera', 'Warehouse']",OwnedTruck,159.40375
-r144,"['Warehouse', 'New World Ormiston', ""Pak 'n Save Ormiston"", 'Warehouse']",OwnedTruck,185.98583333333343
+r145,"['Warehouse', 'New World Ormiston', ""Pak 'n Save Ormiston"", 'Four Square Botany Junction', 'Warehouse']",OwnedTruck,197.37833333333344
 r146,"['Warehouse', ""Pak 'n Save Royal Oak"", 'Warehouse']",OwnedTruck,60.86083333333325
 r150,"['Warehouse', ""Pak 'n Save Sylvia Park"", 'New World Stonefields', 'Four Square Ellerslie', 'Warehouse']",OwnedTruck,170.9733333333334
 r165,"['Warehouse', 'New World Devonport', 'New World Metro Shore City', 'Warehouse']",OwnedTruck,224.535
