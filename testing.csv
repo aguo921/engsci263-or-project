@@ -1,0 +1,13 @@
+RouteNum,Route,TruckType,RouteCost,RouteNum
+r1,"['Warehouse', 'New World New Lynn', 'Warehouse']",Cost,73.5945833333335,r1
+r2,"['Warehouse', 'Four Square Glen Eden', 'Warehouse']",Cost,108.83708333333324,r2
+r3,"['Warehouse', 'New World New Lynn', 'Four Square Glen Eden', 'Warehouse']",Cost,125.29041666666669,r3
+r4,"['Warehouse', 'New World New Lynn', 'Four Square Glen Eden', ""Pak 'n Save Henderson"", 'Warehouse']",Cost,168.92374999999993,r4
+r5,"['Warehouse', ""Pak 'n Save Henderson"", 'Warehouse']",Cost,120.41625,r5
+r6,"['Warehouse', ""Pak 'n Save Henderson"", 'Four Square Glen Eden', 'Warehouse']",Cost,153.43083333333325,r6
+r7,"['Warehouse', 'New World New Lynn', 'Warehouse']",MainfreightCost,3000.0,r7
+r8,"['Warehouse', 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r8
+r9,"['Warehouse', 'New World New Lynn', 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r9
+r10,"['Warehouse', 'New World New Lynn', 'Four Square Glen Eden', ""Pak 'n Save Henderson"", 'Warehouse']",MainfreightCost,3000.0,r10
+r11,"['Warehouse', ""Pak 'n Save Henderson"", 'Warehouse']",MainfreightCost,3000.0,r11
+r12,"['Warehouse', ""Pak 'n Save Henderson"", 'Four Square Glen Eden', 'Warehouse']",MainfreightCost,3000.0,r12
