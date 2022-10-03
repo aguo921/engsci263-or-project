@@ -62,23 +62,38 @@ def calculate_route_time(route, durations, localised=False, unloading=4, traffic
             time += 0.25 * travel_time
         else:
             time += travel_time
+            
     return time
 
-def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_cost=200, mainfreight=False):
+def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_cost=200, mainfreight_cost=3000, mainfreight=False):
+    """ Calculate the cost of a route.
+
+        Parameters
+        ----------
+        route_time : float
+            Total time in minutes for the route, including driving and unloading time.
+        shift_time : int (default=240)
+            Time in minutes for a shift.
+        shift_cost : int (default=150)
+            Operating cost per hour during a shift.
+        overtime_cost : int (default=200)
+            Cost per hour (in blocks) after shift hours.
+        mainfreight_cost : int (default=3000)
+            Cost per 4-hour block for leased Mainfreight trucks.
+        mainfreight : boolean (default=False)
+            Whether the truck is leased Mainfreight truck or not.
+
+    """
+    # cost in 4-hour blocks for leasing Mainfreight trucks
+    if mainfreight:
+        return math.ceiling(route_time / 240)
+
     if route_time < shift_time:
         # shift costs can be fractional
-        if mainfreight:
-            return 3000
-        else:
-            return route_time * shift_cost / 60
+        return route_time * shift_cost / 60
     else:
-        if mainfreight:
-            return math.ceiling(route_time / 240)
-        else:
-            # overtime costs cannot be fractional
-            cost = shift_time * shift_cost
-            cost += (route_time - shift_time) * math.ceiling(overtime_cost / 60)
-            return cost
+        # overtime costs cannot be fractional
+        return shift_time * shift_cost + (route_time - shift_time) * math.ceiling(overtime_cost / 60)
 
 def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropout=0):
     """ Insert a store into the optimal position in a route.
@@ -137,12 +152,13 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
     route_time = calculate_route_time(best_route, durations)
     route_capacity = calculate_route_capacity(best_route, demands, day_type)
     
-    # return best route if capacity constraint is satisfied
     if route_capacity <= capacity:
+        # return best route if capacity constraint is satisfied
         cost = calculate_route_cost(route_time)
         mainfreight_cost = calculate_route_cost(route_time, mainfreight=True)
         return (best_route, cost, mainfreight_cost)
     else:
+        # try to find a cheaper route with current store removed if capacity is reached
         new_nodes = [node for node in nodes if node != best_store]
         return insert_store(route, new_nodes, demands, durations, day_type, capacity, dropout)
 
@@ -187,7 +203,7 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0):
 
         route = (initial_route, cost, mainfreight_cost)
 
-        # keep inserting routes until constraints are not met
+        # keep inserting routes until capacity is reached
         while (route is not None):
             routes.append(route)
             route = insert_store(route[0], nodes, demands, durations, day_type, dropout=dropout)
@@ -214,12 +230,13 @@ def remove_duplicate_routes(routes):
         for j in range(i + 1, len(routes)):
             # remove a route if they contain identical stores
             if set(routes[i][0]) == set(routes[j][0]):
-                # remove route with higher cost
+                # record route to remove if it has a higher cost
                 if routes[i][1] < routes[j][1]:
                     routes_to_remove.append(j)
                 else:
                     routes_to_remove.append(i)
 
+    # remove routes
     routes = [route for i, route in enumerate(routes) if i not in routes_to_remove]
 
     return routes
@@ -254,6 +271,18 @@ def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0]):
     return remove_duplicate_routes(all_routes)
 
 def convert_routes_to_dataframe(routes):
+    """ Convert a list of tuples to a dataframe.
+
+        Parameters
+        ----------
+        routes : list
+            List of tuples containing routes, costs and Mainfreight costs.
+        
+        Returns
+        -------
+        dataframe
+            Dataframe with a route in each row and costs in columns.
+    """
     return pd.DataFrame({
         "Route": [route[0] for route in routes],
         "Cost": [route[1] for route in routes],
@@ -261,6 +290,18 @@ def convert_routes_to_dataframe(routes):
     })
 
 def read_regions(filename):
+    """ Read region data from a file.
+
+        Parameters
+        ----------
+        filename : string
+            Name of file with region data.
+        
+        Returns
+        -------
+        regions : list
+            List containing lists of nodes within each region.
+    """
     df = pd.read_csv(filename)
 
     regions = []
