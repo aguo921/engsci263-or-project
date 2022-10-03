@@ -71,7 +71,7 @@ def route_selection_lp(routeCost, nodes, ownedTruck=12, numShifts=2):
         [vars[i] for i in routeCost.index if routeCost['TruckType'][i] == 'OwnedTruck']) <= ownedTruck*numShifts, 'TruckRestrictions'
 
     # Solving routines - no need to modify other than slotting your name and username in.
-    prob.writeLP('RouteLP.lp')
+    prob.writeLP('./linear-program/output/RouteLP.lp')
 
     prob.solve()
 
@@ -85,7 +85,7 @@ def route_selection_lp(routeCost, nodes, ownedTruck=12, numShifts=2):
     for v in prob.variables():
         if v.varValue == 1:
             selectedRoutes.append(v.name.split("_")[1])
-        print(v.name, "=", v.varValue)
+            print(v.name, "=", v.varValue)
 
     # The optimised objective function valof Ingredients pue is printed to the screen
     print("Total cost for VRP = ", value(prob.objective))

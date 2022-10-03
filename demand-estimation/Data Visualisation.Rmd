@@ -11,7 +11,7 @@ library(lubridate)
 
 ## Reading the demand data
 ```{r}
-Demand = read_csv("./foodstuffs-data/FoodstuffsDemands.csv",show_col_types=FALSE)
+Demand = read_csv("../foodstuffs-data/FoodstuffsDemands.csv",show_col_types=FALSE)
 head(Demand)
 ```
 
