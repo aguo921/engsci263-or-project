@@ -1,5 +1,6 @@
 import pandas as pd
 from pulp import *
+import ast
 
 def read_routes_costs(filename):
     """ reads in a route file and returns a dataframe"""
@@ -112,8 +113,22 @@ if __name__ == "__main__":
     df.drop(columns='RouteNum')
     df.to_csv("./linear-program/output/SelectedRoutesWeekday.csv", index=False)
 
+    print("Selected Weekday Routes")
+    print("-----------------------")
+    for i in df.index:
+        route = ast.literal_eval(df.Route[i])
+        cost = df.RouteCost[i]
+        print(f"Route: {' > '.join(route)}\nCost: {cost}")
+
     selectedRoutesSaturday, objectiveSaturday = route_selection_lp(saturdayRouteCosts, nodes)
 
     df = pd.DataFrame(saturdayRouteCosts, index=selectedRoutesSaturday)
     df.drop(columns='RouteNum')
     df.to_csv("./linear-program/output/SelectedRoutesSaturday.csv", index=False)
+
+    print("Selected Saturday Routes")
+    print("-----------------------")
+    for i in df.index:
+        route = ast.literal_eval(df.Route[i])
+        cost = df.RouteCost[i]
+        print(f"Route: {' > '.join(route)}\nCost: {cost}")
