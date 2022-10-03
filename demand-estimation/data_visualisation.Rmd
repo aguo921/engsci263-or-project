@@ -85,7 +85,7 @@ We observe no long term trend in the demand. The weekly cycles remain similar an
 ```{r}
 DemandEstimates = Demand %>%
   subset(Weekday != 'Sun') %>%
-  mutate(DayType=ifelse(Weekday == 'Sat', 'Saturday', 'Weekday')) %>%
+  mutate(DayType=ifelse(Weekday == 'Sat', 'Saturday', 'Weekdays')) %>%
   group_by(DayType, Supermarket, Type) %>%
   summarise(UQ=quantile(Demand, 0.75)) %>%
   pivot_wider(names_from=DayType, values_from=UQ)
