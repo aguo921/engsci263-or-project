@@ -1,0 +1,7 @@
+numpy
+pandas
+folium
+openrouteservice
+pulp
+matplotlib
+python-dotenv
