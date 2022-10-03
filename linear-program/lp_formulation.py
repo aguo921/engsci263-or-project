@@ -5,13 +5,20 @@ def read_routes_costs(filename):
     """ reads in a route file and returns a dataframe"""
     df = pd.read_csv(filename)
 
-    dict = {'Cost': 'OwnedTruck',
-           'MainfreightCost': 'LeasedTruck'}
+    dict = {
+        'Cost': 'OwnedTruck',
+        'MainfreightCost': 'LeasedTruck'
+    }
 
     df.rename(columns=dict,inplace=True)
 
-    df = pd.melt(df, id_vars=['Route'], value_vars=['OwnedTruck', 'LeasedTruck']
-                 , var_name='TruckType', value_name='RouteCost')
+    df = pd.melt(
+        df,
+        id_vars=['Route'],
+        value_vars=['OwnedTruck', 'LeasedTruck'],
+        var_name='TruckType',
+        value_name='RouteCost'
+    )
 
     routeNames = [f"r{i + 1}" for i in range(df['Route'].count())]
     df['RouteNum'] = routeNames
@@ -96,17 +103,17 @@ def route_selection_lp(routeCost, nodes, ownedTruck=12, numShifts=2):
 
 if __name__ == "__main__":
     nodes = pd.read_csv("./foodstuffs-data/FoodstuffsDemands.csv").Supermarket.values.tolist()
-    weekdayRouteCosts = read_routes_costs("./route-generation/output/weekday_routes.csv")
-    saturdayRouteCosts = read_routes_costs("./route-generation/output/saturday_routes.csv")
+    weekdayRouteCosts = read_routes_costs("./route-generation/output/WeekdayRoutes.csv")
+    saturdayRouteCosts = read_routes_costs("./route-generation/output/SaturdayRoutes.csv")
 
     selectedRoutesWeekday, objectiveWeekday = route_selection_lp(weekdayRouteCosts, nodes)
 
     df = pd.DataFrame(weekdayRouteCosts, index=selectedRoutesWeekday)
     df.drop(columns='RouteNum')
-    df.to_csv("./linear-program/output/selectedRoutesWeekday.csv", index=False)
+    df.to_csv("./linear-program/output/SelectedRoutesWeekday.csv", index=False)
 
     selectedRoutesSaturday, objectiveSaturday = route_selection_lp(saturdayRouteCosts, nodes)
 
     df = pd.DataFrame(saturdayRouteCosts, index=selectedRoutesSaturday)
     df.drop(columns='RouteNum')
-    df.to_csv("./linear-program/output/selectedRoutesSaturday.csv", index=False)
+    df.to_csv("./linear-program/output/SelectedRoutesSaturday.csv", index=False)

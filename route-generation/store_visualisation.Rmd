@@ -12,7 +12,7 @@ library(leaflet)
 
 ## Reading location data
 ```{r}
-Locations = read_csv("./foodstuffs-data/FoodstuffsLocations.csv",show_col_types=FALSE)
+Locations = read_csv("../foodstuffs-data/FoodstuffsLocations.csv",show_col_types=FALSE)
 head(Locations)
 ```
 
@@ -24,7 +24,7 @@ leaflet() %>% addTiles() %>% addCircleMarkers(data=Locations, lng=~Long, lat=~La
 
 ## Reading distance data
 ```{r}
-Distances = read_csv("./foodstuffs-data/FoodstuffsDistances.csv", show_col_types=FALSE)
+Distances = read_csv("../foodstuffs-data/FoodstuffsDistances.csv", show_col_types=FALSE)
 head(Distances)
 ```
 ## Pivoting distance data
@@ -37,7 +37,7 @@ head(Distances)
 ```
 ## Reading duration data
 ```{r}
-Durations = read_csv("./foodstuffs-data/FoodstuffsDurations.csv", show_col_types=FALSE)
+Durations = read_csv("../foodstuffs-data/FoodstuffsDurations.csv", show_col_types=FALSE)
 head(Durations)
 ```
 ## Pivoting duration data
