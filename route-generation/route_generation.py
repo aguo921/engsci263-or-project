@@ -24,7 +24,7 @@ def calculate_route_capacity(route, demands, day_type):
         capacity += demands[demands.Supermarket==store].iloc[0][day_type]
     return capacity
 
-def calculate_route_time(route, durations, localisation=1, unloading=4, traffic_intensity=1):
+def calculate_route_time(route, durations, warehouse_weight=1, unloading=4, traffic_intensity=1):
     """ Calculate total time taken on route.
 
         Parameters
@@ -33,8 +33,8 @@ def calculate_route_time(route, durations, localisation=1, unloading=4, traffic_
             List of nodes in route.
         durations : dataframe
             Durations between nodes.
-        localised : boolean (default=False)
-            Whether to weight trips to and from the warehouse.
+        warehouse_weight : float (default=1)
+            Value between 0 and 1. Weighting of arcs to and from the warehouse.
         unloading : int (default=4)
             Unloading time (min) at each store.
         traffic_intensity : float
@@ -59,7 +59,7 @@ def calculate_route_time(route, durations, localisation=1, unloading=4, traffic_
         
         # decrease weighting of trips to and from the warehouse
         if (source == "Warehouse" or destination == "Warehouse"):
-            time += localisation * travel_time
+            time += warehouse_weight * travel_time
         else:
             time += travel_time
             
@@ -95,7 +95,7 @@ def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_co
             # overtime costs cannot be fractional
             return shift_time * shift_cost + (route_time - shift_time) * math.ceiling(overtime_cost / 60)
 
-def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropout=0, localisation=1):
+def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropout=0, warehouse_weight=1):
     """ Insert a store into the optimal position in a route.
 
         Parameters
@@ -112,6 +112,8 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
             Capacity of truck.
         dropout : float (default=0)
             Value between 0 and 1. Rate at which better routes are dropped out.
+        warehouse_weight : float (default=1)
+            Value between 0 and 1. Weighting of arcs to and from warehouse.
         
         Returns
         -------
@@ -130,7 +132,7 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
     # initiate best route and time
     best_route = route.copy()
     best_route.insert(1, unvisited[0])
-    best_time = calculate_route_time(best_route, durations, localisation=localisation)
+    best_time = calculate_route_time(best_route, durations, warehouse_weight=warehouse_weight)
     best_store = unvisited[0]
 
     # loop over every unvisited store
@@ -145,7 +147,7 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
             if current_capacity > capacity:
                 break
 
-            current_time = calculate_route_time(current_route, durations, localisation=localisation)
+            current_time = calculate_route_time(current_route, durations, warehouse_weight=warehouse_weight)
             
             # replace best time if new route time is better
             if current_time < best_time and random.random() > dropout:
@@ -168,7 +170,7 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
         return insert_store(route, new_nodes, demands, durations, day_type, capacity, dropout)
 
 
-def generate_routes(nodes, demands, durations, weekday=True, dropout=0, localisation=1):
+def generate_routes(nodes, demands, durations, weekday=True, dropout=0, warehouse_weight=1):
     """ Generate feasible routes between warehouse and stores.
 
         Parameters
@@ -183,6 +185,8 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0, localisa
             Whether the day is a weekday or not.
         dropout : float (default=0)
             Value between 0 and 1. Rate at which improved routes are dropped.
+        warehouse_weight : float (default=1)
+            Value between 0 and 1. Weighting of arcs to and from the warehouse.
 
         Returns
         -------
@@ -211,7 +215,7 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0, localisa
         # keep inserting routes until capacity is reached
         while (route is not None):
             routes.append(route)
-            route = insert_store(route[0], nodes, demands, durations, day_type, dropout=dropout, localisation=localisation)
+            route = insert_store(route[0], nodes, demands, durations, day_type, dropout=dropout, warehouse_weight=warehouse_weight)
             
     return routes
 
@@ -246,7 +250,7 @@ def remove_duplicate_routes(routes):
 
     return routes
 
-def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0], localisations=[1]):
+def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0], warehouse_weights=[1]):
     """ Aggregate generated routes over multiple regions for different dropout rates.
 
         Parameters
@@ -261,6 +265,8 @@ def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0], lo
             Whether the day is a weekday or not.
         dropouts : list (default=[0])
             List of dropout rates.
+        warehouse_weights : list (default=[1])
+            List of warehouse weighting factors.
 
         Returns
         -------
@@ -270,8 +276,8 @@ def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0], lo
     all_routes = []
     for region in regions:
         for dropout in dropouts:
-            for localisation in localisations:
-                all_routes.append(generate_routes(region, demands, durations, weekday, dropout=dropout, localisation=localisation))
+            for weight in warehouse_weights:
+                all_routes.append(generate_routes(region, demands, durations, weekday, dropout=dropout, warehouse_weight=weight))
 
     all_routes = [route for routes in all_routes for route in routes]
     return remove_duplicate_routes(all_routes)
