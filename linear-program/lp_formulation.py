@@ -118,7 +118,7 @@ if __name__ == "__main__":
     for i in df.index:
         route = ast.literal_eval(df.Route[i])
         cost = df.RouteCost[i]
-        print(f"Route: {' > '.join(route)}\nCost: {cost}")
+        print(f"Route: {', '.join(route[1:-1])}\nCost: {cost}")
 
     selectedRoutesSaturday, objectiveSaturday = route_selection_lp(saturdayRouteCosts, nodes)
 
@@ -131,4 +131,4 @@ if __name__ == "__main__":
     for i in df.index:
         route = ast.literal_eval(df.Route[i])
         cost = df.RouteCost[i]
-        print(f"Route: {' > '.join(route)}\nCost: {cost}")
+        print(f"Route: {', '.join(route[1:-1])}\nCost: {cost}")
