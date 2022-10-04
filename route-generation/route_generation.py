@@ -24,7 +24,7 @@ def calculate_route_capacity(route, demands, day_type):
         capacity += demands[demands.Supermarket==store].iloc[0][day_type]
     return capacity
 
-def calculate_route_time(route, durations, localised=False, unloading=4, traffic_intensity=1):
+def calculate_route_time(route, durations, localisation=1, unloading=4, traffic_intensity=1):
     """ Calculate total time taken on route.
 
         Parameters
@@ -58,8 +58,8 @@ def calculate_route_time(route, durations, localised=False, unloading=4, traffic
         travel_time = traffic_intensity * durations.Duration[(durations.From==source) & (durations.To==destination)].iloc[0]
         
         # decrease weighting of trips to and from the warehouse
-        if localised and (source == "Warehouse" or destination == "Warehouse"):
-            time += 0.25 * travel_time
+        if (source == "Warehouse" or destination == "Warehouse"):
+            time += localisation * travel_time
         else:
             time += travel_time
             
@@ -86,16 +86,16 @@ def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_co
     """
     # cost in 4-hour blocks for leasing Mainfreight trucks
     if mainfreight:
-        return math.ceiling(route_time / 240)
-
-    if route_time < shift_time:
-        # shift costs can be fractional
-        return route_time * shift_cost / 60
+        return math.ceil(route_time / 240) * mainfreight_cost
     else:
-        # overtime costs cannot be fractional
-        return shift_time * shift_cost + (route_time - shift_time) * math.ceiling(overtime_cost / 60)
+        if route_time < shift_time:
+            # shift costs can be fractional
+            return route_time * shift_cost / 60
+        else:
+            # overtime costs cannot be fractional
+            return shift_time * shift_cost + (route_time - shift_time) * math.ceiling(overtime_cost / 60)
 
-def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropout=0):
+def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropout=0, localisation=1):
     """ Insert a store into the optimal position in a route.
 
         Parameters
@@ -130,7 +130,7 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
     # initiate best route and time
     best_route = route.copy()
     best_route.insert(1, unvisited[0])
-    best_time = calculate_route_time(best_route, durations, localised=True)
+    best_time = calculate_route_time(best_route, durations, localisation=localisation)
     best_store = unvisited[0]
 
     # loop over every unvisited store
@@ -140,8 +140,13 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
             # calculate time of new route
             current_route = route.copy()
             current_route.insert(position, node)
-            current_time = calculate_route_time(current_route, durations, localised=True)
 
+            current_capacity = calculate_route_capacity(current_route, demands, day_type)
+            if current_capacity > capacity:
+                break
+
+            current_time = calculate_route_time(current_route, durations, localisation=localisation)
+            
             # replace best time if new route time is better
             if current_time < best_time and random.random() > dropout:
                 best_route = current_route
@@ -163,7 +168,7 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
         return insert_store(route, new_nodes, demands, durations, day_type, capacity, dropout)
 
 
-def generate_routes(nodes, demands, durations, weekday=True, dropout=0):
+def generate_routes(nodes, demands, durations, weekday=True, dropout=0, localisation=1):
     """ Generate feasible routes between warehouse and stores.
 
         Parameters
@@ -206,7 +211,7 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0):
         # keep inserting routes until capacity is reached
         while (route is not None):
             routes.append(route)
-            route = insert_store(route[0], nodes, demands, durations, day_type, dropout=dropout)
+            route = insert_store(route[0], nodes, demands, durations, day_type, dropout=dropout, localisation=localisation)
             
     return routes
 
@@ -241,7 +246,7 @@ def remove_duplicate_routes(routes):
 
     return routes
 
-def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0]):
+def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0], localisations=[1]):
     """ Aggregate generated routes over multiple regions for different dropout rates.
 
         Parameters
@@ -265,7 +270,8 @@ def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0]):
     all_routes = []
     for region in regions:
         for dropout in dropouts:
-            all_routes.append(generate_routes(region, demands, durations, weekday, dropout=dropout))
+            for localisation in localisations:
+                all_routes.append(generate_routes(region, demands, durations, weekday, dropout=dropout, localisation=localisation))
 
     all_routes = [route for routes in all_routes for route in routes]
     return remove_duplicate_routes(all_routes)

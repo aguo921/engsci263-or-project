@@ -1,19 +1,19 @@
-﻿South,West,East,North
-Four Square Botany Junction,New World New Lynn,Four Square Alberton,Pak 'n Save Mt Albert
-Four Square Everglade,New World Green Bay,Four Square Ellerslie,Four Square Alberton
-New World Mt Roskill,Four Square Glen Eden,Four Square St Heliers,New World Victoria Park
-New World Papatoetoe,Pak 'n Save Henderson,Four Square Pakuranga Heights,New World Metro Queen St
-New World Southmall,Pak 'n Save Mt Albert,Four Square Cockle Bay,New World Devonport
-New World Papakura,Four Square Fair Price Henderson,Four Square Botany Junction,New World Birkenhead
-New World Ormiston,Pak 'n Save Lincoln Road,New World Mt Roskill,New World Metro Shore City
-Pak 'n Save Mangere,Pak 'n Save Westgate,New World Remuera,Four Square Lancaster
-Pak 'n Save Manukau,Four Square Hobsonville,New World Eastridge,Pak 'n Save Wairau Road
-Pak 'n Save Clendon,,New World Stonefields,New World Milford
-Pak 'n Save Papakura,,New World Howick,New World Albany
-Pak 'n Save Ormiston,,New World Botany,Pak 'n Save Albany
-,,New World Ormiston,New World Browns Bay
-,,Pak 'n Save Royal Oak,Four Square Torbay
-,,Pak 'n Save Sylvia Park,New World Long Bay
-,,Pak 'n Save Botany,
-,,Pak 'n Save Ormiston,
-,,Pak 'n Save Glen Innes,
+﻿South,West,East,North,Central
+Four Square Botany Junction,New World New Lynn,Four Square Alberton,Pak 'n Save Mt Albert,Four Square Glen Eden
+Four Square Everglade,New World Green Bay,Four Square Ellerslie,Four Square Alberton,Four Square Alberton
+New World Mt Roskill,Four Square Glen Eden,Four Square St Heliers,New World Victoria Park,Four Square Ellerslie
+New World Papatoetoe,Pak 'n Save Henderson,Four Square Pakuranga Heights,New World Metro Queen St,Four Square St Heliers
+New World Southmall,Pak 'n Save Mt Albert,Four Square Cockle Bay,New World Devonport,New World Green Bay
+New World Papakura,Four Square Fair Price Henderson,Four Square Botany Junction,New World Birkenhead,New World New Lynn
+New World Ormiston,Pak 'n Save Lincoln Road,New World Mt Roskill,New World Metro Shore City,New World Mt Roskill
+Pak 'n Save Mangere,Pak 'n Save Westgate,New World Remuera,Four Square Lancaster,New World Victoria Park
+Pak 'n Save Manukau,Four Square Hobsonville,New World Eastridge,Pak 'n Save Wairau Road,New World Metro Queen St
+Pak 'n Save Clendon,,New World Stonefields,New World Milford,New World Remuera
+Pak 'n Save Papakura,,New World Howick,New World Albany,New World Stonefields
+Pak 'n Save Ormiston,,New World Botany,Pak 'n Save Albany,New World Eastridge
+,,New World Ormiston,New World Browns Bay,Pak 'n Save Mt Albert
+,,Pak 'n Save Royal Oak,Four Square Torbay,Pak 'n Save Royal Oak
+,,Pak 'n Save Sylvia Park,New World Long Bay,Pak 'n Save Sylvia Park
+,,Pak 'n Save Botany,,Pak 'n Save Glen Innes
+,,Pak 'n Save Ormiston,,
+,,Pak 'n Save Glen Innes,,

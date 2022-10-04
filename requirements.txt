@@ -5,3 +5,4 @@ openrouteservice
 pulp
 matplotlib
 python-dotenv
+ipykernel

@@ -68,6 +68,15 @@ Demand %>%
   ylab("Daily Demand")
 ```
 
+```{r}
+Demand %>%
+  subset(Weekday != 'Sun') %>%
+  mutate(DayType=ifelse(Weekday == 'Sat', 'Saturday', 'Weekdays')) %>%
+  group_by(DayType, Type) %>%
+  ggplot() + geom_histogram(aes(x=Demand)) + facet_wrap(DayType ~ Type)
+```
+
+
 
 ## Data description
 We have data on the number of pallets to be delivered to 49 Foodstuff stores between 4th July 2022 and 31st July 2022.
@@ -87,7 +96,7 @@ DemandEstimates = Demand %>%
   subset(Weekday != 'Sun') %>%
   mutate(DayType=ifelse(Weekday == 'Sat', 'Saturday', 'Weekdays')) %>%
   group_by(DayType, Supermarket, Type) %>%
-  summarise(UQ=quantile(Demand, 0.75)) %>%
+  summarise(UQ=round(quantile(Demand, 0.75))) %>%
   pivot_wider(names_from=DayType, values_from=UQ)
 
 write.csv(DemandEstimates, "output/DemandEstimates.csv", row.names=FALSE)
@@ -95,6 +104,6 @@ write.csv(DemandEstimates, "output/DemandEstimates.csv", row.names=FALSE)
 
 ## Plotting the demand estimates
 ```{r}
-ggplot(DemandEstimates) + geom_point(aes(x=Saturday, y=Weekday, color=Type, alpha=0.1)) + guides(alpha="none")
+ggplot(DemandEstimates) + geom_point(aes(x=Saturday, y=Weekdays, color=Type, alpha=0.1)) + guides(alpha="none")
 ```
 
