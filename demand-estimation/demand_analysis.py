@@ -16,7 +16,7 @@ def get_demand_info():
     demand_dict: dictionary
         keys correspond to name of supermarket, values are a list of number of pallets demanded on each day
     """
-    with open('FoodstuffsDemands.csv', mode='r') as demand_data:
+    with open('./foodstuffs-data/FoodstuffsDemands.csv', mode='r') as demand_data:
         demand = list(csv.reader(demand_data, delimiter=','))
         # extract dates as a list of strings
         date = [x[5:] for x in demand[0][1:]]
@@ -100,8 +100,8 @@ def write_demand_to_file(demand_dict):
         keys correspond to name of supermarket, values are a list of number of pallets demanded on each day
     """
     # set up txt files and write in headings
-    store_demandP = open("store_demand_plotting.txt", "w")
-    store_demand = open("store_demand.txt", "w")
+    store_demandP = open("output/store_demand_plotting.txt", "w")
+    store_demand = open("output/store_demand.txt", "w")
     store_demandP.write("Brand,Location,Weekdays,Saturday\n")
     store_demand.write("Brand,Location,Weekdays,Saturday\n")
     for key in demand_dict:

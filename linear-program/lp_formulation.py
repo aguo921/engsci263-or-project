@@ -1,20 +1,25 @@
-import numpy as np
 import pandas as pd
 from pulp import *
-from route_generation import read_regions
-
+import ast
 
 def read_routes_costs(filename):
     """ reads in a route file and returns a dataframe"""
     df = pd.read_csv(filename)
 
-    dict = {'Cost': 'OwnedTruck',
-           'MainfreightCost': 'LeasedTruck'}
+    dict = {
+        'Cost': 'OwnedTruck',
+        'MainfreightCost': 'LeasedTruck'
+    }
 
     df.rename(columns=dict,inplace=True)
 
-    df = pd.melt(df, id_vars=['Route'], value_vars=['OwnedTruck', 'LeasedTruck']
-                 , var_name='TruckType', value_name='RouteCost')
+    df = pd.melt(
+        df,
+        id_vars=['Route'],
+        value_vars=['OwnedTruck', 'LeasedTruck'],
+        var_name='TruckType',
+        value_name='RouteCost'
+    )
 
     routeNames = [f"r{i + 1}" for i in range(df['Route'].count())]
     df['RouteNum'] = routeNames
@@ -74,7 +79,7 @@ def route_selection_lp(routeCost, nodes, ownedTruck=12, numShifts=2):
         [vars[i] for i in routeCost.index if routeCost['TruckType'][i] == 'OwnedTruck']) <= ownedTruck*numShifts, 'TruckRestrictions'
 
     # Solving routines - no need to modify other than slotting your name and username in.
-    prob.writeLP('RouteLP.lp')
+    prob.writeLP('./linear-program/output/RouteLP.lp')
 
     prob.solve()
 
@@ -88,7 +93,7 @@ def route_selection_lp(routeCost, nodes, ownedTruck=12, numShifts=2):
     for v in prob.variables():
         if v.varValue == 1:
             selectedRoutes.append(v.name.split("_")[1])
-        print(v.name, "=", v.varValue)
+            print(v.name, "=", v.varValue)
 
     # The optimised objective function valof Ingredients pue is printed to the screen
     print("Total cost for VRP = ", value(prob.objective))
@@ -98,21 +103,32 @@ def route_selection_lp(routeCost, nodes, ownedTruck=12, numShifts=2):
 
 
 if __name__ == "__main__":
-    nodes = read_regions("nodes.csv")[0]  # read nodes
-    weekdayRouteCosts = read_routes_costs("weekday_routes.csv")
-    saturdayRouteCosts = read_routes_costs("saturday_routes.csv")
+    nodes = pd.read_csv("./foodstuffs-data/FoodstuffsDemands.csv").Supermarket.values.tolist()
+    weekdayRouteCosts = read_routes_costs("./route-generation/output/WeekdayRoutes.csv")
+    saturdayRouteCosts = read_routes_costs("./route-generation/output/SaturdayRoutes.csv")
 
     selectedRoutesWeekday, objectiveWeekday = route_selection_lp(weekdayRouteCosts, nodes)
 
     df = pd.DataFrame(weekdayRouteCosts, index=selectedRoutesWeekday)
     df.drop(columns='RouteNum')
-    df.to_csv("selectedRoutesWeekday.csv", index=False)
+    df.to_csv("./linear-program/output/SelectedRoutesWeekday.csv", index=False)
+
+    print("Selected Weekday Routes")
+    print("-----------------------")
+    for i in df.index:
+        route = ast.literal_eval(df.Route[i])
+        cost = df.RouteCost[i]
+        print(f"Route: {' > '.join(route)}\nCost: {cost}")
 
     selectedRoutesSaturday, objectiveSaturday = route_selection_lp(saturdayRouteCosts, nodes)
 
     df = pd.DataFrame(saturdayRouteCosts, index=selectedRoutesSaturday)
     df.drop(columns='RouteNum')
-    df.to_csv("selectedRoutesSaturday.csv", index=False)
+    df.to_csv("./linear-program/output/SelectedRoutesSaturday.csv", index=False)
 
-
-
+    print("Selected Saturday Routes")
+    print("-----------------------")
+    for i in df.index:
+        route = ast.literal_eval(df.Route[i])
+        cost = df.RouteCost[i]
+        print(f"Route: {' > '.join(route)}\nCost: {cost}")

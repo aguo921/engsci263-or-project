@@ -1,6 +1,6 @@
 library(tidyverse)
 # read in data and convert to tibble
-demand_data = read_delim("store_demand_plotting.txt",",")
+demand_data = read_delim("output/store_demand_plotting.txt",",")
 demand_tibble = as_tibble(demand_data)
 
 # plot scatter plot : x-axis weekdays, y-axis Saturdays
