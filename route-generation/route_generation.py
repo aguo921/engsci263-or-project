@@ -143,13 +143,13 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
             current_route = route.copy()
             current_route.insert(position, node)
 
+            # if the capacity is exceeded, move on to next store
             current_capacity = calculate_route_capacity(current_route, demands, day_type)
             if current_capacity > capacity:
                 break
-
-            current_time = calculate_route_time(current_route, durations, warehouse_weight=warehouse_weight)
             
             # replace best time if new route time is better
+            current_time = calculate_route_time(current_route, durations, warehouse_weight=warehouse_weight)
             if current_time < best_time and random.random() > dropout:
                 best_route = current_route
                 best_time = current_time
