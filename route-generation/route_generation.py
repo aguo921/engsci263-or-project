@@ -86,14 +86,14 @@ def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_co
     """
     # cost in 4-hour blocks for leasing Mainfreight trucks
     if mainfreight:
-        return math.ceiling(route_time / 240)
-
-    if route_time < shift_time:
-        # shift costs can be fractional
-        return route_time * shift_cost / 60
+        return math.ceil(route_time / 240) * mainfreight_cost
     else:
-        # overtime costs cannot be fractional
-        return shift_time * shift_cost + (route_time - shift_time) * math.ceiling(overtime_cost / 60)
+        if route_time < shift_time:
+            # shift costs can be fractional
+            return route_time * shift_cost / 60
+        else:
+            # overtime costs cannot be fractional
+            return shift_time * shift_cost + (route_time - shift_time) * math.ceiling(overtime_cost / 60)
 
 def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropout=0):
     """ Insert a store into the optimal position in a route.
@@ -140,8 +140,13 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
             # calculate time of new route
             current_route = route.copy()
             current_route.insert(position, node)
-            current_time = calculate_route_time(current_route, durations, localised=True)
 
+            current_capacity = calculate_route_capacity(current_route, demands, day_type)
+            if current_capacity > capacity:
+                break
+
+            current_time = calculate_route_time(current_route, durations, localised=True)
+            
             # replace best time if new route time is better
             if current_time < best_time and random.random() > dropout:
                 best_route = current_route
