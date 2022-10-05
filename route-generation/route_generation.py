@@ -21,7 +21,7 @@ def calculate_route_capacity(route, demands, day_type):
     """
     capacity = 0
     for store in route[1:-1]:
-        capacity += demands[demands.Supermarket==store].iloc[0][day_type]
+        capacity += demands[day_type][store]
     return capacity
 
 def calculate_route_time(route, durations, warehouse_weight=1, unloading=4, traffic_intensity=1):
@@ -55,7 +55,7 @@ def calculate_route_time(route, durations, warehouse_weight=1, unloading=4, traf
         destination = route[i + 1]
         
         # calculate travel time between stores
-        travel_time = traffic_intensity * durations.Duration[(durations.From==source) & (durations.To==destination)].iloc[0]
+        travel_time = traffic_intensity * durations.Duration[source, destination]
         
         # decrease weighting of trips to and from the warehouse
         if (source == "Warehouse" or destination == "Warehouse"):
@@ -122,18 +122,26 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
         route_cost : float
             Cost of best route.
     """
+    # calculate capacity of old route
+    old_capacity = calculate_route_capacity(route, demands, day_type)
 
-    # get list of unvisited stores and dropout some stores
-    unvisited = [node for node in nodes if node not in route and random.random() > dropout]
+    # get list of unvisited stores
+    unvisited = [
+        node for node in nodes 
+        if node not in route 
+        # additional demand does not exceed capacity
+        and old_capacity + demands[day_type][node] <= capacity
+        # drop out some nodes at random
+        and random.random() > dropout
+    ]
 
-    if unvisited == []:
+    if len(unvisited) == 0:
         return None
 
-    # initiate best route and time
+    # initialise best route and time
     best_route = route.copy()
     best_route.insert(1, unvisited[0])
     best_time = calculate_route_time(best_route, durations, warehouse_weight=warehouse_weight)
-    best_store = unvisited[0]
 
     # loop over every unvisited store
     for node in unvisited:
@@ -143,32 +151,17 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
             current_route = route.copy()
             current_route.insert(position, node)
 
-            # if the capacity is exceeded, move on to next store
-            current_capacity = calculate_route_capacity(current_route, demands, day_type)
-            if current_capacity > capacity:
-                break
-            
             # replace best time if new route time is better
             current_time = calculate_route_time(current_route, durations, warehouse_weight=warehouse_weight)
             if current_time < best_time:
                 best_route = current_route
                 best_time = current_time
-                best_store = node
 
-    # calculate route time and capacity of best route
     route_time = calculate_route_time(best_route, durations)
-    route_capacity = calculate_route_capacity(best_route, demands, day_type)
-    
-    if route_capacity <= capacity:
-        # return best route if capacity constraint is satisfied
-        cost = calculate_route_cost(route_time)
-        mainfreight_cost = calculate_route_cost(route_time, mainfreight=True)
-        return (best_route, cost, mainfreight_cost)
-    else:
-        # try to find a cheaper route with current store removed if capacity is reached
-        new_nodes = [node for node in nodes if node != best_store]
-        return insert_store(route, new_nodes, demands, durations, day_type, capacity, dropout)
+    cost = calculate_route_cost(route_time)
+    mainfreight_cost = calculate_route_cost(route_time, mainfreight=True)
 
+    return (best_route, cost, mainfreight_cost)
 
 def generate_routes(nodes, demands, durations, weekday=True, dropout=0, warehouse_weight=1):
     """ Generate feasible routes between warehouse and stores.
@@ -215,7 +208,15 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0, warehous
         # keep inserting routes until capacity is reached
         while (route is not None):
             routes.append(route)
-            route = insert_store(route[0], nodes, demands, durations, day_type, dropout=dropout, warehouse_weight=warehouse_weight)
+            route = insert_store(
+                route[0], 
+                nodes, 
+                demands, 
+                durations, 
+                day_type, 
+                dropout=dropout, 
+                warehouse_weight=warehouse_weight
+            )
             
     return routes
 
@@ -277,7 +278,14 @@ def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0], wa
     for region in regions:
         for dropout in dropouts:
             for weight in warehouse_weights:
-                all_routes.append(generate_routes(region, demands, durations, weekday, dropout=dropout, warehouse_weight=weight))
+                all_routes.append(generate_routes(
+                    region, 
+                    demands, 
+                    durations, 
+                    weekday, 
+                    dropout=dropout, 
+                    warehouse_weight=weight
+                ))
 
     all_routes = [route for routes in all_routes for route in routes]
     return remove_duplicate_routes(all_routes)
