@@ -123,8 +123,8 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
             Cost of best route.
     """
 
-    # get list of unvisited stores
-    unvisited = [node for node in nodes if node not in route]
+    # get list of unvisited stores and dropout some stores
+    unvisited = [node for node in nodes if node not in route and random.random() > dropout]
 
     if unvisited == []:
         return None
@@ -150,7 +150,7 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
             
             # replace best time if new route time is better
             current_time = calculate_route_time(current_route, durations, warehouse_weight=warehouse_weight)
-            if current_time < best_time and random.random() > dropout:
+            if current_time < best_time:
                 best_route = current_route
                 best_time = current_time
                 best_store = node
