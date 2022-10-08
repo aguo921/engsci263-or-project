@@ -96,9 +96,12 @@ DemandEstimates = Demand %>%
   subset(Weekday != 'Sun') %>%
   mutate(DayType=ifelse(Weekday == 'Sat', 'Saturday', 'Weekdays')) %>%
   group_by(DayType, Supermarket, Type) %>%
-  summarise(UQ=round(quantile(Demand, 0.75))) %>%
+  summarise(
+    UQ=round(quantile(Demand, 0.75))
+  ) %>%
   pivot_wider(names_from=DayType, values_from=UQ)
 
+DemandEstimates
 write.csv(DemandEstimates, "output/DemandEstimates.csv", row.names=FALSE)
 ```
 
@@ -107,3 +110,13 @@ write.csv(DemandEstimates, "output/DemandEstimates.csv", row.names=FALSE)
 ggplot(DemandEstimates) + geom_point(aes(x=Saturday, y=Weekdays, color=Type, alpha=0.1)) + guides(alpha="none")
 ```
 
+```{r}
+MeanDemand = Demand %>%
+  subset(Weekday != 'Sun') %>%
+  mutate(DayType=ifelse(Weekday == 'Sat', 'Saturday', 'Weekdays')) %>%
+  group_by(DayType, Supermarket, Type) %>%
+  summarise(Average=round(mean(Demand))) %>%
+  pivot_wider(names_from=DayType, values_from=Average)
+
+write.csv(MeanDemand, "output/MeanDemand.csv", row.names=FALSE)
+```
