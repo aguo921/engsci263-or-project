@@ -26,10 +26,7 @@ def read_routes_costs(filename):
 
     df = df[['RouteNum','Route','TruckType','RouteCost']]
 
-
-
     df.set_index('RouteNum', drop=False, inplace=True)
-
 
     return df
 
