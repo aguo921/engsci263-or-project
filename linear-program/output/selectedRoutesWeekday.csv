@@ -1,21 +1,23 @@
 RouteNum,Route,TruckType,RouteCost
-r105,"['Warehouse', 'Four Square Glen Eden', ""Pak 'n Save Henderson"", 'Four Square Fair Price Henderson', 'Warehouse']",OwnedTruck,177.6725
-r119,"['Warehouse', ""Pak 'n Save Westgate"", 'Four Square Hobsonville', 'Warehouse']",OwnedTruck,158.38166666666675
-r128,"['Warehouse', ""Pak 'n Save Lincoln Road"", 'Warehouse']",OwnedTruck,104.1925
-r149,"['Warehouse', 'Four Square Botany Junction', 'Four Square Cockle Bay', 'New World Howick', 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Warehouse']",OwnedTruck,285.71666666666647
-r15,"['Warehouse', 'New World Ormiston', ""Pak 'n Save Ormiston"", 'Four Square Everglade', 'Warehouse']",OwnedTruck,201.88375000000016
-r274,"['Warehouse', ""Pak 'n Save Botany"", 'New World Botany', 'Warehouse']",OwnedTruck,205.3037500000001
-r399,"['Warehouse', 'New World Long Bay', 'Four Square Torbay', 'New World Browns Bay', 'Warehouse']",OwnedTruck,265.61583333333346
-r40,"['Warehouse', 'New World Southmall', ""Pak 'n Save Clendon"", 'Warehouse']",OwnedTruck,173.92874999999992
-r429,"['Warehouse', 'New World Devonport', 'New World Metro Shore City', 'Warehouse']",OwnedTruck,224.535
-r430,"['Warehouse', ""Pak 'n Save Wairau Road"", 'New World Milford', 'Warehouse']",OwnedTruck,190.64375000000013
-r45,"['Warehouse', ""Pak 'n Save Papakura"", 'New World Papakura', 'Warehouse']",OwnedTruck,202.59875
-r461,"['Warehouse', 'Four Square Lancaster', 'New World Birkenhead', 'New World Metro Queen St', 'Warehouse']",OwnedTruck,223.73958333333323
-r468,"['Warehouse', 'New World Albany', ""Pak 'n Save Albany"", 'Warehouse']",OwnedTruck,203.5366666666665
-r498,"['Warehouse', ""Pak 'n Save Sylvia Park"", 'New World Stonefields', 'Warehouse']",OwnedTruck,174.39500000000015
-r501,"['Warehouse', 'New World Eastridge', 'Four Square St Heliers', ""Pak 'n Save Glen Innes"", 'Warehouse']",OwnedTruck,208.6633333333332
-r509,"['Warehouse', ""Pak 'n Save Mt Albert"", ""Pak 'n Save Royal Oak"", 'Warehouse']",OwnedTruck,94.74541666666676
-r521,"['Warehouse', 'Four Square Alberton', 'New World Victoria Park', 'New World Remuera', 'Warehouse']",OwnedTruck,164.37833333333344
-r558,"['Warehouse', 'New World Green Bay', 'New World New Lynn', 'Warehouse']",OwnedTruck,105.61791666666682
-r74,"['Warehouse', 'New World Mt Roskill', ""Pak 'n Save Mangere"", 'Warehouse']",OwnedTruck,109.7616666666668
-r84,"['Warehouse', ""Pak 'n Save Manukau"", 'New World Papatoetoe', 'Warehouse']",OwnedTruck,146.88541666666669
+r109,"['Warehouse', 'Four Square Glen Eden', ""Pak 'n Save Henderson"", 'Four Square Fair Price Henderson', 'Four Square Hobsonville', 'Warehouse']",OwnedTruck,317.1276666666665
+r122,"['Warehouse', ""Pak 'n Save Lincoln Road"", 'Warehouse']",OwnedTruck,104.1925
+r124,"['Warehouse', ""Pak 'n Save Westgate"", 'Warehouse']",OwnedTruck,118.68541666666675
+r14,"['Warehouse', 'Four Square Everglade', 'New World Ormiston', ""Pak 'n Save Ormiston"", 'Warehouse']",OwnedTruck,271.9188333333332
+r189,"['Warehouse', 'Four Square Botany Junction', 'Four Square Cockle Bay', 'New World Howick', 'Four Square Pakuranga Heights', 'Four Square Ellerslie', 'Warehouse']",OwnedTruck,380.0033333333331
+r278,"['Warehouse', ""Pak 'n Save Botany"", 'New World Botany', 'Warehouse']",OwnedTruck,279.4252500000001
+r36,"['Warehouse', 'New World Southmall', ""Pak 'n Save Clendon"", 'Warehouse']",OwnedTruck,235.50024999999988
+r382,"['Warehouse', 'New World Long Bay', 'Four Square Torbay', 'New World Browns Bay', 'Warehouse']",OwnedTruck,359.8621666666668
+r384,"['Warehouse', 'New World Birkenhead', 'Four Square Lancaster', 'New World Metro Shore City', 'Warehouse']",OwnedTruck,315.34099999999967
+r410,"['Warehouse', 'Four Square Alberton', 'New World Victoria Park', 'New World Metro Queen St', 'Warehouse']",OwnedTruck,194.0934166666665
+r418,"['Warehouse', ""Pak 'n Save Wairau Road"", 'New World Milford', 'Warehouse']",OwnedTruck,258.90125000000023
+r419,"['Warehouse', 'New World Albany', ""Pak 'n Save Albany"", 'Warehouse']",OwnedTruck,276.95133333333314
+r425,"['Warehouse', 'New World Devonport', 'Warehouse']",OwnedTruck,206.28041666666675
+r44,"['Warehouse', ""Pak 'n Save Papakura"", 'New World Papakura', 'Warehouse']",OwnedTruck,275.63825
+r500,"['Warehouse', ""Pak 'n Save Royal Oak"", 'New World Remuera', 'Warehouse']",OwnedTruck,162.57016666666652
+r505,"['Warehouse', 'New World Green Bay', 'New World New Lynn', 'Warehouse']",OwnedTruck,139.86508333333356
+r528,"['Warehouse', 'New World Eastridge', 'Four Square St Heliers', ""Pak 'n Save Glen Innes"", 'Warehouse']",OwnedTruck,280.12866666666645
+r529,"['Warehouse', ""Pak 'n Save Sylvia Park"", 'New World Stonefields', 'Warehouse']",OwnedTruck,236.15300000000025
+r594,"['Warehouse', 'New World Mt Roskill', 'Warehouse']",OwnedTruck,32.83958333333332
+r611,"['Warehouse', ""Pak 'n Save Mt Albert"", 'Warehouse']",OwnedTruck,48.88041666666668
+r76,"['Warehouse', ""Pak 'n Save Mangere"", 'Warehouse']",OwnedTruck,89.92541666666675
+r78,"['Warehouse', ""Pak 'n Save Manukau"", 'New World Papatoetoe', 'Warehouse']",OwnedTruck,197.6395833333333
