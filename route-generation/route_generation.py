@@ -123,9 +123,13 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
     # calculate capacity of old route
     old_capacity = calculate_route_capacity(route, demands, day_type)
 
-    # get list of unvisited stores
+    # calculate traffic intensity depending on if it is a weekday or Saturday
+    traffic = 1.4 if day_type == "Weekdays" else 1.2
+
+    # get list of possible stores to insert
     unvisited = [
         node for node in nodes 
+        # store is unvisited
         if node not in route 
         # additional demand does not exceed capacity
         and old_capacity + demands[day_type][node] <= capacity
@@ -157,11 +161,18 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
                 best_time = current_time
 
     # calculate time and costs of best route
-    route_time = calculate_route_time(best_route, durations)
+    route_capacity = calculate_route_capacity(best_route, demands, day_type)
+    route_time = calculate_route_time(best_route, durations, traffic_intensity=traffic)
     cost = calculate_route_cost(route_time)
     mainfreight_cost = calculate_route_cost(route_time, mainfreight=True)
 
-    return (best_route, cost, mainfreight_cost)
+    return {
+        "Route": best_route, 
+        "Time": route_time, 
+        "Demand": route_capacity, 
+        "Cost": cost, 
+        "MainfreightCost": mainfreight_cost
+    }
 
 def generate_routes(nodes, demands, durations, weekday=True, dropout=0, warehouse_weight=1):
     """ Generate feasible routes between warehouse and stores.
@@ -201,14 +212,21 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0, warehous
         route_time = calculate_route_time(initial_route, durations)
         cost = calculate_route_cost(route_time)
         mainfreight_cost = calculate_route_cost(route_time, mainfreight=True)
+        route_capacity = calculate_route_capacity(initial_route, demands, day_type)
 
-        route = (initial_route, cost, mainfreight_cost)
+        route = {
+            "Route": initial_route, 
+            "Time": route_time,
+            "Demand": route_capacity,
+            "Cost": cost, 
+            "MainfreightCost": mainfreight_cost
+        }
 
         # keep inserting routes until capacity is reached
         while (route is not None):
             routes.append(route)
             route = insert_store(
-                route[0], 
+                route["Route"], 
                 nodes, 
                 demands, 
                 durations, 
@@ -235,12 +253,12 @@ def remove_duplicate_routes(routes):
     # find indices of routes to remove
     routes_to_remove = [
         # find index of higher cost route
-        j if routes[i][1] < routes[j][1] else i
+        j if routes[i]["Cost"] < routes[j]["Cost"] else i
         # loop through every possible pair of routes
         for i in range(len(routes))
         for j in range(i + 1, len(routes))
         # check if routes contain identical stores
-        if set(routes[i][0]) == set(routes[j][0])
+        if set(routes[i]["Route"]) == set(routes[j]["Route"])
     ]
 
     # remove routes
@@ -290,26 +308,10 @@ def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0], wa
     all_routes = [route for routes in all_routes for route in routes]
 
     # remove duplicate routes within list
-    return remove_duplicate_routes(all_routes)
+    all_routes = remove_duplicate_routes(all_routes)
 
-def convert_routes_to_dataframe(routes):
-    """ Convert a list of tuples to a dataframe.
-
-        Parameters
-        ----------
-        routes : list
-            List of tuples containing routes, costs and Mainfreight costs.
-        
-        Returns
-        -------
-        dataframe
-            Dataframe with a route in each row and costs in columns.
-    """
-    return pd.DataFrame({
-        "Route": [route[0] for route in routes],
-        "Cost": [route[1] for route in routes],
-        "MainfreightCost": [route[2] for route in routes]
-    })
+    # convert to dataframe
+    return pd.DataFrame.from_dict(all_routes)
 
 def read_regions(filename):
     """ Read region data from a file.
@@ -329,3 +331,22 @@ def read_regions(filename):
     regions = [df[region].dropna().values.tolist() for region in df]
 
     return regions
+
+if __name__ == "__main__":
+    regions = read_regions("./route-generation/Regions.csv")
+
+    demands = pd \
+        .read_csv("./demand-estimation/output/DemandEstimates.csv") \
+        .set_index("Supermarket")
+
+    durations = pd \
+        .read_csv("./route-generation/output/TravelCosts.csv") \
+        .set_index(['From', 'To'])
+    
+    saturday_routes = aggregate_routes(
+        regions, 
+        demands, 
+        durations, 
+        weekday=False, 
+    )
+    print(len(saturday_routes))
