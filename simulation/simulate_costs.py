@@ -102,7 +102,7 @@ def check_routes(routes, demands, durations, day_type, capacity=16):
 
     # loop through each selected route
     for i in routes_copy.index:
-        route = ast.literal_eval(routes.Route[i])
+        route = ast.literal_eval(routes_copy.Route[i])
 
         # check if capacity is exceeded
         if calculate_route_capacity(route) > capacity:
@@ -120,10 +120,7 @@ def check_routes(routes, demands, durations, day_type, capacity=16):
                 str(new_route),
                 "OwnedTruck",
                 calculate_route_cost(time)
-            ] 
-
-    # convert routes done by owned trucks to Mainfreight trucks
-    convert_to_mainfreight(routes)
+            ]
 
 
 def remove_store(route, durations, capacity_func, capacity=16):
@@ -190,7 +187,7 @@ def convert_to_mainfreight(routes, trucks=12, shifts=2):
         routes.loc[index, "TruckType"] = "LeasedTruck"
 
 
-def simulate_runs(optimal_routes, demands, durations, day_type):
+def simulate_runs(optimal_routes, demands, durations, day_type, trucks=12, shifts=2):
     """ Calculate actual costs on each realisation of demand.
 
         Parameters
@@ -222,13 +219,20 @@ def simulate_runs(optimal_routes, demands, durations, day_type):
         # modify routes based on actual demand
         check_routes(routes, demands[run], durations, day_type)
 
+        # convert routes done by owned trucks to Mainfreight trucks
+        convert_to_mainfreight(routes, trucks=trucks, shifts=shifts)
+
         # record total cost and number of Mainfreight turcks used
         costs.append(sum(routes.RouteCost))
         mainfreight.append(len(routes[routes.TruckType=="LeasedTruck"]))
         extra_trucks.append(len(routes) - len(optimal_routes))
 
-    return pd.DataFrame({
+    df = pd.DataFrame({
         "Cost": costs,
         "Mainfreight": mainfreight,
         "ExtraShifts": extra_trucks
     }, index=demands.columns)
+
+    df.index.name = "Run"
+
+    return df
