@@ -39,41 +39,26 @@ def calculate_route_time(route, durations, warehouse_weight=1, unloading=4, traf
             
     return time
 
-def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_cost=200, mainfreight_cost=3000, mainfreight=False):
+def calculate_route_cost(route_time, shift_cost=150):
     """ Calculate the cost of a route.
 
         Parameters
         ----------
         route_time : float
             Total time in minutes for the route, including driving and unloading time.
-        shift_time : int (default=240)
-            Time in minutes for a shift.
         shift_cost : int (default=150)
             Operating cost per hour during a shift.
-        overtime_cost : int (default=200)
-            Cost per hour (in blocks) after shift hours.
-        mainfreight_cost : int (default=3000)
-            Cost per 4-hour block for leased Mainfreight trucks.
-        mainfreight : boolean (default=False)
-            Whether the truck is leased Mainfreight truck or not.
 
         Returns
         -------
         float
             Cost of the route.
+
+        Notes
+        -----
+        Assume route time is under 4 hours and is done by an owned Foodstuffs truck.
     """
-    # cost in 4-hour blocks for leasing Mainfreight trucks
-    if mainfreight:
-        return np.ceil(route_time / 240) * mainfreight_cost
-
-    # owned Foodstuffs trucks
-    if route_time < shift_time:
-        # shift costs can be fractional
-        return route_time * shift_cost / 60
-
-    # overtime costs cannot be fractional
-    return shift_time * shift_cost + (route_time - shift_time) * np.ceil(overtime_cost / 60)
-
+    return route_time * shift_cost / 60
 
 def check_routes(routes, demands, durations, day_type, capacity=16):
     """ Check capacity constraints are satisfied and modify routes appropriately.
@@ -100,27 +85,143 @@ def check_routes(routes, demands, durations, day_type, capacity=16):
     # set up function to calculate total demand on route
     calculate_route_capacity = lambda route: sum(demands[store] for store in route[1:-1])
 
+    # initiailise list of removed stores
+    removed_stores = []
+
     # loop through each selected route
     for i in routes_copy.index:
         route = ast.literal_eval(routes_copy.Route[i])
 
         # check if capacity is exceeded
         if calculate_route_capacity(route) > capacity:
-            # remove stores from route until capacity is satisfied and return new route
-            new_route = remove_store(route, durations, calculate_route_capacity)
+            removed_stores = removed_stores + remove_store(route, durations, calculate_route_capacity)
 
             # modify route and route cost after removing store(s)
             time = calculate_route_time(route, durations, traffic_intensity=traffic)
             routes.loc[i, "Route"] = str(route)
             routes.loc[i, "RouteCost"] = calculate_route_cost(time)
 
-            # add new route to dataframe
-            time = calculate_route_time(new_route, durations, traffic_intensity=traffic)
-            routes.loc[len(routes.index)] = [
-                str(new_route),
-                "OwnedTruck",
-                calculate_route_cost(time)
-            ]
+    # get new routes from pool of removed stores
+    new_routes = generate_routes(removed_stores, demands, durations, traffic_intensity=traffic)
+
+    # add new routes to dataframe
+    for route in new_routes:
+        time = calculate_route_time(route, durations, traffic_intensity=traffic)
+        routes.loc[len(routes.index)] = [
+            str(route),
+            "OwnedTruck",
+            calculate_route_cost(time)
+        ]
+
+
+def insert_store(route, unvisited, demands, durations, capacity=16, shift_time=240, traffic_intensity=1):
+    """ Insert a store into the optimal position in a route.
+
+        Parameters
+        ----------
+        route : list
+            List of nodes in route.
+        node : string
+            Store to insert into route.
+        durations : dataframe
+            Duration between nodes.
+        day_type : string
+            Type of day.
+        capacity : int (default=16)
+            Capacity of truck.
+        shift_time : int (default=240)
+            Time in minutes per shift.
+        traffic_intensity : float (default=1)
+            Traffic intensity factor affecting route time.
+
+        Returns
+        -------
+        best_route : list
+            List of nodes in optimal route.
+    """
+    calculate_route_capacity = lambda route: sum(demands[store] for store in route[1:-1])
+
+    # exit algorithm if unvisited set is empty
+    if len(unvisited) == 0:
+        return None
+
+    # initialise best route and time
+    best_route = route.copy()
+    best_route.insert(1, unvisited[0])
+    best_time = calculate_route_time(best_route, durations, traffic_intensity=traffic_intensity)
+    best_capacity = calculate_route_capacity(best_route)
+
+    # loop over every unvisited store
+    for node in unvisited:
+        # loop over every possible position to insert store into route
+        for position in range(2, len(route)):
+            # calculate time of new route
+            current_route = route.copy()
+            current_route.insert(position, node)
+
+            # replace best time if new route time is better
+            current_time = calculate_route_time(current_route, durations, traffic_intensity=traffic_intensity)
+            if current_time < best_time:
+                best_route = current_route
+                best_time = current_time
+
+    # check time and capacity constraints are satisified
+    if best_time > shift_time or best_capacity > capacity:
+        return None
+    
+    # get unvisited stores
+    for store in best_route[1:-1]:
+        if store in unvisited:
+            unvisited.remove(store)
+
+    return best_route
+
+
+def generate_routes(nodes, demands, durations, traffic_intensity=1):
+    """ Generate feasible routes between warehouse and stores.
+
+        Parameters
+        ----------
+        nodes : list
+            List of nodes to travel to.
+        demands : dataframe
+            Demands at each node.
+        durations : dataframe
+            Durations between nodes.
+        traffic_intensity : float (default=1)
+            Traffic intensity factor affecting route time.
+
+        Returns
+        -------
+        routes : list
+            List of generated routes.
+    """
+    # initiate empty list of routes
+    routes = []
+
+    # initialise unvisited nodes
+    unvisited = nodes
+
+    # continue until no more nodes are unvisited
+    while len(unvisited) > 0:
+        # initialise route
+        route = ["Warehouse", unvisited.pop(), "Warehouse"]
+
+        # keep inserting stores until constraints are not met
+        while (route is not None):
+            new_route = insert_store(
+                route, 
+                unvisited, 
+                demands, 
+                durations,
+                traffic_intensity=traffic_intensity
+            )
+
+            if new_route is None:
+                routes.append(route)
+            route = new_route
+    
+    return routes
 
 
 def remove_store(route, durations, capacity_func, capacity=16):
@@ -145,21 +246,18 @@ def remove_store(route, durations, capacity_func, capacity=16):
     # initiailise stores to remove
     removed_stores = []
 
-    # determine whether first or last store in route is closer
-    remove_first = durations.Duration["Warehouse", route[1]] < durations.Duration[route[-2], "Warehouse"]
-    remove_index = 1 if remove_first else -2
-
     # remove stores until capacity constraint satisfied
     while capacity_func(route) > capacity:
-        removed_stores.append(route.pop(remove_index))
+        # remove store closer to warehouse
+        if durations.Duration["Warehouse", route[1]] < durations.Duration[route[-2], "Warehouse"]:
+            removed_stores.append(route.pop(1))
+        else:
+            removed_stores.append(route.pop(-2))
 
-    # construct new route from removed stores
-    new_route = ["Warehouse"] + removed_stores + ["Warehouse"]
-
-    return new_route
+    return removed_stores
         
 
-def convert_to_mainfreight(routes, trucks=12, shifts=2):
+def convert_to_mainfreight(routes, trucks=12, shifts=2, mainfreight_cost=3000):
     """ Lease out shifts to Mainfreight trucks until truck and shift availability constraints
         are satisifed.
 
@@ -171,6 +269,8 @@ def convert_to_mainfreight(routes, trucks=12, shifts=2):
             Number of Foodstuffs trucks available.
         shifts : int (default=2)
             Number of shifts per day that each Foodstuffs truck can do.
+        mainfreight_cost : int (default=3000)
+            Cost of leasing a Mainfreight truck for 4 hours.
     """
     # function to calculate number of routes done by owned trucks
     owned_routes = lambda: len(routes[routes.TruckType == 'OwnedTruck'])
@@ -183,7 +283,7 @@ def convert_to_mainfreight(routes, trucks=12, shifts=2):
         ].index[0]
 
         # set new route cost and truck type
-        routes.loc[index, "RouteCost"] = 3000
+        routes.loc[index, "RouteCost"] = mainfreight_cost
         routes.loc[index, "TruckType"] = "LeasedTruck"
 
 
@@ -200,10 +300,14 @@ def simulate_runs(optimal_routes, demands, durations, day_type, trucks=12, shift
             Travel durations between each pair of stores.
         day_type : string
             Whether it is a Saturday or weekday.
+        trucks : int (default=12)
+            Number of Foodstuffs trucks available.
+        shifts : int (default=2)
+            Number of shifts per day for each truck.
 
         Returns
         -------
-        dataframe
+        df : dataframe
             Dataframe containing actual costs and number of Mainfreight trucks used per run.
     """
     # initiailise costs and Mainfreight trucks list
