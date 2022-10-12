@@ -64,16 +64,19 @@ def route_selection_lp(routeCost, nodes, ownedTruck=12, numShifts=2):
 
     prob = LpProblem("Foodies VRP", LpMinimize)
 
-    # objective function
-    prob += lpSum([vars[i] * routeCost['RouteCost'][i] for i in routeCost.index]), "TotalCost"
+    # objective function (add penalty cost of $100 per route to favour lower number of routes)
+    prob += lpSum([vars[i] * (routeCost['RouteCost'][i] + 100) for i in routeCost.index]), "TotalCost"
 
     # node constraint
     for node in nodes:
-        prob += lpSum([vars[j] * routes[node][j] for j in routeCost.index]) == 1, f"{node}Demands"
+        prob += lpSum(
+            [vars[j] * routes[node][j] for j in routeCost.index]
+        ) == 1, f"{node}Demands"
 
     # truck constraints
     prob += lpSum(
-        [vars[i] for i in routeCost.index if routeCost['TruckType'][i] == 'OwnedTruck']) <= ownedTruck*numShifts, 'TruckRestrictions'
+        [vars[i] for i in routeCost.index if routeCost['TruckType'][i] == 'OwnedTruck']
+    ) <= ownedTruck*numShifts, 'TruckRestrictions'
 
     # Solving routines - no need to modify other than slotting your name and username in.
     prob.writeLP('./linear-program/output/RouteLP.lp')

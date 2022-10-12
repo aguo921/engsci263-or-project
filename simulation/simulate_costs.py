@@ -101,6 +101,8 @@ def check_routes(routes, demands, durations, day_type, capacity=16):
             routes.loc[i, "Route"] = str(route)
             routes.loc[i, "RouteCost"] = calculate_route_cost(time)
 
+    num_removed_stores = len(removed_stores)
+
     # get new routes from pool of removed stores
     new_routes = generate_routes(removed_stores, demands, durations, traffic_intensity=traffic)
 
@@ -112,6 +114,8 @@ def check_routes(routes, demands, durations, day_type, capacity=16):
             "OwnedTruck",
             calculate_route_cost(time)
         ]
+    
+    return num_removed_stores
 
 
 def insert_store(route, unvisited, demands, durations, capacity=16, shift_time=240, traffic_intensity=1):
@@ -314,6 +318,7 @@ def simulate_runs(optimal_routes, demands, durations, day_type, trucks=12, shift
     costs = []
     mainfreight = []
     extra_trucks = []
+    extra_stores = []
 
     # loop through each realisation
     for run in demands.columns:
@@ -321,7 +326,7 @@ def simulate_runs(optimal_routes, demands, durations, day_type, trucks=12, shift
         routes = optimal_routes.copy()
 
         # modify routes based on actual demand
-        check_routes(routes, demands[run], durations, day_type)
+        extra_stores.append(check_routes(routes, demands[run], durations, day_type))
 
         # convert routes done by owned trucks to Mainfreight trucks
         convert_to_mainfreight(routes, trucks=trucks, shifts=shifts)
@@ -334,7 +339,8 @@ def simulate_runs(optimal_routes, demands, durations, day_type, trucks=12, shift
     df = pd.DataFrame({
         "Cost": costs,
         "Mainfreight": mainfreight,
-        "ExtraShifts": extra_trucks
+        "ExtraShifts": extra_trucks,
+        "ExtraStores": extra_stores
     }, index=demands.columns)
 
     df.index.name = "Run"
