@@ -1,5 +1,5 @@
 # ENGSCI 263 OR Project
-### Group 10: Aaryan Karan, Yinming Li, Angela Guo
+### Group 10: Aryan Karan, Yinming Li, Angela Guo
 
 ## Requirements
 ### Python
