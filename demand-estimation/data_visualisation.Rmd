@@ -55,7 +55,7 @@ Demand %>%
   summarise(TotalDemand=sum(Demand)) %>%
   ggplot() +
   geom_line(aes(x=Date, y=TotalDemand, color=Type)) +
-  labs(title="Total daily demand of pallets to Foodstuffs supermarket chains in Auckland") +
+  labs(title="Demand of pallets to Foodstuffs supermarket chains in Auckland") +
   ylab("Total Daily Demand")
 ```
 
