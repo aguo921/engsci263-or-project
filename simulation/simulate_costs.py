@@ -317,7 +317,7 @@ def simulate_runs(optimal_routes, demands, durations, day_type, trucks=12, shift
     # initiailise costs and Mainfreight trucks list
     costs = []
     mainfreight = []
-    extra_trucks = []
+    num_routes = []
     extra_stores = []
 
     # loop through each realisation
@@ -334,12 +334,12 @@ def simulate_runs(optimal_routes, demands, durations, day_type, trucks=12, shift
         # record total cost and number of Mainfreight turcks used
         costs.append(sum(routes.RouteCost))
         mainfreight.append(len(routes[routes.TruckType=="LeasedTruck"]))
-        extra_trucks.append(len(routes) - len(optimal_routes))
+        num_routes.append(len(routes))
 
     df = pd.DataFrame({
         "Cost": costs,
         "Mainfreight": mainfreight,
-        "ExtraShifts": extra_trucks,
+        "NumRoutes": num_routes,
         "ExtraStores": extra_stores
     }, index=demands.columns)
 

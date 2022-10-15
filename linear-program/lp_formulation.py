@@ -15,7 +15,7 @@ def read_routes_costs(filename):
 
     df = pd.melt(
         df,
-        id_vars=['Route'],
+        id_vars=['Route', 'Demand'],
         value_vars=['OwnedTruck', 'LeasedTruck'],
         var_name='TruckType',
         value_name='RouteCost'
@@ -24,7 +24,7 @@ def read_routes_costs(filename):
     routeNames = [f"r{i + 1}" for i in range(df['Route'].count())]
     df['RouteNum'] = routeNames
 
-    df = df[['RouteNum','Route','TruckType','RouteCost']]
+    df = df[['RouteNum','Route','TruckType','RouteCost','Demand']]
 
     df.set_index('RouteNum', drop=False, inplace=True)
 
