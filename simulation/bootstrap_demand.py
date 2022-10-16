@@ -24,7 +24,7 @@ def bootstrap_demand(n, stores, demands, day_type):
     # obtain n samples of demand for each store
     bootstrapped_demands = [
         demands[
-            (demands.Supermarket==store) & (demands.DayType==day_type)
+            (demands.Supermarket == store) & (demands.DayType == day_type)
         ].Demand.sample(n=n, replace=True).values.tolist()
         for store in stores
     ]
@@ -39,13 +39,17 @@ def bootstrap_demand(n, stores, demands, day_type):
 
     return df
 
+
 if __name__ == "__main__":
     demands = pd.read_csv("./foodstuffs-data/FoodstuffsDemands.csv")
     stores = demands.Supermarket.values.tolist()
     demands = transform_demand(demands)
 
     sat_bootstrap = bootstrap_demand(1000, stores, demands, "Saturday")
-    weekday_bootstrap = bootstrap_demand(1000, stores, demands, "Weekdays")
+    print(sat_bootstrap.head())
 
-    sat_bootstrap.to_csv("./simulation/output/sat_bootstrap.csv")
-    weekday_bootstrap.to_csv("./simulation/output/weekday_bootstrap.csv")
+    weekday_bootstrap = bootstrap_demand(1000, stores, demands, "Weekdays")
+    print(weekday_bootstrap.head())
+
+    # sat_bootstrap.to_csv("./simulation/output/sat_bootstrap.csv")
+    # weekday_bootstrap.to_csv("./simulation/output/weekday_bootstrap.csv")

@@ -1,7 +1,6 @@
-Route,Cost,MainfreightCost
-"['Warehouse', 'New World New Lynn', 'Warehouse']",73.5945833333335,3000
-"['Warehouse', 'New World New Lynn', 'Four Square Glen Eden', ""Pak 'n Save Henderson"", 'Warehouse']",168.92374999999993,3000
-"['Warehouse', 'Four Square Glen Eden', 'Warehouse']",108.83708333333324,3000
-"['Warehouse', 'New World New Lynn', 'Four Square Glen Eden', 'Warehouse']",125.29041666666669,3000
-"['Warehouse', ""Pak 'n Save Henderson"", 'Warehouse']",120.41624999999999,3000
-"['Warehouse', ""Pak 'n Save Henderson"", 'Four Square Glen Eden', 'Warehouse']",153.43083333333325,3000
+Route,Time,Demand,Cost,MainfreightCost
+"['Warehouse', 'New World New Lynn', 'Warehouse']",29.4378333333334,7,73.5945833333335,3000
+"['Warehouse', 'Four Square Glen Eden', 'Warehouse']",43.534833333333296,2,108.83708333333324,3000
+"['Warehouse', 'New World New Lynn', 'Four Square Glen Eden', 'Warehouse']",66.96263333333334,9,167.40658333333337,3000
+"['Warehouse', ""Pak 'n Save Henderson"", 'Warehouse']",48.1665,8,120.41624999999999,3000
+"['Warehouse', 'New World New Lynn', ""Pak 'n Save Henderson"", 'Warehouse']",80.1742,15,200.4355,3000

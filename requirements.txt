@@ -6,3 +6,5 @@ pulp
 matplotlib
 python-dotenv
 ipykernel
+seaborn
+statsmodels

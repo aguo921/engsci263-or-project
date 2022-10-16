@@ -18,7 +18,7 @@ def get_demand_info():
     demand_dict: dictionary
         keys correspond to name of supermarket, values are a list of number of pallets demanded on each day
     """
-    with open('FoodstuffsDemands.csv', mode='r') as demand_data:
+    with open('./foodstuffs-data/FoodstuffsDemands.csv', mode='r') as demand_data:
         demand = list(csv.reader(demand_data, delimiter=','))
         # extract dates as a list of strings
         date = [x[5:] for x in demand[0][1:]]
@@ -101,8 +101,8 @@ def write_demand_to_file(demand_dict):
         keys correspond to name of supermarket, values are a list of number of pallets demanded on each day
     """
     # set up txt files and write in headings
-    store_demandP = open("store_demand_plotting.txt", "w")
-    store_demand = open("store_demand.txt", "w")
+    store_demandP = open("./demand-estimation/output/store_demand_plotting.txt", "w")
+    store_demand = open("./demand-estimation/output/store_demand.txt", "w")
     store_demandP.write("Brand,Location,Weekdays,Saturday\n")
     store_demand.write("Brand,Location,Weekdays,Saturday\n")
     weekday_dict, sat_dict = dict(), dict()
@@ -145,7 +145,7 @@ def plot_demand_frequency(reference_dict, supermarket="Four Square"):
 
 
 def bootstrap_weekday_demand(reference_dict):
-    wd = open("weekday_bootstrap.csv", "w")
+    wd = open("./demand-estimation/output/weekday_bootstrap.csv", "w")
     heading = "Supermarket,"
     for i in range(1,1001):
         heading += f"Run{i},"
@@ -164,7 +164,7 @@ def bootstrap_weekday_demand(reference_dict):
 
 
 def bootstrap_sat_demand(reference_dict):
-    sat = open("sat_bootstrap.csv", "w")
+    sat = open("./demand-estimation/output/sat_bootstrap.csv", "w")
     sat_df = pd.DataFrame.from_dict(reference_dict)
     heading = "Supermarket,"
     for i in range(1,1001):

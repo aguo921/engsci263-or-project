@@ -3,6 +3,8 @@
 
 ## Requirements
 ### Python
+(Recommended) Create and activate a virtual environment.
+
 Run
 ```
 pip install -r requirements.txt

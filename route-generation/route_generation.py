@@ -24,7 +24,8 @@ def calculate_route_capacity(route, demands, day_type):
 
     return capacity
 
-def calculate_route_time(route, durations, warehouse_weight=1, unloading=4, traffic_intensity=1):
+
+def calculate_route_time(route, durations, warehouse_weight=1, unloading=4, traffic=1):
     """ Calculate total time taken on route.
 
         Parameters
@@ -37,8 +38,8 @@ def calculate_route_time(route, durations, warehouse_weight=1, unloading=4, traf
             Value between 0 and 1. Weighting of arcs to and from the warehouse.
         unloading : int (default=4)
             Unloading time (min) at each store.
-        traffic_intensity : float (default=1)
-            Intensity of traffic.
+        traffic : float (default=1)
+            Traffic multiplier.
 
         Returns
         -------
@@ -53,13 +54,16 @@ def calculate_route_time(route, durations, warehouse_weight=1, unloading=4, traf
         # obtain source and destination stores of individual trip
         (source, destination) = route[i:i+2]
         
-        # calculate travel time between stores
-        travel_time = traffic_intensity * durations.Duration[source, destination]
+        # calculate travel time between stores according to traffic multiplier
+        travel_time = traffic * durations.Duration[source, destination]
         
         # decrease weighting of trips to and from the warehouse
-        time += warehouse_weight * travel_time if ("Warehouse" in [source, destination]) else travel_time
+        travel_time *= warehouse_weight if ("Warehouse" in [source, destination]) else 1
+
+        time += travel_time
             
     return time
+
 
 def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_cost=200, mainfreight_cost=3000, mainfreight=False):
     """ Calculate the cost of a route.
@@ -85,13 +89,13 @@ def calculate_route_cost(route_time, shift_time=240, shift_cost=150, overtime_co
         return math.ceil(route_time / 240) * mainfreight_cost
 
     # owned Foodstuffs trucks
-    else:
-        if route_time < shift_time:
-            # shift costs can be fractional
-            return route_time * shift_cost / 60
-        else:
-            # overtime costs cannot be fractional
-            return shift_time * shift_cost + (route_time - shift_time) * math.ceil(overtime_cost / 60)
+    if route_time < shift_time:
+        # shift costs can be fractional
+        return route_time * shift_cost / 60
+
+    # overtime costs cannot be fractional
+    return shift_time * shift_cost + (route_time - shift_time) * math.ceil(overtime_cost / 60)
+
 
 def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropout=0, warehouse_weight=1):
     """ Insert a store into the optimal position in a route.
@@ -115,10 +119,8 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
         
         Returns
         -------
-        best_route : list
-            List of nodes in optimal route.
-        route_cost : float
-            Cost of best route.
+        dict
+            Dictionary of optimal route containing its path, time, demand and cost.
     """
     # calculate capacity of old route
     old_capacity = calculate_route_capacity(route, demands, day_type)
@@ -160,9 +162,9 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
                 best_route = current_route
                 best_time = current_time
 
-    # calculate time and costs of best route
+    # calculate demand, time and costs of best route
     route_capacity = calculate_route_capacity(best_route, demands, day_type)
-    route_time = calculate_route_time(best_route, durations, traffic_intensity=traffic)
+    route_time = calculate_route_time(best_route, durations, traffic=traffic)
     cost = calculate_route_cost(route_time)
     mainfreight_cost = calculate_route_cost(route_time, mainfreight=True)
 
@@ -173,6 +175,7 @@ def insert_store(route, nodes, demands, durations, day_type, capacity=16, dropou
         "Cost": cost, 
         "MainfreightCost": mainfreight_cost
     }
+
 
 def generate_routes(nodes, demands, durations, weekday=True, dropout=0, warehouse_weight=1):
     """ Generate feasible routes between warehouse and stores.
@@ -190,7 +193,7 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0, warehous
         dropout : float (default=0)
             Value between 0 and 1. Rate at which improved routes are dropped.
         warehouse_weight : float (default=1)
-            Value between 0 and 1. Weighting of arcs to and from the warehouse.
+            Value between 0 and 1. Weighting of arcs to and from the warehouse in time calculations.
 
         Returns
         -------
@@ -205,7 +208,7 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0, warehous
 
     # loop over every store
     for store in nodes:
-        # initiate route to store
+        # initialise route to store
         initial_route = ["Warehouse", store, "Warehouse"]
 
         # calculate time and costs of initial route
@@ -237,6 +240,7 @@ def generate_routes(nodes, demands, durations, weekday=True, dropout=0, warehous
             
     return routes
 
+
 def remove_duplicate_routes(routes):
     """ Remove routes visiting identical stores.
 
@@ -248,7 +252,7 @@ def remove_duplicate_routes(routes):
         Returns
         -------
         routes : list
-            List of routes with duplicates removed.
+            List of routes with higher cost duplicates removed.
     """
     # find indices of routes to remove
     routes_to_remove = [
@@ -266,8 +270,9 @@ def remove_duplicate_routes(routes):
 
     return routes
 
+
 def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0], warehouse_weights=[1]):
-    """ Aggregate generated routes over multiple regions for different dropout rates.
+    """ Aggregate generated routes over multiple regions for different dropout rates and warehouse weights.
 
         Parameters
         ----------
@@ -286,8 +291,8 @@ def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0], wa
 
         Returns
         -------
-        all_routes : list
-            List of all generated routes across the regions.
+        dataframe
+            Dataframe of all generated routes across the regions.
     """
     # generate routes for each combination of region, dropout rate and warehouse weighting factor
     all_routes = [
@@ -313,6 +318,7 @@ def aggregate_routes(regions, demands, durations, weekday=True, dropouts=[0], wa
     # convert to dataframe
     return pd.DataFrame.from_dict(all_routes)
 
+
 def read_regions(filename):
     """ Read region data from a file.
 
@@ -332,21 +338,20 @@ def read_regions(filename):
 
     return regions
 
+
 if __name__ == "__main__":
     regions = read_regions("./route-generation/Regions.csv")
 
-    demands = pd \
-        .read_csv("./demand-estimation/output/DemandEstimates.csv") \
+    demands = pd.read_csv("./demand-estimation/output/DemandEstimates.csv")\
         .set_index("Supermarket")
 
-    durations = pd \
-        .read_csv("./route-generation/output/TravelCosts.csv") \
+    durations = pd.read_csv("./route-generation/output/TravelCosts.csv")\
         .set_index(['From', 'To'])
     
-    saturday_routes = aggregate_routes(
+    weekday_routes = aggregate_routes(
         regions, 
         demands, 
-        durations, 
-        weekday=False, 
+        durations
     )
-    print(len(saturday_routes))
+    print(len(weekday_routes))
+    print(weekday_routes.head())

@@ -1,6 +1,5 @@
 import pandas as pd
 from pulp import *
-import ast
 
 def read_routes_costs(filename):
     """ reads in a route file and returns a dataframe"""
@@ -21,14 +20,13 @@ def read_routes_costs(filename):
         value_name='RouteCost'
     )
 
-    routeNames = [f"r{i + 1}" for i in range(df['Route'].count())]
+    routeNames = [f"r{i + 1}" for i in range(df.Route.count())]
     df['RouteNum'] = routeNames
 
-    df = df[['RouteNum','Route','TruckType','RouteCost','Demand']]
-
-    df.set_index('RouteNum', drop=False, inplace=True)
+    df.set_index('RouteNum', inplace=True)
 
     return df
+
 
 def route_selection_lp(routeCost, nodes, write_filename, ownedTruck=12, numShifts=2):
     """ formulates and solves the route selection LP
@@ -54,18 +52,18 @@ def route_selection_lp(routeCost, nodes, write_filename, ownedTruck=12, numShift
     # creates a matrix of routes that travel to each node
     routes = []
     for node in nodes:
-        routes.append([1 if node in routeCost['Route'][i] else 0 for i in routeCost.index])
+        routes.append([1 if node in routeCost.Route[i] else 0 for i in routeCost.index])
 
     # turns routes into a dictionary
-    routes = makeDict([nodes, routeCost['RouteNum']], routes, 0)
+    routes = makeDict([nodes, routeCost.index], routes, 0)
 
     # LP formulation
-    vars = LpVariable.dicts("Route", routeCost['RouteNum'], cat=LpBinary)
+    vars = LpVariable.dicts("Route", routeCost.index, cat=LpBinary)
 
     prob = LpProblem("Foodies VRP", LpMinimize)
 
     # objective function (add penalty cost of $100 per route to favour lower number of routes)
-    prob += lpSum([vars[i] * (routeCost['RouteCost'][i] + 100) for i in routeCost.index]), "TotalCost"
+    prob += lpSum([vars[i] * (routeCost.RouteCost[i] + 100) for i in routeCost.index]), "TotalCost"
 
     # node constraint
     for node in nodes:
@@ -75,7 +73,7 @@ def route_selection_lp(routeCost, nodes, write_filename, ownedTruck=12, numShift
 
     # truck constraints
     prob += lpSum(
-        [vars[i] for i in routeCost.index if routeCost['TruckType'][i] == 'OwnedTruck']
+        [vars[i] for i in routeCost.index if routeCost.TruckType[i] == 'OwnedTruck']
     ) <= ownedTruck*numShifts, 'TruckRestrictions'
 
     # Solving routines - no need to modify other than slotting your name and username in.
@@ -106,30 +104,16 @@ if __name__ == "__main__":
     weekdayRouteCosts = read_routes_costs("./route-generation/output/WeekdayRoutes.csv")
     saturdayRouteCosts = read_routes_costs("./route-generation/output/SaturdayRoutes.csv")
 
-    selectedRoutesWeekday, objectiveWeekday = route_selection_lp(weekdayRouteCosts, nodes)
+    weekday_filename = "./linear-program/output/WeekdayRouteLP.lp"
 
-    write_filename = "./linear-program/output/RouteLP.lp"
+    selectedRoutesWeekday, objectiveWeekday = route_selection_lp(weekdayRouteCosts, nodes, weekday_filename)
 
     df = pd.DataFrame(weekdayRouteCosts, index=selectedRoutesWeekday)
-    df.drop(columns='RouteNum')
     df.to_csv("./linear-program/output/SelectedRoutesWeekday.csv", index=False)
 
-    print("Selected Weekday Routes")
-    print("-----------------------")
-    for i in df.index:
-        route = ast.literal_eval(df.Route[i])
-        cost = df.RouteCost[i]
-        print(f"Route: {', '.join(route[1:-1])}\nCost: {cost}")
+    saturday_filename = "./linear-program/output/SaturdayRouteLP.lp"
 
-    selectedRoutesSaturday, objectiveSaturday = route_selection_lp(saturdayRouteCosts, nodes)
+    selectedRoutesSaturday, objectiveSaturday = route_selection_lp(saturdayRouteCosts, nodes, saturday_filename)
 
     df = pd.DataFrame(saturdayRouteCosts, index=selectedRoutesSaturday)
-    df.drop(columns='RouteNum')
     df.to_csv("./linear-program/output/SelectedRoutesSaturday.csv", index=False)
-
-    print("Selected Saturday Routes")
-    print("-----------------------")
-    for i in df.index:
-        route = ast.literal_eval(df.Route[i])
-        cost = df.RouteCost[i]
-        print(f"Route: {', '.join(route[1:-1])}\nCost: {cost}")

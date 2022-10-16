@@ -100,8 +100,8 @@ def write_demand_to_file(demand_dict):
         keys correspond to name of supermarket, values are a list of number of pallets demanded on each day
     """
     # set up txt files and write in headings
-    store_demandP = open("output/store_demand_plotting.txt", "w")
-    store_demand = open("output/store_demand.txt", "w")
+    store_demandP = open("./demand-estimation/output/store_demand_plotting.txt", "w")
+    store_demand = open("./demand-estimation/output/store_demand.txt", "w")
     store_demandP.write("Brand,Location,Weekdays,Saturday\n")
     store_demand.write("Brand,Location,Weekdays,Saturday\n")
     for key in demand_dict:
