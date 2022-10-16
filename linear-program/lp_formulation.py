@@ -15,7 +15,7 @@ def read_routes_costs(filename):
 
     df = pd.melt(
         df,
-        id_vars=['Route'],
+        id_vars=['Route', 'Demand'],
         value_vars=['OwnedTruck', 'LeasedTruck'],
         var_name='TruckType',
         value_name='RouteCost'
@@ -24,13 +24,13 @@ def read_routes_costs(filename):
     routeNames = [f"r{i + 1}" for i in range(df['Route'].count())]
     df['RouteNum'] = routeNames
 
-    df = df[['RouteNum','Route','TruckType','RouteCost']]
+    df = df[['RouteNum','Route','TruckType','RouteCost','Demand']]
 
     df.set_index('RouteNum', drop=False, inplace=True)
 
     return df
 
-def route_selection_lp(routeCost, nodes, ownedTruck=12, numShifts=2):
+def route_selection_lp(routeCost, nodes, write_filename, ownedTruck=12, numShifts=2):
     """ formulates and solves the route selection LP
 
         Parameters
@@ -79,7 +79,7 @@ def route_selection_lp(routeCost, nodes, ownedTruck=12, numShifts=2):
     ) <= ownedTruck*numShifts, 'TruckRestrictions'
 
     # Solving routines - no need to modify other than slotting your name and username in.
-    prob.writeLP('./linear-program/output/RouteLP.lp')
+    prob.writeLP(write_filename)
 
     prob.solve()
 
@@ -97,7 +97,6 @@ def route_selection_lp(routeCost, nodes, ownedTruck=12, numShifts=2):
 
     # The optimised objective function valof Ingredients pue is printed to the screen
     print("Total cost for VRP = ", value(prob.objective))
-    print(routeCost.index)
 
     return selectedRoutes, value(prob.objective)
 
@@ -108,6 +107,8 @@ if __name__ == "__main__":
     saturdayRouteCosts = read_routes_costs("./route-generation/output/SaturdayRoutes.csv")
 
     selectedRoutesWeekday, objectiveWeekday = route_selection_lp(weekdayRouteCosts, nodes)
+
+    write_filename = "./linear-program/output/RouteLP.lp"
 
     df = pd.DataFrame(weekdayRouteCosts, index=selectedRoutesWeekday)
     df.drop(columns='RouteNum')
