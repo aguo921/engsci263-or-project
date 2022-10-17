@@ -45,3 +45,6 @@ The `linear-program` directory contains `lp_formulation.py`, which solves a line
 
 ### Route Visualisation
 The `route-visualisation` directory contains the `route_mapping.ipynb` notebook, which plots the locations of each store, and our selected routes for both Saturdays and weekdays.
+
+### Simulation
+The `simulation` directory contains `bootstrap_demand.py`, which generates demand samples from the given demand data, and `simulate_costs.py`, which calculates actual costs of routes under simulations of random demand. The `simulation.ipynb` notebook simulates our selected routes under 1000 realisations of random demand for Saturdays and weekdays, and the `five_year_planning.ipynb` notebook simulates how purchasing additional trucks affects performance over five years.
